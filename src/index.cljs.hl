@@ -37,5 +37,7 @@
             (nav/nav-link "Links"))))
       (layout/layout-drawer)
       (layout/layout-content
-        (grid/grid :class [:demo-blog__posts])
+        (grid/grid :class [:demo-blog__posts]
+          (grid/cell-card
+            :cols-desktop 4))
         (footer/mini-footer)))))
