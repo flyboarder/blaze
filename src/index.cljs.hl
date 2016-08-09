@@ -1,1 +1,4 @@
-(page "index.html")
+(page "index.html"
+  (:require [material-hl.core :as mdl]
+            [material-hl.layout :as layout])
+  (:require-macros [hoplon.firebase :refer [with-auth!]]))
