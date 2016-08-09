@@ -14,7 +14,8 @@
  '[hoplon.boot-hoplon :refer :all]
  '[boot-semver.core :refer :all]
  '[tolitius.boot-check :as check]
- '[funcool.boot-codeina :refer :all])
+ '[funcool.boot-codeina :refer :all]
+ '[pandeiro.boot-http :refer :all])
 
 ;; Boot Task Options ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (task-options!
@@ -66,3 +67,10 @@
              :pre-release 'snapshot)
     (hoplon :manifest true)
     (build-jar)))
+
+(deftask demo
+  "Run a demo of the project."
+  []
+  (comp
+    (hoplon)
+    (serve :port 8080)))
