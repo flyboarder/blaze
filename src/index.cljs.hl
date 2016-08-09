@@ -15,16 +15,10 @@
     ;; MDL Colors
     (mdl/include-colors :blue :orange)
 
-    ;; MDL Stepper
-    (link :rel "stylesheet" :href "https://ahlechandre.github.io/mdl-stepper/stepper.min.css")
-
     ;; Custom CSS
     (link :rel "stylesheet" :href "css/mdl.css")
 
-    ;;Animate.css
-    (link :rel "stylesheet" :href "bower_components/animate-css/animate.min.css")
-
-    ;(title "ROCKET9 - Rapid equipment provisioning.")
+    (title "Blaze - A (No Backend) Blog")
 
     (html-meta :charset "utf-8")
     (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
