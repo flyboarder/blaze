@@ -8,4 +8,5 @@
  [tolitius/boot-check       "0.1.1" :scope "test"]
  [funcool/boot-codeina      "0.1.0-SNAPSHOT" :scope "test"]
  [pandeiro/boot-http        "0.7.0" :scope "test"]
- [cljsjs/material           "1.1.3-1"]]
+ [cljsjs/material           "1.1.3-1"]
+ [cljsjs/jquery             "2.2.2-0"]]
