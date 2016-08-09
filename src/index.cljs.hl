@@ -41,6 +41,6 @@
       (layout/layout-drawer)
       (layout/layout-content
         (grid/grid :class [:demo-blog__posts]
-          (grid/cell-card :cols-desktop 4)
-          (grid/cell-card ))
+          (grid/cell-card :desktop-cols 4)
+          (grid/cell-card))
         (footer/mini-footer))))))
