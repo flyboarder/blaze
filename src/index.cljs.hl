@@ -26,7 +26,7 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
     (layout/layout
-      (layout/layout-header :scroll true
+      (layout/layout-header :scroll true :transparent true
         (layout/header-row
           (layout/layout-spacer)
           (nav/navigation
