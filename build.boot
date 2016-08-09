@@ -3,7 +3,6 @@
 (defn get-deps    []     (read-file "./dependencies.edn"))
 ;(defn get-devdeps []     (read-file "./dev_dependencies.edn"))
 
-
 ;; Boot Env Settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (set-env!
  :dependencies   (get-deps)
