@@ -38,9 +38,9 @@
             (nav/nav-link "Links"))))
       (layout/layout-drawer)
       (layout/layout-content
-        (binding [grid/*cols*   8
+        (binding [grid/*cols*   12
                   grid/*shadow* 2]
           (grid/grid :class [:demo-blog__posts]
             (grid/cell-card :desktop-cols 4)
-            (grid/cell-card)))
+            (grid/cell-card :desktop-cols 8)))
         (footer/mini-footer)))))
