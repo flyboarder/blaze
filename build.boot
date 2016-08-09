@@ -9,6 +9,7 @@
  :dependencies   (get-deps)
  :resource-paths #{"src"})
 
+;; Require Boot Task Namespaces ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require
  '[adzerk.bootlaces :refer :all]
  '[hoplon.boot-hoplon :refer :all]
@@ -16,6 +17,7 @@
  '[tolitius.boot-check :as check]
  '[funcool.boot-codeina :refer :all])
 
+;; Boot Task Options ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (task-options!
  pom    {:project 'degree9/blaze
          :version (get-version)
@@ -28,6 +30,7 @@
          :sources #{"target"}
          :description "A (No Backend) Blog"})
 
+;; Boot Tasks ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (deftask tests
   "Run code tests."
   []
