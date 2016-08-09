@@ -15,6 +15,7 @@
  '[boot-semver.core :refer :all]
  '[tolitius.boot-check :as check]
  '[funcool.boot-codeina :refer :all]
+ '[adzerk.boot-cljs :refer :all]
  '[pandeiro.boot-http :refer :all])
 
 ;; Boot Task Options ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
