@@ -36,4 +36,4 @@
       (layout/layout-drawer)
       (layout/layout-content
         (grid/grid)
-        ()))))
+        (footer/mini-footer)))))
