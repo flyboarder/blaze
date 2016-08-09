@@ -78,6 +78,7 @@
   "Run a demo of the project."
   []
   (comp
+    (watch)
     (hoplon)
     (cljs :optimizations :none)
     (serve :port 8080)))
