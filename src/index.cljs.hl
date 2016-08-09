@@ -30,7 +30,7 @@
     (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
-    (binding [material-hl.card/*shadow* 2]
+    (binding [material-hl.cards/*shadow* 2]
       (layout/layout :class [:demo-blog]
       (layout/layout-header :scroll true :transparent true
         (layout/header-row
