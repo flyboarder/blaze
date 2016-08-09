@@ -31,5 +31,6 @@
           (layout/layout-spacer)
           (nav/navigation
             (nav/nav-link "Links"))))
+      (layout/layout-drawer)
       (layout/layout-content
         ))))
