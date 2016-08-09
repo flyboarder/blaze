@@ -1,7 +1,9 @@
 (page "index.html"
   (:require [material-hl.core :as mdl]
             [material-hl.layout :as layout]
-            [material-hl.navigation :as nav])
+            [material-hl.navigation :as nav]
+            [material-hl.grid :as grid]
+            [material-hl.footer :as footer])
   (:require-macros [hoplon.firebase :refer [with-auth!]]))
 
 ;; Index Page
@@ -33,4 +35,5 @@
             (nav/nav-link "Links"))))
       (layout/layout-drawer)
       (layout/layout-content
-        ))))
+        (grid/grid)
+        ()))))
