@@ -38,6 +38,6 @@
       (layout/layout-drawer)
       (layout/layout-content
         (grid/grid :class [:demo-blog__posts]
-          (grid/cell-card :cols-desktop 4)
-          (grid/cell-card :cols 8))
+          (grid/cell-card :cols-desktop 4 :shadow 2)
+          (grid/cell-card :cols 8 :shadow 2))
         (footer/mini-footer)))))
