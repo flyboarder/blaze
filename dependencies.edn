@@ -4,6 +4,7 @@
  [adzerk/bootlaces          "0.1.13"]
  [hoplon/boot-hoplon        "0.2.2"]
  [hoplon/hoplon             "6.0.0-alpha16" :scope "provided"]
+ [hoplon/brew               "0.2.0-SNAPSHOT" :scope "provided"]
  [degree9/boot-semver       "1.2.4" :scope "test"]
  [tolitius/boot-check       "0.1.1" :scope "test"]
  [funcool/boot-codeina      "0.1.0-SNAPSHOT" :scope "test"]
