@@ -1,6 +1,7 @@
 (page "index.html"
   (:require [material-hl.core :as mdl]
-            [material-hl.layout :as layout])
+            [material-hl.layout :as layout]
+            [material-hl.navigation :as nav])
   (:require-macros [hoplon.firebase :refer [with-auth!]]))
 
 ;; Index Page
