@@ -25,6 +25,11 @@
          :description "A (No Backend) Blog"
          :url "https://github.com/degree9/blaze"
          :scm {:url "https://github.com/degree9/blaze"}}
+ cljs   {:source-map       true
+         :compiler-options {:pseudo-names true
+                            :pretty-print true
+                            :language-in :ecmascript5
+                            :parallel-build true}}
  apidoc {:version (get-version)
          :reader :clojurescript
          :title "Blaze"
