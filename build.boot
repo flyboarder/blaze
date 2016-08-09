@@ -1,3 +1,4 @@
+;; Dependency Helper Fn's ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn read-file   [file] (read-string (slurp file)))
 (defn get-deps    []     (read-file "./dependencies.edn"))
 ;(defn get-devdeps []     (read-file "./dev_dependencies.edn"))
