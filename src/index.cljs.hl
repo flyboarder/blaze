@@ -44,6 +44,5 @@
             (grid/cell-card :desktop-cols 4)
             (grid/cell-card :desktop-cols 8)
             (grid/cell-card)
-            (grid/cell-card)
             (grid/cell-card)))
         (footer/mini-footer)))))
