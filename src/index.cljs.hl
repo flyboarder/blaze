@@ -2,3 +2,39 @@
   (:require [material-hl.core :as mdl]
             [material-hl.layout :as layout])
   (:require-macros [hoplon.firebase :refer [with-auth!]]))
+
+;; Index Page
+(html
+  (head
+    ;; MDL Font Roboto
+    (mdl/include-fonts)
+
+    ;; MDL Icons
+    (mdl/include-icons)
+
+    ;; MDL Colors
+    (mdl/include-colors :blue :orange)
+
+    ;; MDL Stepper
+    (link :rel "stylesheet" :href "https://ahlechandre.github.io/mdl-stepper/stepper.min.css")
+
+    ;; Custom CSS
+    (link :rel "stylesheet" :href "css/mdl.css")
+
+    ;;Animate.css
+    (link :rel "stylesheet" :href "bower_components/animate-css/animate.min.css")
+
+    ;(title "ROCKET9 - Rapid equipment provisioning.")
+
+    (html-meta :charset "utf-8")
+    (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
+    (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
+  (body
+    (layout/layout
+      (layout/layout-header :scroll true
+        (layout/header-row
+          (layout/layout-spacer)
+          (nav/navigation
+            (nav/nav-link "Links"))))
+      (layout/layout-content
+        ))))
