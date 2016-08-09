@@ -31,6 +31,7 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
     (binding [material-hl.cards/*shadow* 2]
+      (prn material-hl.cards/*shadow*)
       (layout/layout :class [:demo-blog]
       (layout/layout-header :scroll true :transparent true
         (layout/header-row
