@@ -17,7 +17,7 @@
     (mdl/include-colors :blue :orange)
 
     ;; Custom CSS
-    (link :rel "stylesheet" :href "css/mdl.css")
+    (link :rel "stylesheet" :href "css/index.css")
 
     (title "Blaze - A (No Backend) Blog")
 
