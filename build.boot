@@ -79,4 +79,5 @@
   []
   (comp
     (hoplon)
+    (cljs :optimizations :none)
     (serve :port 8080)))
