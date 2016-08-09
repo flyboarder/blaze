@@ -6,7 +6,7 @@
 ;; Boot Env Settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (set-env!
  :dependencies   (get-deps)
- :resource-paths #{"src"})
+ :resource-paths #{"src" "resources"})
 
 ;; Require Boot Task Namespaces ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require
