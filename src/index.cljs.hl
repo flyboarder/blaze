@@ -4,7 +4,8 @@
             [material-hl.navigation :as nav]
             [material-hl.grid :as grid]
             [material-hl.footer :as footer]
-            [material-hl.cards :as card])
+            [material-hl.cards :as card]
+            [hoplon.firebase :as fb])
   (:require-macros [hoplon.firebase :refer [with-auth!]]))
 
 ;; Index Page
