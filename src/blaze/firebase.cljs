@@ -7,9 +7,9 @@
 ;; Firebase ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (def auth (fb/get-auth))
 
-(def app (fb/get-app))
+(def app  (fb/get-app))
 
-(def db (fb/get-db))
+(def db   (fb/get-db))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (def posts      (hfb/fb-cell (fbdb/get-in db [:posts])))
