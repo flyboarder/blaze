@@ -11,3 +11,13 @@
 (def db (fb/get-db))
 
 (def posts (hfb/fb-cell (fbdb/get-in db [:posts])))
+
+(def settings (hfb/fb-cell (fbdb/get-in db [:settings])))
+
+(def categories (hfb/fb-cell (fbdb/get-in db [:categories])))
+
+(def pages (hfb/fb-cell (fbdb/get-in db [:pages])))
+
+(def navigation (hfb/fb-cell (fbdb/get-in db [:navigation])))
+
+(def apps (hfb/fb-cell (fbdb/get-in db [:apps])))
