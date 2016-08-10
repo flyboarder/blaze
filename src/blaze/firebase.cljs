@@ -16,6 +16,8 @@
 
 (def categories (hfb/fb-cell (fbdb/get-in db [:categories])))
 
+(def tags (hfb/fb-cell (fbdb/get-in db [:tags])))
+
 (def pages (hfb/fb-cell (fbdb/get-in db [:pages])))
 
 (def navigation (hfb/fb-cell (fbdb/get-in db [:navigation])))
