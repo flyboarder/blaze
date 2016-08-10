@@ -2,6 +2,7 @@
  [org.clojure/clojurescript "1.7.228" :scope "provided"]
  [adzerk/boot-cljs          "1.7.228-1" :scope "provided"]
  [adzerk/bootlaces          "0.1.13"]
+ [adzerk/env                "0.3.0"]
  [hoplon/boot-hoplon        "0.2.2"]
  [hoplon/hoplon             "6.0.0-alpha16" :scope "provided"]
  [hoplon/brew               "0.2.0-SNAPSHOT" :scope "provided"]
