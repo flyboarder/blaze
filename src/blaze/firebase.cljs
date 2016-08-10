@@ -10,4 +10,4 @@
 
 (def db (fb/get-db))
 
-(def posts (hfb/fb-cell ()))
+(def posts (hfb/fb-cell (fbdb/get-in db [:posts])))
