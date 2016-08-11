@@ -1,4 +1,4 @@
-(ns blaze.routing)
+(ns blaze.bidi)
 
 (def routes
   ["" {#{"" "/"} :index
