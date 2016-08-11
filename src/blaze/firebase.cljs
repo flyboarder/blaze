@@ -11,6 +11,7 @@
 
 (def ^:dynamic *db*   (fbdb/get-in (fb/get-db) [:_blaze])
 
+(prn *auth* *app* *db*)
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn posts
   [& [db]]
