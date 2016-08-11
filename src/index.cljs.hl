@@ -5,9 +5,8 @@
             [material-hl.grid :as grid]
             [material-hl.footer :as footer]
             [material-hl.cards :as card]
-            [hoplon.bidi :as bidi]
             [blaze.firebase :as fb]
-            [blaze.routing :as route])
+            [blaze.bidi :as bidi])
   (:require-macros [hoplon.firebase :refer [with-auth!]]
                    [hoplon.bidi :refer [route-tpl]]))
 
