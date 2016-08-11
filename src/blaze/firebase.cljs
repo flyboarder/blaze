@@ -12,18 +12,34 @@
 (def ^:dynamic *db*   (fbdb/get-in (fb/get-db) [:_blaze])
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(def posts      (hfb/fb-cell (fbdb/get-in *db* [:posts])))
+(defn posts
+  [& [db]]
+  (hfb/fb-cell (fbdb/get-in (or db *db*) [:posts])))
 
-(def settings   (hfb/fb-cell (fbdb/get-in *db* [:settings])))
+(defn settings
+  [& [db]]
+  (hfb/fb-cell (fbdb/get-in *db* [:settings])))
 
-(def categories (hfb/fb-cell (fbdb/get-in *db* [:categories])))
+(defn categories
+  [& [db]]
+  (hfb/fb-cell (fbdb/get-in *db* [:categories])))
 
-(def tags       (hfb/fb-cell (fbdb/get-in *db* [:tags])))
+(defn tags
+  [& [db]]
+  (hfb/fb-cell (fbdb/get-in *db* [:tags])))
 
-(def pages      (hfb/fb-cell (fbdb/get-in *db* [:pages])))
+(defn pages
+  [& [db]]
+  (hfb/fb-cell (fbdb/get-in *db* [:pages])))
 
-(def navigation (hfb/fb-cell (fbdb/get-in *db* [:navigation])))
+(defn navigation
+  [& [db]]
+  (hfb/fb-cell (fbdb/get-in *db* [:navigation])))
 
-(def apps       (hfb/fb-cell (fbdb/get-in *db* [:apps])))
+(defn apps
+  [& [db]]
+  (hfb/fb-cell (fbdb/get-in *db* [:apps])))
 
-(def routing    (hfb/fb-cell (fbdb/get-in *db* [:routing])))
+(defn routing
+  [& [db]]
+  (hfb/fb-cell (fbdb/get-in *db* [:routing])))
