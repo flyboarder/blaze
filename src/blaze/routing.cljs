@@ -3,7 +3,7 @@
 (def routes
   ["" {#{"" "/"} :index
        "tags" {#{"" "/"} :tags}
-       "admin" #{"" "/"} :admin}
+       "admin" {#{"" "/"} :admin}
        "pages" {#{"" "/"} :pages}
        "posts" {#{"" "/"} :posts}
        "categories" {#{"" "/"} :categories}}])
