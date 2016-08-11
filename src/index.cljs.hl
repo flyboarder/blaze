@@ -49,6 +49,6 @@
               (grid/grid :class [:demo-blog__posts]
                 (bmdl/about-card)
                 (bmdl/feature-card)
-                (grid/cell-card)
-                (grid/cell-card))))
+                (bmdl/post-card)
+                (bmdl/post-card))))
         (footer/mini-footer)))))
