@@ -5,11 +5,11 @@
             [hoplon.firebase :as hfb]))
 
 ;; Firebase ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(def auth (fb/get-auth))
+(def ^:dynamic auth (fb/get-auth))
 
-(def app  (fb/get-app))
+(def ^:dynamic app  (fb/get-app))
 
-(def db   (fbdb/get-in (fb/get-db) [:_blaze])
+(def ^:dynamic db   (fbdb/get-in (fb/get-db) [:_blaze])
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (def posts      (hfb/fb-cell (fbdb/get-in db [:posts])))
