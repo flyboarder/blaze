@@ -18,28 +18,28 @@
 
 (defn settings
   [& [db]]
-  (hfb/fb-cell (fbdb/get-in *db* [:settings])))
+  (hfb/fb-cell (fbdb/get-in (or db *db*) [:settings])))
 
 (defn categories
   [& [db]]
-  (hfb/fb-cell (fbdb/get-in *db* [:categories])))
+  (hfb/fb-cell (fbdb/get-in (or db *db*) [:categories])))
 
 (defn tags
   [& [db]]
-  (hfb/fb-cell (fbdb/get-in *db* [:tags])))
+  (hfb/fb-cell (fbdb/get-in (or db *db*) [:tags])))
 
 (defn pages
   [& [db]]
-  (hfb/fb-cell (fbdb/get-in *db* [:pages])))
+  (hfb/fb-cell (fbdb/get-in (or db *db*) [:pages])))
 
 (defn navigation
   [& [db]]
-  (hfb/fb-cell (fbdb/get-in *db* [:navigation])))
+  (hfb/fb-cell (fbdb/get-in (or db *db*) [:navigation])))
 
 (defn apps
   [& [db]]
-  (hfb/fb-cell (fbdb/get-in *db* [:apps])))
+  (hfb/fb-cell (fbdb/get-in (or db *db*) [:apps])))
 
 (defn routing
   [& [db]]
-  (hfb/fb-cell (fbdb/get-in *db* [:routing])))
+  (hfb/fb-cell (fbdb/get-in (or db *db*) [:routing])))
