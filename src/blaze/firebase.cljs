@@ -25,3 +25,5 @@
 (def navigation (hfb/fb-cell (fbdb/get-in *db* [:navigation])))
 
 (def apps       (hfb/fb-cell (fbdb/get-in *db* [:apps])))
+
+(def routing    (hfb/fb-cell (fbdb/get-in *db* [:routing])))
