@@ -9,7 +9,7 @@
 
 (def app  (fb/get-app))
 
-(def db   (fb/get-db))
+(def db   (fbdb/get-in (fb/get-db) [:_blaze])
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (def posts      (hfb/fb-cell (fbdb/get-in db [:posts])))
