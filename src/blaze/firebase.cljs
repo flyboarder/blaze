@@ -9,7 +9,7 @@
 
 (def ^:dynamic *app*  (fb/get-app))
 
-(def ^:dynamic *db*   (fbdb/get-in (fb/get-db) [:_blaze])
+(def ^:dynamic *db*   (fbdb/get-in (fb/get-db) [:_blaze]))
 
 (prn *auth* *app* *db*)
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
