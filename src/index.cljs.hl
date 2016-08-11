@@ -42,7 +42,7 @@
             (nav/nav-link "Links"))))
       (layout/layout-drawer)
       (layout/layout-content
-        (bidi/route-tpl route/routes
+        (route-tpl route/routes
           :index
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
