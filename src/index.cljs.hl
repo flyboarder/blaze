@@ -5,6 +5,7 @@
             [material-hl.grid :as grid]
             [material-hl.footer :as footer]
             [material-hl.cards :as card]
+            [hoplon.bidi :as bidi]
             [blaze.firebase :as fb]
             [blaze.routing :as route])
   (:require-macros [hoplon.firebase :refer [with-auth!]]))
@@ -40,11 +41,11 @@
             (nav/nav-link "Links"))))
       (layout/layout-drawer)
       (layout/layout-content
-        (binding [grid/*cols*   12
+        ((binding [grid/*cols*   12
                   grid/*shadow* 2]
           (grid/grid :class [:demo-blog__posts]
             (grid/cell-card :desktop-cols 4)
             (grid/cell-card :desktop-cols 8)
             (grid/cell-card)
-            (grid/cell-card)))
+            (grid/cell-card))))
         (footer/mini-footer)))))
