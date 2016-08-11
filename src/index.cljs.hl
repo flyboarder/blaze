@@ -8,7 +8,8 @@
             [hoplon.bidi :as bidi]
             [blaze.firebase :as fb]
             [blaze.routing :as route])
-  (:require-macros [hoplon.firebase :refer [with-auth!]]))
+  (:require-macros [hoplon.firebase :refer [with-auth!]]
+                   [hoplon.bidi :refer [route-tpl]]))
 
 ;; Index Page
 (html
@@ -41,7 +42,7 @@
             (nav/nav-link "Links"))))
       (layout/layout-drawer)
       (layout/layout-content
-        ((binding [grid/*cols*   12
+        (bidi/route-tpl(binding [grid/*cols*   12
                   grid/*shadow* 2]
           (grid/grid :class [:demo-blog__posts]
             (grid/cell-card :desktop-cols 4)
