@@ -3,7 +3,7 @@
 
 (def ^:dynamic *prefix* "_blaze")
 
-(defn *routes* []
+(defn routes []
   [*prefix*
     {#{"" "/"} :index
        "tags" {#{"" "/"} :tags}
