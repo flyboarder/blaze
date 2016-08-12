@@ -21,6 +21,6 @@
       attr
       (for-tpl [l links]
         (nav/nav-link
-          :click #(bidi/route! (first @l))
+          :click #(bidi/route! (first @l) :prefix bidi/*prefix*)
           (text "~{(second l)}")))
       kids)))
