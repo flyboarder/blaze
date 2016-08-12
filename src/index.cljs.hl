@@ -39,7 +39,8 @@
         (layout/header-row
           (layout/layout-spacer)
           (bmdl/navigation)))
-      (layout/layout-drawer)
+      (layout/layout-drawer
+        (bmdl/navigation))
       (layout/layout-content
         (route-tpl (bidi/routes "")
           :index
