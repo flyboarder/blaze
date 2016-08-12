@@ -34,7 +34,7 @@
     (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
-    (layout/layout :class [:demo-blog] :drawer-button true
+    (layout/layout :class [:demo-blog] :drawer-button true :desktop-drawer-button true
       (layout/layout-header :scroll true :transparent true
         (layout/header-row
           (layout/layout-spacer)
