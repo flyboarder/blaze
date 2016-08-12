@@ -15,7 +15,7 @@
        true :not-blaze}])
 
 (defn route [& [prefix]]
-  (bidi/route (routes prefix))
+  (bidi/route (routes prefix)))
 
 (defn route? [handler & [prefix]]
   (bidi/route? (routes prefix) handler))
