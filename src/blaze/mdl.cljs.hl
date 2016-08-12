@@ -1,0 +1,23 @@
+(ns blaze.mdl
+  (:require [material-hl.core :as mdl]
+            [material-hl.grid :as grid]
+            [material-hl.navigation :as nav]))
+
+(defelem about-card [attr kids]
+  (grid/cell-card :desktop-cols 4))
+
+(defelem feature-card [attr kids]
+  (grid/cell-card :desktop-cols 8))
+
+(defelem post-card [attr kids]
+  (grid/cell-card))
+
+(def ^:dynamic *links* nil)
+
+(defelem navigation [attr kids]
+  (let [links (or (:links attr) *links*)]
+    (nav/navigation
+      attr
+      (for-tpl [l links]
+        (nav/nav-link l))
+      kids)))
