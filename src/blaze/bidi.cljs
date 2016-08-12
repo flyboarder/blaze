@@ -19,3 +19,8 @@
 
 (defn route? [handler & [prefix]]
   (bidi/route? (routes prefix) handler))
+
+(defn mkroute [handler & {:keys [id prefix]}]
+  (if-not id
+    (bidi/mkroute (routes prefix) handler)
+    (bidi/mkroute (routes prefix) handler :id id))
