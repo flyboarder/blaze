@@ -13,7 +13,7 @@
        "categories" {#{"" "/"} :categories}
        true :not-blaze}])
 
-(defc= route (bidi/route routes))
+(def route (bidi/route routes))
 
 (defn route? [handler]
   (bidi/route? routes handler))
