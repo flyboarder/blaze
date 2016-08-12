@@ -1,7 +1,8 @@
 (ns blaze.mdl
   (:require [material-hl.core :as mdl]
             [material-hl.grid :as grid]
-            [material-hl.navigation :as nav]))
+            [material-hl.navigation :as nav]
+            [blaze.bidi :as bidi]))
 
 (defelem about-card [attr kids]
   (grid/cell-card :desktop-cols 4))
@@ -21,5 +22,5 @@
       (for-tpl [l links]
         (let []
           (prn "l: " l)
-          (nav/nav-link )))
+          (nav/nav-link :click #(bidi/route! (first l)) (second l))))
       kids)))
