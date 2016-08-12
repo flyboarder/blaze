@@ -20,7 +20,9 @@
     (nav/navigation
       attr
       (for-tpl [l links]
-        (let []
-          (prn "l: " l)
-          (nav/nav-link :click #(bidi/route! (first @l)) (text "~{(second l)}"))))
+        (nav/nav-link
+          :click #(if-not (:id @l)
+                    (bidi/route! (first @l))
+                    (bidi/route! (first @l) :id id))
+          (text "~{(second l)}")))
       kids)))
