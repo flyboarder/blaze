@@ -15,15 +15,15 @@
 
 (defc= route (bidi/route routes))
 
-(defn route? [handler & [prefix]]
-  (bidi/route? (routes prefix) handler))
+(defn route? [handler]
+  (bidi/route? routes handler))
 
-(defn mkroute [handler & {:keys [id prefix]}]
+(defn mkroute [handler & {:keys [id]}]
   (if-not id
-    (bidi/mkroute (routes prefix) handler)
-    (bidi/mkroute (routes prefix) handler :id id)))
+    (bidi/mkroute routes handler)
+    (bidi/mkroute routes handler :id id)))
 
-(defn route! [handler & {:keys [id prefix]}]
+(defn route! [handler & {:keys [id]}]
   (if-not id
-    (bidi/route! (routes prefix) handler)
-    (bidi/route! (routes prefix) handler :id id)))
+    (bidi/route! routes handler)
+    (bidi/route! routes handler :id id)))
