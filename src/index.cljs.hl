@@ -5,6 +5,7 @@
             [material-hl.grid :as grid]
             [material-hl.footer :as footer]
             [material-hl.cards :as card]
+            [blaze.core :as blz]
             [blaze.firebase :as fb]
             [blaze.bidi :as bidi]
             [blaze.mdl :as bmdl])
@@ -34,7 +35,8 @@
     (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
-    (layout/layout
+    (binding [blaze.core/*navigation* ()]
+      (layout/layout
       :class [:demo-blog]
       :drawer-button true
       :desktop-drawer-button true
@@ -54,4 +56,4 @@
                 (bmdl/feature-card)
                 (bmdl/post-card)
                 (bmdl/post-card))))
-        (footer/mini-footer)))))
+        (footer/mini-footer))))))
