@@ -38,8 +38,7 @@
       (layout/layout-header :scroll true :transparent true
         (layout/header-row
           (layout/layout-spacer)
-          (nav/navigation
-            (nav/nav-link "Links"))))
+          (bmdl/navigation)))
       (layout/layout-drawer)
       (layout/layout-content
         (route-tpl (bidi/routes "")
