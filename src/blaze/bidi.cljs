@@ -3,9 +3,8 @@
 
 (def ^:dynamic *prefix* "_blaze")
 
-(defn routes
-  [& [prefix]]
-  [(or prefix *prefix*)
+(def ^:dynamic routes
+  [*prefix*
     {#{"" "/"} :index
        "tags" {#{"" "/"} :tags}
        "admin" {#{"" "/"} :admin}
@@ -14,8 +13,7 @@
        "categories" {#{"" "/"} :categories}
        true :not-blaze}])
 
-(defn route [& [prefix]]
-  (bidi/route (routes prefix)))
+(defc= route (bidi/route routes))
 
 (defn route? [handler & [prefix]]
   (bidi/route? (routes prefix) handler))
