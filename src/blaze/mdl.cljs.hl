@@ -22,5 +22,5 @@
       (for-tpl [l links]
         (let []
           (prn "l: " l)
-          (nav/nav-link :click #(bidi/route! (first l)) (second l))))
+          (nav/nav-link :click #(bidi/route! (first @l)) (text "~{(second l)}"))))
       kids)))
