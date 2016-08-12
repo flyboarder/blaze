@@ -35,7 +35,8 @@
     (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
-    (binding [blaze.mdl/*links* (fb/navigation)]
+    (binding [blaze.bidi/*prefix* ""
+              blaze.mdl/*links* (fb/navigation)]
       (layout/layout
       :class [:demo-blog]
       :drawer-button true
@@ -47,7 +48,7 @@
       (layout/layout-drawer
         (bmdl/navigation))
       (layout/layout-content
-        (route-tpl (bidi/routes "")
+        (route-tpl (bidi/routes)
           :index
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
