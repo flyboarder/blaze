@@ -48,7 +48,7 @@
       (layout/layout-drawer
         (bmdl/navigation))
       (layout/layout-content
-        (route-tpl bidi/*routes*
+        (route-tpl (bidi/routes)
           :index
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
