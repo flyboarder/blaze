@@ -34,7 +34,10 @@
 (defelem list-card-item [attr kids]
   (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
     (div :class [:meta]
-      (div :class [:minilogo]))
+      (div :class [:minilogo])
+      (div
+        (strong (:meta attr))
+        (span (:meta-description attr))))
     (a :click #(bidi/route! (first @i) :prefix prefix)
       (h5 :class [:mdl-color-text--grey-600]
         kids))))
@@ -48,7 +51,7 @@
         :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
-        (let []
-          (if (map? (second @i))
-            (list-card-item )
-            (list-card-item (text "~{(second i)}"))))))))
+        (if (map? (second @i))
+          (let [meta (:)]
+            (list-card-item :meta meta :meta-description desc))
+          (list-card-item (text "~{(second i)}")))))))
