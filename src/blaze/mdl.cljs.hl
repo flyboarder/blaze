@@ -59,7 +59,7 @@
               meta (cell= (:header (:meta item) ""))
               desc (cell= (:desc (:meta item) ""))
               title (cell= (:title item))
-              avatar (or (:icon item) "../images/avatar.png")]
+              avatar (cell= (:icon item "../images/avatar.png"))]
             (list-card-item
               :click #(router :id (first @i) :prefix prefix)
               :meta-header meta
