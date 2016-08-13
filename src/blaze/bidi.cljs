@@ -6,13 +6,14 @@
 (defn routes [& [prefix]]
   [(or prefix *prefix*)
     {#{"" "/"} :index
-       "/admin" {#{"" "/"} :admin}
-       "/tag" {"s" :tags
-               ["/" :id] :tag}
-       "/post" {"s" :posts
-                ["/" :id] :post}
-       "/categor" {"ies" :categories
-                   ["y/" :id] :category}
+       "/admin" {#{"" "/"} :admin
+                 ["/" :id] :admin-id}
+       "/tag" {#{"" "/"} :tag
+               ["/" :id] :tag-id}
+       "/post" {#{"" "/"} :post
+                ["/" :id] :post-id}
+       "/category" {#{"" "/"} :category
+                   ["/" :id] :category-id}
        ["/" :id] :page}])
 
 (defn route [& [prefix]]
