@@ -18,14 +18,13 @@
 (def ^:dynamic *links* nil)
 
 (defelem navigation [attr kids]
-  (let [links (or (:links attr) *links*)
-        prefix (or (:prefix attr) bidi/*prefix*)
+  (let [links (or (:links attr) *links*))
         router (or (:router attr) blz/*router*)]
     (nav/navigation
       attr
       (for-tpl [l links]
         (nav/nav-link
-          :click #(router (first @l) :prefix prefix)
+          :click #(router (first @l))
           (text "~{(second l)}")))
       kids)))
 
