@@ -11,7 +11,7 @@
   (let [title (:title attr (:title *about-settings*))
         image (str "url(\'" (:image attr) "\')")]
     (grid/cell-card :desktop-cols 4
-    (card/card-media :style {:background-image image})
+    (card/card-media :css {:background-image image})
     (card/card-supporting-text :class [:meta :meta--fill]
       (div (text "~{title}"))))))
 
