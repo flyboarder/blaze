@@ -62,28 +62,28 @@
                 (bmdl/feature-card)
                 (bmdl/post-card)
                 (bmdl/post-card)))
-          :category
+          :categories
             (binding [grid/*cols*   12
                       grid/*shadow* 2
                       bmdl/*title* "Categories:"
                       bmdl/*items* (fb/categories)]
               (grid/grid
                 :class [:demo-blog__list]
-                (bmdl/list-card)))
-          :category-id
+                (bmdl/list-card :type :category)))
+          :category
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
               (grid/grid
                 :class [:demo-blog__posts]))
-          :post
+          :posts
             (binding [grid/*cols*   12
                       grid/*shadow* 2
                       bmdl/*title* "All Posts:"
                       bmdl/*items* (fb/posts)]
               (grid/grid
                 :class [:demo-blog__list]
-                (bmdl/list-card)))
-          :post-id
+                (bmdl/list-card :type :post)))
+          :post
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
               (grid/grid
