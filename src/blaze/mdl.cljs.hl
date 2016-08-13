@@ -3,8 +3,7 @@
             [material-hl.cards :as card]
             [material-hl.grid :as grid]
             [material-hl.navigation :as nav]
-            [blaze.core :as blz]
-            [blaze.bidi :as bidi]))
+            [blaze.core :as blz]))
 
 (defelem about-card [attr kids]
   (grid/cell-card :desktop-cols 4))
