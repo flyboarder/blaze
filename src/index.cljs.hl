@@ -67,7 +67,7 @@
                       grid/*shadow* 2
                       bmdl/*title* "Categories:"
                       bmdl/*items* (fb/categories)
-                      blaze.core/*router* (partial bidi/route! :category-id :prefix bidi/*prefix* :id)]
+                      blaze.core/*router* #(bidi/route! :category-id :prefix bidi/*prefix* :id %)]
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card)))
@@ -81,7 +81,7 @@
                       grid/*shadow* 2
                       bmdl/*title* "All Posts:"
                       bmdl/*items* (fb/posts)
-                      blz/*router* (partial bidi/route! :post-id :prefix bidi/*prefix* :id)]
+                      blz/*router* #(bidi/route! :post-id :prefix bidi/*prefix* :id %)]
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card)))
