@@ -25,3 +25,11 @@
           :click #(bidi/route! (first @l) :prefix prefix)
           (text "~{(second l)}")))
       kids)))
+
+(def ^:dynamic *items* nil)
+
+(defelem list-card [attr kids]
+  (let [items (or (:items attr) *items*)]
+    (grid/cell-card
+      (for-tpl [i items]
+        (div :class [:mdl-card__list-item])))))
