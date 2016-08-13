@@ -7,10 +7,10 @@
   [(or prefix *prefix*)
     {#{"" "/"} :index
        "/admin" {#{"" "/"} :admin}
-       "/tag" {#{"" "/"} :tags
-               ["/" :id] :tag}
-       "/post" {#{"" "/"} :posts
-                ["/" :id] :post}
+       "/tag" {#{"" "/"} :tag
+               ["/" :id] :tag-id}
+       "/post" {#{"" "/"} :post
+                ["/" :id] :post-id}
        "/category" {#{"" "/"} :category
                     ["/" :id] :category-id}
        ["/" :id] :page}])
