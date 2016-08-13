@@ -12,7 +12,7 @@
         image (:image attr)
         style (cell= (str "background-image: url('" image "')"))]
     (grid/cell-card :desktop-cols 4
-    (card/card-media :css (cell= {:background-image image}));style)
+    (card/card-media :css (cell= {:background-image image}))
     (card/card-supporting-text :class [:meta :meta--fill]
       (div (text "~{title}"))))))
 
