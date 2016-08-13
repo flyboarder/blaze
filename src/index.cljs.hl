@@ -68,6 +68,7 @@
                 :class [:demo-blog__list]
                 (grid/cell-card
                   (card/card-media
+                    :class [:mdl-color-text--grey-50]
                     (h3 "Categories"))
                   (div :class [:mdl-card__list-item])))))
         (footer/mini-footer))))))
