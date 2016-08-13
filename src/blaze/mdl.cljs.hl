@@ -5,10 +5,13 @@
             [material-hl.navigation :as nav]
             [blaze.core :as blz]))
 
+(def ^:dynamic *about-settings* nil)
+
 (defelem about-card [attr kids]
-  (grid/cell-card :desktop-cols 4
+  (let [title (:title attr (:title *about-settings*))]
+    (grid/cell-card :desktop-cols 4
     (card/card-media)
-    (card/card-supporting-text :class [:meta])))
+    (card/card-supporting-text :class [:meta]))))
 
 (defelem feature-card [attr kids]
   (grid/cell-card :desktop-cols 8
@@ -16,7 +19,7 @@
     (card/card-supporting-text :class [:meta])))
 
 (defelem post-card [attr kids]
-  (let [title (:title attr (:title (:about (:cards blz/*settings*))))]
+  (let []
     (grid/cell-card
       (card/card-media)
       (card/card-supporting-text :class [:meta :meta--fill]
