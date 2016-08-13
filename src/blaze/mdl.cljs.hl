@@ -49,6 +49,7 @@
   (let [items (or (:items attr) *items*)
         prefix (or (:prefix attr) bidi/*prefix*)
         title (or (:title attr) *title*)
+        route (or (:route attr) blz/*route*)
         router (or (:router attr) blz/*router*)]
     (grid/cell-card
       (card/card-media
