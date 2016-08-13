@@ -23,8 +23,7 @@
   (let []
     (grid/cell-card
       (card/card-media)
-      (card/card-supporting-text :class [:meta]
-        (div (strong title))))))
+      (card/card-supporting-text :class [:meta]))))
 
 (def ^:dynamic *links* nil)
 
