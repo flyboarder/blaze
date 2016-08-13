@@ -1,3 +1,5 @@
 (ns blaze.core)
 
 (def ^:dynamic *settings* nil)
+
+(def ^:dynamic *router* nil)
