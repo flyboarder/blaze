@@ -18,7 +18,7 @@
 (def ^:dynamic *links* nil)
 
 (defelem navigation [attr kids]
-  (let [links (or (:links attr) *links*))
+  (let [links (or (:links attr) *links*)
         router (or (:router attr) blz/*router*)]
     (nav/navigation
       attr
