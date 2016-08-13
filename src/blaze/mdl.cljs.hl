@@ -53,9 +53,9 @@
         (h3 (text "~{title}")))
       (for-tpl [i items]
         (if (map? (second @i))
-          (let [i (second @i)
-                meta (:meta i)
-                desc (:description i)
-                title (:title i)]
+          (let [item @i
+                meta (:meta item)
+                desc (:description item)
+                title (:title item)]
             (list-card-item :meta meta :meta-description desc title))
           (list-card-item (text "~{(second i)}")))))))
