@@ -24,7 +24,7 @@
       attr
       (for-tpl [l links]
         (nav/nav-link
-          :click #(bidi/route! (first @l) :prefix prefix)
+          :click #(blz/*router* (first @l) :prefix prefix)
           (text "~{(second l)}")))
       kids)))
 
@@ -59,10 +59,10 @@
                 desc (:created item)
                 title (:title item)]
             (list-card-item
-              :click #(bidi/route! (first @i) :prefix prefix)
+              :click #(blz/*router* (first @i) :prefix prefix)
               :meta meta
               :meta-description desc
               title))
           (list-card-item
-            :click #(bidi/route! (first @i) :prefix prefix)
+            :click #(blz/*router* (first @i) :prefix prefix)
             (text "~{(second i)}")))))))
