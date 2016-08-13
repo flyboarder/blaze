@@ -39,7 +39,7 @@
         (div
           (strong (:meta attr))
           (span (:meta-description attr))))
-      (a (:click attr)
+      (a :click (:click attr)
         (h5 :class [:mdl-color-text--grey-600]
           kids)))))
 
