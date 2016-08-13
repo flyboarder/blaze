@@ -19,12 +19,13 @@
 
 (defelem navigation [attr kids]
   (let [links (or (:links attr) *links*)
-        prefix (or (:prefix attr) bidi/*prefix*)]
+        prefix (or (:prefix attr) bidi/*prefix*)
+        router (or (:router attr) blz/*router*)]
     (nav/navigation
       attr
       (for-tpl [l links]
         (nav/nav-link
-          :click #(blz/*router* (first @l) :prefix prefix)
+          :click #(router (first @l) :prefix prefix)
           (text "~{(second l)}")))
       kids)))
 
