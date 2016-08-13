@@ -52,8 +52,8 @@
         :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
-        (if (map? @i)
-          (let [item @i
+        (if (map? (second @i))
+          (let [item (second @i)
                 meta (:author item)
                 desc (:created item)
                 title (:title item)]
