@@ -7,7 +7,8 @@
 
 (defelem about-card [attr kids]
   (grid/cell-card :desktop-cols 4
-    (card/card-media)))
+    (card/card-media)
+    (card/card-supporting-text :class [:meta])))
 
 (defelem feature-card [attr kids]
   (grid/cell-card :desktop-cols 8))
