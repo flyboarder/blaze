@@ -19,6 +19,10 @@
   (let [prefix (or prefix *prefix*)]
     (bidi/route (routes prefix))))
 
+(defn route-params [& [prefix]]
+  (let [prefix (or prefix *prefix*)]
+    (bidi/route-params (routes prefix))))
+
 (defn route? [handler & [prefix]]
   (let [prefix (or prefix *prefix*)]
     (bidi/route? (routes prefix) handler)))
