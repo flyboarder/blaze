@@ -55,8 +55,7 @@
         :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
-        (if (map? (second @i))
-          (let [item (second @i)
+        (let [item (second @i)
                 meta (:author item)
                 desc (:created item)
                 title (:title item)]
@@ -65,6 +64,4 @@
               :meta meta
               :meta-description desc
               title))
-          (list-card-item
-            :click #(router :id (first @i) :prefix prefix)
-            (text "~{(second i)}")))))))
+          ))))
