@@ -26,12 +26,17 @@
           (text "~{(second l)}")))
       kids)))
 
+(def ^:dynamic *title* nil)
+
 (def ^:dynamic *items* nil)
 
 (defelem list-card [attr kids]
   (let [items (or (:items attr) *items*)
-        prefix (or (:prefix attr) bidi/*prefix*)]
+        prefix (or (:prefix attr) bidi/*prefix*)
+        title (or (:title attr) *title*)]
     (grid/cell-card
+      (card/card-media
+        (h3 (text "~{title}")))
       (for-tpl [i items]
         (div
           :class [:mdl-card__list-item]
