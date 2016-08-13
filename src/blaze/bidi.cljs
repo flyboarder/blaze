@@ -10,6 +10,7 @@
        "admin" {#{"" "/"} :admin}
        "pages" {#{"" "/"} :pages}
        "posts" {#{"" "/"} :posts}
+       "post" {["/" :id] :post}
        "categories" {#{"" "/"} :categories}
        true :not-blaze}])
 
