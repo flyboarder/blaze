@@ -52,7 +52,7 @@
           (layout/layout-spacer)
           (bmdl/navigation :router #(router % :prefix prefix))))
       (layout/layout-drawer
-        (bmdl/navigation))
+        (bmdl/navigation :router #(router % :prefix prefix)))
       (layout/layout-content
         (route-tpl (bidi/routes)
           :index
