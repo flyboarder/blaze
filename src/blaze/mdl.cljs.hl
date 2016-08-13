@@ -55,11 +55,11 @@
         :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
-        (let [item (cell= (second i))
-              meta (cell= (:header (:meta item) ""))
-              desc (cell= (:desc (:meta item) ""))
-              title (cell= (:title item))
-              avatar (cell= (:icon item "../images/avatar.png"))]
+        (cell-let [item (cell= (second i))
+              meta (:header (:meta item) "")
+              desc (:desc (:meta item) "")
+              title (:title item)
+              avatar (:icon item "../images/avatar.png")]
             (list-card-item
               :click #(router :id (first @i) :prefix prefix)
               :meta-header meta
