@@ -65,18 +65,18 @@
                 (bmdl/post-card)))
           :category
             (binding [grid/*cols*   12
-                      grid/*shadow* 2]
-              (grid/grid
-                :class [:demo-blog__posts]))
-          :categories
-            (binding [grid/*cols*   12
                       grid/*shadow* 2
                       bmdl/*title* "Categories:"
                       bmdl/*items* (fb/categories)]
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card)))
-          :posts
+          :category-id
+            (binding [grid/*cols*   12
+                      grid/*shadow* 2]
+              (grid/grid
+                :class [:demo-blog__posts]))
+          :post
             (binding [grid/*cols*   12
                       grid/*shadow* 2
                       bmdl/*title* "All Posts:"
@@ -84,7 +84,7 @@
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card)))
-          :post
+          :post-id
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
               (grid/grid
