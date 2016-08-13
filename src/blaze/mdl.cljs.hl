@@ -7,7 +7,7 @@
 
 (defelem about-card [attr kids]
   (grid/cell-card :desktop-cols 4
-    (card/card-media :css "background-image: '/images/bg.png';")))
+    (card/card-media)))
 
 (defelem feature-card [attr kids]
   (grid/cell-card :desktop-cols 8))
