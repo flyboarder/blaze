@@ -6,8 +6,6 @@
 (defn routes [& [prefix]]
   [(or prefix *prefix*)
     {#{"" "/"} :index
-      ["/" :slug] {#{"" "/"} :page
-                   ["/" :id] {#{"" "/"} :page-id}}
        "/admin" {#{"" "/"} :admin}
        "/tag" {#{"s" "s/"} :tags
                ["/" :id] :tag}
