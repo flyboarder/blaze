@@ -59,7 +59,7 @@
               meta (:author item)
               desc (:created item)
               title (:title item)
-              avatar (:icon item)]
+              avatar (or (:icon item) :minilogo)]
             (list-card-item
               :click #(router :id (first @i) :prefix prefix)
               :meta-header meta
