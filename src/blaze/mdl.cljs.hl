@@ -68,5 +68,5 @@
               :meta-description desc
               title))
           (list-card-item
-            :click #(router route :id (first @i) :prefix prefix)
+            :click #(prn route);#(router route :id (first @i) :prefix prefix)
             (text "~{(second i)}")))))))
