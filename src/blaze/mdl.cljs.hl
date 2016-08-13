@@ -37,7 +37,7 @@
   (let [prefix (or (:prefix attr) bidi/*prefix*)]
     (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
       (div :class [:meta]
-        (div :class [(:avatar attr)])
+        (div :class [:minilogo] :style {:background-image "../images/avatar.png"})
         (div
           (strong (:meta attr))
           (span (:meta-description attr))))
@@ -59,7 +59,7 @@
               meta (:author item)
               desc (:created item)
               title (:title item)
-              avatar (or (:icon item) :minilogo)]
+              avatar (or (:icon item) "../images/avatar.png")]
             (list-card-item
               :click #(router :id (first @i) :prefix prefix)
               :meta-header meta
