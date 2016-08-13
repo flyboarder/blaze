@@ -39,8 +39,8 @@
       (div :class [:meta]
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
         (div
-          (strong (:meta attr))
-          (span (:meta-description attr))))
+          (strong (text "~{(:meta attr)}"))
+          (span (text "~{(:meta-description attr)}"))))
       (a :click (:click attr)
         (h5 :class [:mdl-color-text--grey-600]
           kids)))))
