@@ -47,7 +47,8 @@
 (defelem list-card [attr kids]
   (let [items (or (:items attr) *items*)
         prefix (or (:prefix attr) bidi/*prefix*)
-        title (or (:title attr) *title*)]
+        title (or (:title attr) *title*)
+        router (or (:router attr) blz/*router*)]
     (grid/cell-card
       (card/card-media
         :class [:mdl-color-text--grey-50]
@@ -59,10 +60,10 @@
                 desc (:created item)
                 title (:title item)]
             (list-card-item
-              :click #(blz/*router* (first @i) :prefix prefix)
+              :click #(router (first @i) :prefix prefix)
               :meta meta
               :meta-description desc
               title))
           (list-card-item
-            :click #(blz/*router* (first @i) :prefix prefix)
+            :click #(router (first @i) :prefix prefix)
             (text "~{(second i)}")))))))
