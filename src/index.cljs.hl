@@ -38,7 +38,6 @@
     (binding [blaze.bidi/*prefix* ""
               blaze.mdl/*links* (fb/navigation)
               blaze.core/*settings* (fb/settings)
-              blaze.core/*route* bidi/route
               blaze.core/*router* bidi/route!]
       (layout/layout
       :class [:demo-blog]
