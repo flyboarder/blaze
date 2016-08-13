@@ -31,6 +31,14 @@
 
 (def ^:dynamic *items* nil)
 
+(defelem list-card-item [attr kids]
+  (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
+    (div :class [:meta]
+      (div :class [:minilogo]))
+    (a :click #(bidi/route! (first @i) :prefix prefix)
+      (h5 :class [:mdl-color-text--grey-600]
+        kids))))
+
 (defelem list-card [attr kids]
   (let [items (or (:items attr) *items*)
         prefix (or (:prefix attr) bidi/*prefix*)
@@ -41,9 +49,6 @@
         (h3 (text "~{title}")))
       (for-tpl [i items]
         (let []
-          (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
-            (div :class [:meta]
-              (div :class [:minilogo]))
-            (a :click #(bidi/route! (first @i) :prefix prefix)
-              (h5 :class [:mdl-color-text--grey-600]
-                (text "~{(second i)}")))))))))
+          (if (map? (second @i))
+            (list-card-item )
+            (list-card-item (text "~{(second i)}"))))))))
