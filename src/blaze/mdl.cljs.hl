@@ -11,10 +11,14 @@
     (card/card-supporting-text :class [:meta])))
 
 (defelem feature-card [attr kids]
-  (grid/cell-card :desktop-cols 8))
+  (grid/cell-card :desktop-cols 8
+    (card/card-media)
+    (card/card-supporting-text :class [:meta])))
 
 (defelem post-card [attr kids]
-  (grid/cell-card))
+  (grid/cell-card
+    (card/card-media)
+    (card/card-supporting-text :class [:meta])))
 
 (def ^:dynamic *links* nil)
 
