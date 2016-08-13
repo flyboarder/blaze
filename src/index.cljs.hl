@@ -36,7 +36,8 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
     (binding [blaze.bidi/*prefix* ""
-              blaze.mdl/*links* (fb/navigation)]
+              blaze.mdl/*links* (fb/navigation)
+              blaze.core/*settings* (fb/settings)]
       (layout/layout
       :class [:demo-blog]
       :drawer-button true
