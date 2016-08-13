@@ -93,5 +93,6 @@
                 (grid/cell-card
                   (card/card-media)
                   (card/card-supporting-text :class [:meta])
-                  (card/card-supporting-text)))))
+                  (card/card-supporting-text)
+                  (card/card-supporting-text :class [:comments])))))
         (footer/mini-footer)))))))
