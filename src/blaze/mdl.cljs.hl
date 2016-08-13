@@ -54,8 +54,8 @@
       (for-tpl [i items]
         (if (map? @i)
           (let [item @i
-                meta (:meta item)
-                desc (:description item)
+                meta (:author item)
+                desc (:created item)
                 title (:title item)]
             (list-card-item :meta meta :meta-description desc title))
           (list-card-item (text "~{(second i)}")))))))
