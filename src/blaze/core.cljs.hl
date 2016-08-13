@@ -1,1 +1,3 @@
 (ns blaze.core)
+
+(def ^:dynamic *settings* nil)
