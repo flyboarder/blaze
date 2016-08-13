@@ -50,8 +50,7 @@
   (let [items (:items attr *items*)
         title (:title attr *title*)
         type (:type attr :page)
-        router (:router attr blz/*router*)
-        router #(router type :id %)]
+        router (:router attr blz/*router*)]
     (grid/cell-card
       (card/card-media :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
