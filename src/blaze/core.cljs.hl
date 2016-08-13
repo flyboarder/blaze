@@ -2,4 +2,6 @@
 
 (def ^:dynamic *settings* nil)
 
+(def ^:dynamic *route* nil)
+
 (def ^:dynamic *router* nil)
