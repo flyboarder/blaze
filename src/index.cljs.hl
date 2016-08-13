@@ -38,7 +38,9 @@
     (binding [blaze.bidi/*prefix* ""
               blaze.mdl/*links* (fb/navigation)
               blaze.core/*settings* (fb/settings)
-              blaze.core/*router* bidi/route!]
+              blaze.core/*router* bidi/route!
+              grid/*cols*   12
+              grid/*shadow* 2]
       (let [router blz/*router*
             prefix bidi/*prefix*]
         (layout/layout
@@ -56,8 +58,7 @@
       (layout/layout-content
         (route-tpl (bidi/routes)
           :index
-            (binding [grid/*cols*   12
-                      grid/*shadow* 2]
+            (binding []
               (grid/grid
                 :class [:demo-blog__posts]
                 (bmdl/about-card)
@@ -65,29 +66,23 @@
                 (bmdl/post-card)
                 (bmdl/post-card)))
           :categories
-            (binding [grid/*cols*   12
-                      grid/*shadow* 2
-                      bmdl/*title* "Categories:"
+            (binding [bmdl/*title* "Categories:"
                       bmdl/*items* (fb/categories)]
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card :router #(router :category :id % :prefix prefix))))
           :category
-            (binding [grid/*cols*   12
-                      grid/*shadow* 2]
+            (binding []
               (grid/grid
                 :class [:demo-blog__posts]))
           :posts
-            (binding [grid/*cols*   12
-                      grid/*shadow* 2
-                      bmdl/*title* "All Posts:"
+            (binding [bmdl/*title* "All Posts:"
                       bmdl/*items* (fb/posts)]
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card :router #(router :post :id % :prefix prefix))))
           :post
-            (binding [grid/*cols*   12
-                      grid/*shadow* 2]
+            (binding []
               (grid/grid
                 :class [:demo-blog__post]
                 )))
