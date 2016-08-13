@@ -50,7 +50,7 @@
         :transparent true
         (layout/header-row
           (layout/layout-spacer)
-          (bmdl/navigation)))
+          (bmdl/navigation :prefix prefix)))
       (layout/layout-drawer
         (bmdl/navigation))
       (layout/layout-content
