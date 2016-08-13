@@ -82,7 +82,7 @@
                       bmdl/*items* (fb/posts)]
               (grid/grid
                 :class [:demo-blog__list]
-                (bmdl/list-card :router (partial bidi/router! :post))))
+                (bmdl/list-card :router (partial bidi/route! :post))))
           :post
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
