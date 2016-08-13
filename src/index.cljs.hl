@@ -58,11 +58,10 @@
         (route-tpl (bidi/routes)
           :index
             (binding [grid/*cols*   12
-                      grid/*shadow* 2
-                      bmdl/*about-settings* about-settings]
+                      grid/*shadow* 2]
               (grid/grid
                 :class [:demo-blog__posts]
-                (bmdl/about-card)
+                (bmdl/about-card :title (cell= (:title about-settings)))
                 (bmdl/feature-card)
                 (bmdl/post-card)
                 (bmdl/post-card)))
