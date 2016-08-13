@@ -32,15 +32,16 @@
 (def ^:dynamic *items* nil)
 
 (defelem list-card-item [attr kids]
-  (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
-    (div :class [:meta]
-      (div :class [:minilogo])
-      (div
-        (strong (:meta attr))
-        (span (:meta-description attr))))
-    (a :click #(bidi/route! (first @i) :prefix prefix)
-      (h5 :class [:mdl-color-text--grey-600]
-        kids))))
+  (let [prefix (or (:prefix attr) bidi/*prefix*)]
+    (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
+      (div :class [:meta]
+        (div :class [:minilogo])
+        (div
+          (strong (:meta attr))
+          (span (:meta-description attr))))
+      (a :click #(bidi/route! (first @i) :prefix prefix)
+        (h5 :class [:mdl-color-text--grey-600]
+          kids)))))
 
 (defelem list-card [attr kids]
   (let [items (or (:items attr) *items*)
