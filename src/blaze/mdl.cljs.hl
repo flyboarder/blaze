@@ -34,13 +34,15 @@
 (def ^:dynamic *items* nil)
 
 (defelem list-card-item [attr kids]
-  (let [prefix (or (:prefix attr) bidi/*prefix*)]
+  (let [prefix (or (:prefix attr) bidi/*prefix*)
+        meta (:meta attr)
+        desc (:meta-description attr)]
     (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
       (div :class [:meta]
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
         (div
-          (strong (text "~{(:meta attr)}"))
-          (span (text "~{(:meta-description attr)}"))))
+          (strong (text "~{meta}"))
+          (span (text "~{desc}"))))
       (a :click (:click attr)
         (h5 :class [:mdl-color-text--grey-600]
           kids)))))
