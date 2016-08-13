@@ -7,12 +7,12 @@
   [(or prefix *prefix*)
     {#{"" "/"} :index
        "/admin" {#{"" "/"} :admin}
-       "/tag" {#{"" "/"} :tag
-               ["/" :id] :tag-id}
-       "/post" {#{"" "/"} :post
-                ["/" :id] :post-id}
-       "/category" {#{"" "/"} :category
-                    ["/" :id] :category-id}
+       "/tag" {#{"s" "s/"} :tags
+               ["/" :id] :tag}
+       "/post" {#{"s" "s/"} :posts
+                ["/" :id] :post}
+       "/categor" {#{"ies" "ies/"} :categories
+                    ["y/" :id] :category}
        ["/" :id] :page}])
 
 (defn route [& [prefix]]
