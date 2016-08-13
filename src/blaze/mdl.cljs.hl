@@ -29,7 +29,11 @@
 (def ^:dynamic *items* nil)
 
 (defelem list-card [attr kids]
-  (let [items (or (:items attr) *items*)]
+  (let [items (or (:items attr) *items*)
+        prefix (or (:prefix attr) bidi/*prefix*)]
     (grid/cell-card
       (for-tpl [i items]
-        (div :class [:mdl-card__list-item])))))
+        (div
+          :class [:mdl-card__list-item]
+          :click #(bidi/route! (first @i) :prefix prefix)
+          (text "~{(second l)}"))))))
