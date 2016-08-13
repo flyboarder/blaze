@@ -60,8 +60,7 @@
           (let [item (second @i)
                 meta (:author item)
                 desc (:created item)
-                title (:title item)
-                route (or (:route attr) blz/*route*)]
+                title (:title item)]
             (list-card-item
               :click #(router (route prefix) :id (first @i) :prefix prefix)
               :meta meta
