@@ -22,7 +22,7 @@
     (mdl/include-icons)
 
     ;; MDL Colors
-    (mdl/include-colors :blue :orange)
+    (mdl/include-colors :grey :orange)
 
     ;; Custom CSS
     (link :rel "stylesheet" :href "css/demo.css")
