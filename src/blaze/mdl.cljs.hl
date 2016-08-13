@@ -10,7 +10,7 @@
 (defelem about-card [attr kids]
   (let [title (:title attr (:title *about-settings*))
         image (:image attr)
-        style (cell= (str "background-image: url('"  "')"))]
+        style (cell= (str "background-image: url('" image "')"))]
     (grid/cell-card :desktop-cols 4
     (card/card-media :style style)
     (card/card-supporting-text :class [:meta :meta--fill]
