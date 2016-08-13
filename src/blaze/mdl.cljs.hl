@@ -1,5 +1,6 @@
 (ns blaze.mdl
   (:require [material-hl.core :as mdl]
+            [material-hl.cards :as card]
             [material-hl.grid :as grid]
             [material-hl.navigation :as nav]
             [blaze.bidi :as bidi]))
