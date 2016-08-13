@@ -42,6 +42,6 @@
       (for-tpl [i items]
         (div
           :class [:mdl-card__list-item :mdl-color-text--grey-600]
-          :click #(bidi/route! (first @i) :prefix prefix)
-          (div :class [:meta]
+          (div :class [:meta])
+          (a :click #(bidi/route! (first @i) :prefix prefix)
             (text "~{(second i)}")))))))
