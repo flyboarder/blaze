@@ -43,7 +43,7 @@
           (span (text "~{(:meta-description attr)}"))))
       (a :click (:click attr)
         (h5 :class [:mdl-color-text--grey-600]
-          (text "~{kids}"))))))
+          kids)))))
 
 (defelem list-card [attr kids]
   (let [items (or (:items attr) *items*)
@@ -65,5 +65,5 @@
               :meta-header meta
               :meta-description desc
               :avatar avatar
-              title))
+              (text "~{title}")))
           ))))
