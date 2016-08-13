@@ -56,8 +56,8 @@
         (h3 (text "~{title}")))
       (for-tpl [i items]
         (let [item (second i)
-              meta (cell= (:meta item))
-              desc (:created item)
+              meta (cell= (:header (:meta item) ""))
+              desc (cell= (:desc (:meta item) ""))
               title (cell= (:title item))
               avatar (or (:icon item) "../images/avatar.png")]
             (list-card-item
