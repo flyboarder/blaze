@@ -13,8 +13,9 @@
        "/post" {#{"" "/"} :post
                 ["/" :id] :post-id}
        "/category" {#{"" "/"} :category
-                   ["/" :id] :category-id}
-       ["/" :id] :page}])
+                    ["/" :id] :category-id}
+       ;["/" :id] :page
+       }])
 
 (defn route [& [prefix]]
   (let [prefix (or prefix *prefix*)]
