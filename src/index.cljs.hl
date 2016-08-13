@@ -66,9 +66,5 @@
                       grid/*shadow* 2]
               (grid/grid
                 :class [:demo-blog__list]
-                (grid/cell-card
-                  (card/card-media
-                    :class [:mdl-color-text--grey-50]
-                    (h3 "Categories:"))
-                  ))))
+                (bmdl/list-card))))
         (footer/mini-footer))))))
