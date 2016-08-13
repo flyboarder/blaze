@@ -42,7 +42,7 @@
       (let [router blz/*router*
             prefix bidi/*prefix*]
         (layout/layout
-      :class [:demo-blog :demo-blog--blogpost ]
+      :class [:demo-blog :demo-blog--blogpost]
       :drawer-button true
       :desktop-drawer-button true
       (layout/layout-header
