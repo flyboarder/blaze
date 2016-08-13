@@ -16,7 +16,8 @@
  '[tolitius.boot-check :as check]
  '[funcool.boot-codeina :refer :all]
  '[adzerk.boot-cljs :refer :all]
- '[pandeiro.boot-http :refer :all])
+ '[pandeiro.boot-http :refer :all]
+ '[adzerk.boot-reload :refer [reload]])
 
 ;; Boot Task Options ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (task-options!
