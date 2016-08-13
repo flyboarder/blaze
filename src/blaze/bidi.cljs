@@ -9,8 +9,8 @@
        "tags" {#{"" "/"} :tags}
        "admin" {#{"" "/"} :admin}
        "pages" {#{"" "/"} :pages}
-       "posts" {#{"" "/"} :posts}
        "post" {["/" :id] :post}
+       "posts" {#{"" "/"} :posts}
        "categories" {#{"" "/"} :categories}
        true :not-blaze}])
 
