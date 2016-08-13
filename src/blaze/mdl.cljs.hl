@@ -25,7 +25,7 @@
       attr
       (for-tpl [l links]
         (nav/nav-link
-          :click #(router (first @l) :prefix prefix)
+          :click #(router (first @l))
           (text "~{(second l)}")))
       kids)))
 
