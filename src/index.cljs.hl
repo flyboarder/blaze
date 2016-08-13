@@ -52,7 +52,8 @@
       (layout/layout-drawer
         (bmdl/navigation))
       (layout/layout-content
-        (route-tpl (bidi/routes)
+        (let [router blz/*router*]
+          (route-tpl (bidi/routes)
           :index
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
@@ -88,5 +89,5 @@
                       grid/*shadow* 2]
               (grid/grid
                 :class [:demo-blog__post]
-                )))
+                ))))
         (footer/mini-footer))))))
