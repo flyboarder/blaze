@@ -1,3 +1,8 @@
+/**
+  Thanks to HugoMDL for portions of this file & The original MDL team
+  https://github.com/jchatkinson/demoMDL/
+ **/
+
 body::before {
     background-size: cover;
     background-attachment: fixed;
@@ -49,6 +54,34 @@ body .demo-blog {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
+}
+
+.demo-blog .demo-blog__list {
+  max-width: 900px;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+.demo-blog .demo-blog__list .mdl-list__divider {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.demo-blog .demo-blog__list .mdl-card .mdl-card__list-item {
+  display: flex;
+  font-size: 13px;
+  line-height: 18px;
+  box-sizing: border-box;
+  min-height: 48px;
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+.demo-blog .demo-blog__list .mdl-card .mdl-card__list-item a {
+  text-decoration: none;
+}
+.demo-blog .demo-blog__list .mdl-card .mdl-card__list-item a:hover {
+  text-decoration: underline;
 }
 
 .demo-blog.mdl-layout .mdl-layout__content {

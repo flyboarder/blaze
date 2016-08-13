@@ -66,5 +66,7 @@
                       grid/*shadow* 2]
               (grid/grid
                 :class [:demo-blog__list]
-                )))
+                (card/card
+                  (card/card-media
+                    (h3 "Categories"))))))
         (footer/mini-footer))))))
