@@ -48,7 +48,6 @@
 
 (defelem list-card [attr kids]
   (let [items (:items attr *items*)
-        prefix (:prefix attr bidi/*prefix*)
         title (:title attr *title*)
         type (:type attr :page)
         router (:router attr blz/*router*)]
