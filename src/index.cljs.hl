@@ -39,7 +39,9 @@
               blaze.mdl/*links* (fb/navigation)
               blaze.core/*settings* (fb/settings)
               blaze.core/*router* bidi/route!]
-      (layout/layout
+      (let [router blz/*router*
+            prefix bidi/*prefix*]
+        (layout/layout
       :class [:demo-blog]
       :drawer-button true
       :desktop-drawer-button true
@@ -52,9 +54,7 @@
       (layout/layout-drawer
         (bmdl/navigation))
       (layout/layout-content
-        (let [router blz/*router*
-              prefix bidi/*prefix*]
-          (route-tpl (bidi/routes)
+        (route-tpl (bidi/routes)
           :index
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
@@ -90,5 +90,5 @@
                       grid/*shadow* 2]
               (grid/grid
                 :class [:demo-blog__post]
-                ))))
-        (footer/mini-footer))))))
+                )))
+        (footer/mini-footer)))))))
