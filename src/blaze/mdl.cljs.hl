@@ -40,10 +40,10 @@
         :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
-        (div
-          :class [:mdl-card__list-item :mdl-color-text--grey-600]
-          (div :class [:meta]
-            (div :class [:minilogo]))
-          (a :click #(bidi/route! (first @i) :prefix prefix)
-            (h5 :class [:mdl-color-text--grey-600]
-              (text "~{(second i)}"))))))))
+        (let []
+          (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
+            (div :class [:meta]
+              (div :class [:minilogo]))
+            (a :click #(bidi/route! (first @i) :prefix prefix)
+              (h5 :class [:mdl-color-text--grey-600]
+                (text "~{(second i)}")))))))))
