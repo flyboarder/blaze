@@ -58,4 +58,4 @@
                 desc (:description item)
                 title (:title item)]
             (list-card-item :meta meta :meta-description desc title))
-          (list-card-item (text "~{(second i)}")))))))
+          (list-card-item (text "~{i}")))))))
