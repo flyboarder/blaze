@@ -11,6 +11,8 @@
                ["/" :id] :tag}
        "/post" {#{"s" "s/"} :posts
                 ["/" :id] :post}
+       "/page" {#{"s" "s/"} :pages
+                ["/" :id] :page}
        "/categor" {#{"ies" "ies/"} :categories
                     ["y/" :id] :category}
        }])
