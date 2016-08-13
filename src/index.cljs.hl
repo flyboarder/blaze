@@ -81,6 +81,7 @@
                       grid/*shadow* 2
                       bmdl/*title* "All Posts:"
                       bmdl/*items* (fb/posts)
+                      blaze.bidi/*prefix* ""
                       blaze.core/*router* (partial bidi/route! :post-id :id)]
               (grid/grid
                 :class [:demo-blog__list]
