@@ -36,4 +36,4 @@
         (div
           :class [:mdl-card__list-item]
           :click #(bidi/route! (first @i) :prefix prefix)
-          (text "~{(second l)}"))))))
+          (text "~{(second i)}"))))))
