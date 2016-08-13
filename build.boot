@@ -81,5 +81,6 @@
   (comp
     (watch)
     (hoplon)
+    (reload)
     (cljs :optimizations :none)
     (serve :port 8080)))
