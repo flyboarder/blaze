@@ -52,7 +52,7 @@
         prefix (:prefix attr bidi/*prefix*)
         title (:title attr *title*)
         tyle (:type attr "")
-        router (or (:router attr) blz/*router*)]
+        router (:router attr blz/*router*)]
     (grid/cell-card
       (card/card-media :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
