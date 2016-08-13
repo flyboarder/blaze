@@ -11,7 +11,7 @@
        "/post" {["/" :id] :post}
        "/posts" {#{"" "/"} :posts}
        "/categories" {#{"" "/"} :categories}
-       true :not-blaze}])
+       ["/" :id] :page}])
 
 (defn route [& [prefix]]
   (let [prefix (or prefix *prefix*)]
