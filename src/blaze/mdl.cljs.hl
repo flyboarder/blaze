@@ -53,8 +53,7 @@
         title (or (:title attr) *title*)
         router (or (:router attr) blz/*router*)]
     (grid/cell-card
-      (card/card-media
-        :class [:mdl-color-text--grey-50]
+      (card/card-media :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
         (let [item (cell= (second i))
