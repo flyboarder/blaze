@@ -16,9 +16,11 @@
     (card/card-supporting-text :class [:meta])))
 
 (defelem post-card [attr kids]
-  (grid/cell-card
-    (card/card-media)
-    (card/card-supporting-text :class [:meta])))
+  (let [title (:title attr (:title (:about (:cards blz/*settings*))))]
+    (grid/cell-card
+      (card/card-media)
+      (card/card-supporting-text :class [:meta :meta--fill]
+        (div (strong title))))))
 
 (def ^:dynamic *links* nil)
 
