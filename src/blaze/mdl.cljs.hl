@@ -61,10 +61,10 @@
                 desc (:created item)
                 title (:title item)]
             (list-card-item
-              :click #(router (route) :id (first @i) :prefix prefix)
+              :click #(router (first @i) :prefix prefix)
               :meta meta
               :meta-description desc
               title))
           (list-card-item
-            :click #(prn (route));#(router (route) :id (first @i) :prefix prefix)
+            :click #(router (first @i) :prefix prefix)
             (text "~{(second i)}")))))))
