@@ -11,7 +11,7 @@
        "/tags" {#{"" "/"} :tags}
        "/post" {["/" :id] :post}
        "/posts" {#{"" "/"} :posts}
-       "/category" {["/" :id] :category}
+       ;"/category" {["/" :id] :category}
        "/categories" {#{"" "/"} :categories}
        ["/" :id] :page}])
 
