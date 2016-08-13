@@ -5,13 +5,13 @@
 
 (defn routes [& [prefix]]
   [(or prefix *prefix*)
-    {#{"" "/"} :index
-       "tags" {#{"" "/"} :tags}
-       "admin" {#{"" "/"} :admin}
-       "pages" {#{"" "/"} :pages}
-       "post" {["/" :id] :post}
-       "posts" {#{"" "/"} :posts}
-       "categories" {#{"" "/"} :categories}
+    {#{"" "/"} {[:i] :index}
+       "/tags"} {#{"" "/"} :tags}
+       "/admin" {#{"" "/"} :admin}
+       "/pages" {#{"" "/"} :pages}
+       "/post" {["/" :id] :post}
+       "/posts" {#{"" "/"} :posts}
+       "/categories" {#{"" "/"} :categories}
        true :not-blaze}])
 
 (defn route [& [prefix]]
