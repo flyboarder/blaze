@@ -56,12 +56,14 @@
         (h3 (text "~{title}")))
       (for-tpl [i items]
         (let [item (second @i)
-                meta (:author item)
-                desc (:created item)
-                title (:title item)]
+              meta (:author item)
+              desc (:created item)
+              title (:title item)
+              avatar (:icon item)]
             (list-card-item
               :click #(router :id (first @i) :prefix prefix)
-              :meta meta
+              :meta-header meta
               :meta-description desc
+              :avatar avatar
               title))
           ))))
