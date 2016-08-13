@@ -44,4 +44,5 @@
           :class [:mdl-card__list-item :mdl-color-text--grey-600]
           (div :class [:meta])
           (a :click #(bidi/route! (first @i) :prefix prefix)
-            (h5 :class [:mdl-color-text--grey-600] (text "~{(second i)}"))))))))
+            (h5 :class [:mdl-color-text--grey-600]
+              (text "~{(second i)}"))))))))
