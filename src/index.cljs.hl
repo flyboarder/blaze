@@ -91,5 +91,7 @@
               (grid/grid
                 :class [:demo-blog__posts]
                 (grid/cell-card
-                  (card/card-media)))))
+                  (card/card-media)
+                  (card/card-supporting-text :class [:meta])
+                  (card/card-supporting-text)))))
         (footer/mini-footer)))))))
