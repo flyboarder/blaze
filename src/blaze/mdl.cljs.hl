@@ -37,7 +37,7 @@
   (let [prefix (or (:prefix attr) bidi/*prefix*)]
     (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
       (div :class [:meta]
-        (div :class [:minilogo] :style {:background-image "../images/avatar.png"})
+        (div :class [:minilogo] :style {:background-image (:avatar attr)})
         (div
           (strong (:meta attr))
           (span (:meta-description attr))))
