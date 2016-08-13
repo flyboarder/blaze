@@ -42,7 +42,7 @@
       (let [router blz/*router*
             prefix bidi/*prefix*]
         (layout/layout
-      :class [:demo-blog]
+      :class [:demo-blog :demo-blog--blogpost ]
       :drawer-button true
       :desktop-drawer-button true
       (layout/layout-header
@@ -89,7 +89,7 @@
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
               (grid/grid
-                :class [:demo-blog--blogpost :demo-blog__posts]
+                :class [:demo-blog__posts]
                 (grid/cell-card
                   (card/card-media :class [:mdl-color-text--grey-50]
                     (h3 "Title"))
