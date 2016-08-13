@@ -56,7 +56,7 @@
         (h3 (text "~{title}")))
       (for-tpl [i items]
         (let [item (second i)
-              meta (:author item)
+              meta (cell= (:meta item))
               desc (:created item)
               title (cell= (:title item))
               avatar (or (:icon item) "../images/avatar.png")]
