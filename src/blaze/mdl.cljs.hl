@@ -11,7 +11,7 @@
   (let [title (:title attr (:title *about-settings*))]
     (grid/cell-card :desktop-cols 4
     (card/card-media)
-    (card/card-supporting-text :border true :class [:meta :meta--fill]
+    (card/card-supporting-text :class [:meta :meta--fill]
       (div (text "~{title}"))))))
 
 (defelem feature-card [attr kids]
