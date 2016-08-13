@@ -60,7 +60,7 @@
         (let [item (cell= (second i))
               title (cell= (:title item))]
             (list-card-item
-              :click #(router type :id (first @i) :prefix prefix)
+              :click #(router :id (first @i) :prefix prefix)
               :meta-header (cell= (:header (:meta item) ""))
               :meta-description (cell= (:desc (:meta item) ""))
               :avatar (cell= (:icon item "../images/avatar.png"))
