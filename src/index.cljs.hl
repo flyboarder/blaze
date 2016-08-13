@@ -59,12 +59,14 @@
           :index
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
-              (grid/grid
-                :class [:demo-blog__posts]
-                (bmdl/about-card :title (cell= (:title about-settings)))
-                (bmdl/feature-card)
-                (bmdl/post-card)
-                (bmdl/post-card)))
+              (let [title (cell= (:title about-settings))
+                    image (cell= (:image about-settings))]
+                (grid/grid
+                  :class [:demo-blog__posts]
+                  (bmdl/about-card :title title)
+                  (bmdl/feature-card)
+                  (bmdl/post-card)
+                  (bmdl/post-card))))
           :categories
             (binding [grid/*cols*   12
                       grid/*shadow* 2
