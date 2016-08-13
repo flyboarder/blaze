@@ -52,7 +52,7 @@
         :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
-        (if (seq? (second @i))
+        (if (vec? (second @i))
           (let [i (second @i)
                 meta (:meta i)
                 desc (:description i)
