@@ -57,5 +57,6 @@
                 meta (:meta item)
                 desc (:description item)
                 title (:title item)]
+                (prn (type @i))
             (list-card-item :meta meta :meta-description desc title))
           (list-card-item (text "~{i}")))))))
