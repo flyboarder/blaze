@@ -60,5 +60,11 @@
                 (bmdl/about-card)
                 (bmdl/feature-card)
                 (bmdl/post-card)
-                (bmdl/post-card))))
+                (bmdl/post-card)))
+          :categories
+            (binding [grid/*cols*   12
+                      grid/*shadow* 2]
+              (grid/grid
+                :class [:demo-blog__list]
+                )))
         (footer/mini-footer))))))
