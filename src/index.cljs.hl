@@ -62,11 +62,11 @@
                 (bmdl/post-card)
                 (bmdl/post-card)))
           :categories
-            (binding [card/*cols*   12
-                      card/*shadow* 2]
+            (binding [grid/*cols*   12
+                      grid/*shadow* 2]
               (grid/grid
                 :class [:demo-blog__list]
-                (card/card
+                (grid/cell-card
                   (card/card-media
                     (h3 "Categories"))
                   (div :class [:mdl-card__list-item])))))
