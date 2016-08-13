@@ -11,8 +11,9 @@
        "/tags" {#{"" "/"} :tags}
        "/post" {["/" :id] :post}
        "/posts" {#{"" "/"} :posts}
-       ;"/category" {["/" :id] :category}
-       "/categories" {#{"" "/"} :categories}
+       "/categor" {"ies" :categories
+                   ["y/" :id] :category}
+       ;"/categories" {#{"" "/"} }
        ["/" :id] :page}])
 
 (defn route [& [prefix]]
