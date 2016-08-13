@@ -68,5 +68,6 @@
                 :class [:demo-blog__list]
                 (card/card
                   (card/card-media
-                    (h3 "Categories"))))))
+                    (h3 "Categories"))
+                  (div :class [:mdl-card__list-item])))))
         (footer/mini-footer))))))
