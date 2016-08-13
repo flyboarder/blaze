@@ -79,7 +79,8 @@
             (binding [grid/*cols*   12
                       grid/*shadow* 2
                       bmdl/*title* "All Posts:"
-                      bmdl/*items* (fb/posts)]
+                      bmdl/*items* (fb/posts)
+                      blaze.core/*router* (partial bidi/route! :post-id)]
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card)))
