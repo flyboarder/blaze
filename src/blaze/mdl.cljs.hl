@@ -25,7 +25,7 @@
       attr
       (for-tpl [l links]
         (nav/nav-link
-          :click #(router (first @l))
+          :click #(router (first @l) :prefix prefix)
           (text "~{(second l)}")))
       kids)))
 
@@ -61,10 +61,10 @@
                 desc (:created item)
                 title (:title item)]
             (list-card-item
-              :click #(router (first @i))
+              :click #(router (first @i) :prefix prefix)
               :meta meta
               :meta-description desc
               title))
           (list-card-item
-            :click #(router (first @i))
+            :click #(router (first @i) :prefix prefix)
             (text "~{(second i)}")))))))
