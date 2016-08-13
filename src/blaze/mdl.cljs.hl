@@ -49,7 +49,6 @@
   (let [items (or (:items attr) *items*)
         prefix (or (:prefix attr) bidi/*prefix*)
         title (or (:title attr) *title*)
-        route (or (:router attr) blz/*route*)
         router (or (:router attr) blz/*router*)]
     (grid/cell-card
       (card/card-media
@@ -60,13 +59,12 @@
           (let [item (second @i)
                 meta (:author item)
                 desc (:created item)
-                title (:title item)
-                route (route)]
+                title (:title item)]
             (list-card-item
-              :click #(router route :id (first @i) :prefix prefix)
+              :click #(router (first @i) :prefix prefix)
               :meta meta
               :meta-description desc
               title))
           (list-card-item
-            :click #(prn (route));#(router route :id (first @i) :prefix prefix)
+            :click #(router (first @i) :prefix prefix)
             (text "~{(second i)}")))))))
