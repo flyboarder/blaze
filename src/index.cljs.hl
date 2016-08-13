@@ -37,7 +37,8 @@
   (body
     (binding [blaze.bidi/*prefix* ""
               blaze.mdl/*links* (fb/navigation)
-              blaze.core/*settings* (fb/settings)]
+              blaze.core/*settings* (fb/settings)
+              blaze.core/*router* bidi/route!]
       (layout/layout
       :class [:demo-blog]
       :drawer-button true
