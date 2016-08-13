@@ -37,6 +37,7 @@
         title (or (:title attr) *title*)]
     (grid/cell-card
       (card/card-media
+        :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
         (div
