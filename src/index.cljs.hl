@@ -66,7 +66,8 @@
             (binding [grid/*cols*   12
                       grid/*shadow* 2
                       bmdl/*title* "Categories:"
-                      bmdl/*items* (fb/categories)]
+                      bmdl/*items* (fb/categories)
+                      blaze.core/*router* (partial bidi/route! :category-id)]
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card)))
