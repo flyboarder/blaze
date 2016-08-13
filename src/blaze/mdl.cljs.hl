@@ -55,7 +55,7 @@
         :class [:mdl-color-text--grey-50]
         (h3 (text "~{title}")))
       (for-tpl [i items]
-        (let [item (second i)
+        (let [item (cell= (second i))
               meta (cell= (:header (:meta item) ""))
               desc (cell= (:desc (:meta item) ""))
               title (cell= (:title item))
