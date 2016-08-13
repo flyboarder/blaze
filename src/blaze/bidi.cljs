@@ -8,6 +8,7 @@
     {#{"" "/"} :index
        "/tags" {#{"" "/"} :tags}
        "/admin" {#{"" "/"} :admin}
+       "/page" {["/" :id] :page}
        "/pages" {#{"" "/"} :pages}
        "/post" {["/" :id] :post}
        "/posts" {#{"" "/"} :posts}
