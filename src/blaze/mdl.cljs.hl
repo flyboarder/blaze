@@ -35,7 +35,7 @@
 
 (defelem list-card-item [attr kids]
   (let [prefix (or (:prefix attr) bidi/*prefix*)
-        meta (:meta attr)
+        meta (:meta-header attr)
         desc (:meta-description attr)]
     (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
       (div :class [:meta]
