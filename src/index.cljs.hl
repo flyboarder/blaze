@@ -70,6 +70,11 @@
               (grid/grid
                 :class [:demo-blog__list]
                 (bmdl/list-card)))
+          :category
+            (binding [grid/*cols*   12
+                      grid/*shadow* 2]
+              (grid/grid
+                :class [:demo-blog__posts]))
           :posts
             (binding [grid/*cols*   12
                       grid/*shadow* 2
