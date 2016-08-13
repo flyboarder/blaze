@@ -6,6 +6,7 @@
 (defn routes [& [prefix]]
   [(or prefix *prefix*)
     {#{"" "/"} :index
+      ["/" :id] {#{"" "/"} :page}
        "/admin" {#{"" "/"} :admin}
        "/tag" {#{"s" "s/"} :tags
                ["/" :id] :tag}
@@ -13,7 +14,7 @@
                 ["/" :id] :post}
        "/categor" {#{"ies" "ies/"} :categories
                     ["y/" :id] :category}
-       ["/" :id] :page}])
+       }])
 
 (defn route [& [prefix]]
   (let [prefix (or prefix *prefix*)]
