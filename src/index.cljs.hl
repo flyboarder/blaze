@@ -38,8 +38,8 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
     (binding [blaze.bidi/*prefix* ""
-              blaze.mdl/*links* (fb/navigation)
-              blaze.core/*settings* (fb/settings)
+              blaze.mdl/*links* (fb/navigation=)
+              blaze.core/*settings* (fb/settings=)
               blaze.core/*router* bidi/route!]
       (let [router blz/*router*
             prefix bidi/*prefix*
