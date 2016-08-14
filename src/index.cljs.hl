@@ -40,8 +40,7 @@
               blaze.core/*settings* (fb/settings)
               blaze.core/*router* bidi/route!]
       (let [router blz/*router*
-            prefix bidi/*prefix*
-            about-settings (cell= (:about (:cards blz/*settings*)))]
+            prefix bidi/*prefix*]
         (layout/layout
       :class [:demo-blog :demo-blog--blogpost]
       :drawer-button true
@@ -59,7 +58,8 @@
           :index
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
-              (let [title (cell= (:title about-settings))
+              (let [about-settings (cell= (:about (:cards blz/*settings*)))
+                    title (cell= (:title about-settings))
                     image (cell= (:image about-settings))]
                 (grid/grid
                   :class [:demo-blog__posts]
