@@ -11,7 +11,6 @@
 
 (def ^:dynamic *db*   (fbdb/get-in (fb/get-db) [:_blaze]))
 
-(prn *auth* *app* *db*)
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn posts
   [& [db]]
@@ -40,3 +39,5 @@
 (defn apps
   [& [db]]
   (hfb/fb-cell (fbdb/get-in (or db *db*) [:apps])))
+
+(cell= (prn (posts)))
