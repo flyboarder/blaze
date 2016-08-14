@@ -64,7 +64,7 @@
                           grid/*shadow* 2]
                   (let [featured-post (cell nil)]
                     (fbdb/listen fb/*db* [:posts (keyword @featured-settings)] "value" #(reset! featured-post (hfb/fb->clj %)))
-                    (binding [bmdl/*featured-post*]
+                    (binding [bmdl/*featured-post* featured-post]
                       (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
