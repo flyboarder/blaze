@@ -47,7 +47,8 @@
             featured-settings (cell= (:featured (:posts blz/*settings*)))
             featured-post (cell nil)]
             (cell= (when featured-settings
-              (fbdb/listen-once (fbdb/get-in (fb/posts) (-> featured-settings keyword vector)) "value" #(reset! featured-post (hfb/fb->clj %)))))
+                     (fbdb/listen-once (fbdb/get-in (fb/posts) (-> featured-settings keyword vector)) "value"
+                     #(reset! featured-post (hfb/fb->clj %)))))
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
