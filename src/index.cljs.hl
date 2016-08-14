@@ -6,6 +6,7 @@
             [material-hl.footer :as footer]
             [material-hl.cards :as card]
             [blaze.core :as blz]
+            [hoplon.firebase :as hfb]
             [blaze.firebase :as fb]
             [firebase-cljs.database :as fbdb]
             [blaze.bidi :as bidi]
@@ -61,7 +62,8 @@
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
-                  (let [featured-post (cell nil)]
+                  (let [featured-post (cell nil)
+                        flisten (fbdb/listen fb/*db* "value" #(reset! featured-post )))]
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
