@@ -42,7 +42,6 @@
       (let [router blz/*router*
             prefix bidi/*prefix*
             about-settings (cell= (:about (:cards blz/*settings*)))
-            featured-post (cell nil)
             featured-settings (cell= (:featured (:posts blz/*settings*)))]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
@@ -61,11 +60,13 @@
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
-                  (let [title          (cell= (:title about-settings))
-                        image          (cell= (:image about-settings))]
+                  (let []
                     (grid/grid
                       :class [:demo-blog__posts]
-                      (bmdl/about-card :title title :image image :desktop-cols 4)
+                      (bmdl/about-card
+                        :title (cell= (:title about-settings))
+                        :image (cell= (:image about-settings))
+                        :desktop-cols 4)
                       (bmdl/featured-card :desktop-cols 8)
                       (bmdl/preview-card)
                       (bmdl/preview-card))))
