@@ -10,13 +10,13 @@
 (defelem about-card [attr kids]
   (let [title (:title attr (:title *about-settings*))
         image (:image attr)]
-    (grid/cell-card :desktop-cols 4
+    (grid/cell-card attr
     (card/card-media :css (cell= {:background-image (str "url('" image "')")}))
     (card/card-supporting-text :class [:meta :meta--fill]
       (div (text "~{title}"))))))
 
 (defelem feature-card [attr kids]
-  (grid/cell-card :desktop-cols 8
+  (grid/cell-card attr
     (card/card-media)
     (card/card-supporting-text :class [:meta])))
 
