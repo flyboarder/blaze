@@ -45,7 +45,6 @@
             prefix bidi/*prefix*
             about-settings (cell= (:about (:cards blz/*settings*)))
             featured-settings (cell= (:featured (:posts blz/*settings*)))]
-            (prn about-settings featured-settings)
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
