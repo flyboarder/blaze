@@ -60,7 +60,7 @@
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
-                  (let []
+                  (let [featured-post (cell nil)]
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
