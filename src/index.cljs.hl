@@ -59,8 +59,8 @@
             (binding [grid/*cols*   12
                       grid/*shadow* 2]
               (let [about-settings (cell= (:about (:cards blz/*settings*)))
-                    title (cell= (:title about-settings))
-                    image (cell= (:image about-settings))]
+                    title          (cell= (:title about-settings))
+                    image          (cell= (:image about-settings))]
                 (grid/grid
                   :class [:demo-blog__posts]
                   (bmdl/about-card :title title :image image)
