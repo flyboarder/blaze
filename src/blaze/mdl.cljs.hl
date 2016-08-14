@@ -5,13 +5,16 @@
             [material-hl.navigation :as nav]
             [blaze.core :as blz]))
 
+(defn bg= [image]
+  (cell= {:background-image (str "url('" image "')")}))
+
 (def ^:dynamic *about-settings* nil)
 
 (defelem about-card [attr kids]
   (let [title (:title attr (:title *about-settings*))
         image (:image attr)]
     (grid/cell-card attr
-    (card/card-media :css (cell= {:background-image (str "url('" image "')")}))
+    (card/card-media :css (bg= image))
     (card/card-supporting-text :class [:meta :meta--fill]
       (div (text "~{title}"))))))
 
