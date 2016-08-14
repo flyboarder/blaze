@@ -40,7 +40,8 @@
               blaze.core/*settings* (fb/settings)
               blaze.core/*router* bidi/route!]
       (let [router blz/*router*
-            prefix bidi/*prefix*]
+            prefix bidi/*prefix*
+            about-settings (cell= (:about (:cards blz/*settings*)))]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
