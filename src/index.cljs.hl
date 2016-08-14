@@ -99,4 +99,4 @@
                       (card/card-supporting-text :class [:meta])
                       (card/card-supporting-text)
                       (card/card-supporting-text :class [:comments])))))
-            (footer/mini-footer)))))))
+          (footer/mini-footer)))))))
