@@ -40,7 +40,3 @@
 (defn apps
   [& [db]]
   (hfb/fb-cell (fbdb/get-in (or db *db*) [:apps])))
-
-(defn routing
-  [& [db]]
-  (hfb/fb-cell (fbdb/get-in (or db *db*) [:routing])))
