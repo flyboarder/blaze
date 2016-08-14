@@ -53,6 +53,7 @@
                          (-> featured-settings keyword vector))
                          "value"
                        #(reset! featured-post (hfb/fb->clj %)))))
+            (cell= (prn featured-settings featured-post))
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
