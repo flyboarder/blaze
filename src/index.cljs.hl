@@ -79,7 +79,7 @@
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
                           bmdl/*title* "Categories:"
-                          bmdl/*items* (fb/categories)]
+                          bmdl/*items* (fb/categories=)]
                   (grid/grid
                     :class [:demo-blog__list]
                     (bmdl/list-card :router #(router :category :id % :prefix prefix))))
@@ -92,7 +92,7 @@
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
                           bmdl/*title* "All Posts:"
-                          bmdl/*items* (fb/posts)]
+                          bmdl/*items* (fb/posts=)]
                   (grid/grid
                     :class [:demo-blog__list]
                     (bmdl/list-card :router #(router :post :id % :prefix prefix))))
