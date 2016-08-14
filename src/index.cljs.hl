@@ -65,8 +65,8 @@
                       :class [:demo-blog__posts]
                       (bmdl/about-card :title title :image image :desktop-cols 4)
                       (bmdl/feature-card :desktop-cols 8)
-                      (bmdl/post-card)
-                      (bmdl/post-card))))
+                      (bmdl/preview-card)
+                      (bmdl/preview-card))))
               :categories
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
