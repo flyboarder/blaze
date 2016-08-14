@@ -1,0 +1,66 @@
+(ns blaze.firebase
+  (:require [cljsjs.firebase]
+            [firebase-cljs.core :as fb]
+            [firebase-cljs.database :as fbdb]
+            [hoplon.firebase :as hfb]))
+
+;; Firebase ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(def ^:dynamic *auth* (fb/get-auth))
+
+(def ^:dynamic *app*  (fb/get-app))
+
+(def ^:dynamic *db*   (fbdb/get-in (fb/get-db) [:_blaze]))
+
+;; Helper Fn's ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defn fb-ref
+  ([ref] (fb-ref *db* ref))
+  ([db ref] (fbdb/get-in db ref)))
+
+;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defn posts
+  [& [db]]
+  (fb-ref (or db *db*) [:posts]))
+
+(defn posts=
+  [& [db]]
+  (hfb/fb-cell (posts db)))
+
+(defn settings
+  [& [db]]
+  (fb-ref (or db *db*) [:settings]))
+
+(defn settings=
+  [& [db]]
+  (hfb/fb-cell (settings db)))
+
+(defn categories
+  [& [db]]
+  (fb-ref (or db *db*) [:categories]))
+
+(defn categories=
+  [& [db]]
+  (hfb/fb-cell (categories db)))
+
+(defn tags
+  [& [db]]
+  (fb-ref (or db *db*) [:tags]))
+
+(defn tags=
+  [& [db]]
+  (hfb/fb-cell (tags db)))
+
+(defn pages
+  [& [db]]
+  (fb-ref (or db *db*) [:pages]))
+
+(defn pages=
+  [& [db]]
+  (hfb/fb-cell (pages db)))
+
+(defn navigation
+  [& [db]]
+  (fb-ref (or db *db*) [:navigation]))
+
+(defn navigation=
+  [& [db]]
+  (hfb/fb-cell (navigation db)))
