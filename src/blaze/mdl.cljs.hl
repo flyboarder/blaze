@@ -20,7 +20,7 @@
     (card/card-media)
     (card/card-supporting-text :class [:meta])))
 
-(defelem post-card [attr kids]
+(defelem preview-card [attr kids]
   (let []
     (grid/cell-card
       (card/card-media)
