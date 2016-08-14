@@ -45,8 +45,8 @@
             prefix bidi/*prefix*
             about-settings (cell= (:about (:cards blz/*settings*)))
             featured-settings (cell= (:featured (:posts blz/*settings*)))
-            featured-post (cell nil)
-            featured-listener (fbdb/listen-once (fb/posts) "value" #(reset! featured-post (hfb/fb->clj %)))]
+            featured-post (cell nil)]
+            (fbdb/listen-once (fbdb/get-in (fb/posts) (-> featured-settings keyword vector)) "value" #(reset! featured-post (hfb/fb->clj %)))
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
