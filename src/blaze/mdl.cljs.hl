@@ -16,7 +16,7 @@
       (div (text "~{title}"))))))
 
 (defelem feature-card [attr kids]
-  (let []
+  (let [title (:title attr (:title *featured-settings*))]
     (grid/cell-card attr
       (card/card-media)
       (card/card-supporting-text :class [:meta]))))
