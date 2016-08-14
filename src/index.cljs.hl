@@ -44,7 +44,9 @@
       (let [router blz/*router*
             prefix bidi/*prefix*
             about-settings (cell= (:about (:cards blz/*settings*)))
-            featured-settings (cell= (:featured (:posts blz/*settings*)))]
+            featured-settings (cell= (:featured (:posts blz/*settings*)))
+            featured-post (cell nil)
+            featured-listener (cell= (fbdb/listen (fb/posts) "value" #(reset! featured-post (hfb/fb->clj %))))]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
