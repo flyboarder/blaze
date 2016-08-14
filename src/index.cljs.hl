@@ -63,8 +63,8 @@
                         image          (cell= (:image about-settings))]
                     (grid/grid
                       :class [:demo-blog__posts]
-                      (bmdl/about-card :title title :image image)
-                      (bmdl/feature-card)
+                      (bmdl/about-card :title title :image image :desktop-cols 4)
+                      (bmdl/feature-card :desktop-cols 8)
                       (bmdl/post-card)
                       (bmdl/post-card))))
               :categories
