@@ -62,9 +62,10 @@
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
-                  (let [featured-post (cell nil)
-                        flisten (fbdb/listen fb/*db* [:posts (keyword @featured-settings)] "value" #(reset! featured-post (hfb/fb->clj %)))]
-                    (grid/grid
+                  (let [featured-post (cell nil)]
+                    (fbdb/listen fb/*db* [:posts (keyword @featured-settings)] "value" #(reset! featured-post (hfb/fb->clj %)))
+                    (binding []
+                      (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
                         :title (cell= (:title about-settings))
@@ -72,7 +73,7 @@
                         :desktop-cols 4)
                       (bmdl/featured-card :desktop-cols 8 :post featured-post)
                       (bmdl/preview-card)
-                      (bmdl/preview-card))))
+                      (bmdl/preview-card)))))
               :categories
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
