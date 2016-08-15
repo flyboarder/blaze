@@ -16,10 +16,8 @@
     (card/card-supporting-text :class [:meta :meta--fill]
       (div (text "~{title}"))))))
 
-(def ^:dynamic *featured-post* nil)
-
 (defelem featured-card [attr kids]
-  (let [post (:post attr *featured-post*)
+  (let [post (:post attr)
         image (:image attr)]
     (grid/cell-card attr
       (card/card-media :css (bg= image))
