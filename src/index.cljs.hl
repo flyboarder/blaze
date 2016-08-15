@@ -40,6 +40,7 @@
     (binding [blaze.bidi/*prefix* ""
               blaze.mdl/*links* (fb/navigation=)
               blaze.core/*settings* (fb/settings=)
+              blaze.mdl/*featured-post* (fb/posts-featured=)
               blaze.core/*router* bidi/route!]
       (let [router blz/*router*
             prefix bidi/*prefix*
@@ -61,7 +62,7 @@
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          bmdl/*featured-post* (fb/posts-featured=)]
+                          ]
                   (let [featured-post (cell= (second bmdl/*featured-post*))]
                     (grid/grid
                       :class [:demo-blog__posts]
