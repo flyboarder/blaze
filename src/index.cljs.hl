@@ -45,7 +45,9 @@
       (let [router blz/*router*
             prefix bidi/*prefix*
             about-settings (cell= (-> blz/*settings* :cards :about))
-            featured-post (cell= (first (seq bmdl/*featured-post*)))]
+            featured-post (cell= (first (seq bmdl/*featured-post*)))
+            featured-meta (cell= (second featured-post))
+            featured-id (cell= (first featured-post))]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
@@ -74,8 +76,8 @@
                         :desktop-cols 4)
                       (bmdl/featured-card
                         :click #(router :post :id  :prefix prefix)
-                        :title (cell= (:title featured-post))
-                        :image (cell= (:image featured-post))
+                        :title (cell= (:title featured-meta))
+                        :image (cell= (:image featured-meta))
                         :desktop-cols 8)
                       (bmdl/preview-card)
                       (bmdl/preview-card))))
