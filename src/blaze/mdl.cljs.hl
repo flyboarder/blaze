@@ -21,12 +21,13 @@
 (defelem featured-card [attr kids]
   (let [title (:title attr)
         image (:image attr)
+        color (:color attr)
         router (or (:router attr) blz/*router*)]
     (grid/cell-card
       attr
       (card/card-media
         :class [:mdl-color-text--grey-50]
-        :css (cell= {:background-image (bg-image image)})
+        :css (cell= {:background-image (bg-image image) :background-color color})
         (h3 (text "~{title}")))
       (card/card-supporting-text :class [:meta :meta--fill]
         ))))
