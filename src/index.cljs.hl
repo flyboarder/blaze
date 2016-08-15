@@ -44,8 +44,7 @@
       (let [router blz/*router*
             prefix bidi/*prefix*
             about-settings (cell= (:about (:cards blz/*settings*)))
-            featured-settings (cell= (:featured (:posts blz/*settings*)))
-            featured-post (cell nil)]
+            featured-settings (cell= (:featured (:posts blz/*settings*)))]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
@@ -62,7 +61,8 @@
             (route-tpl (bidi/routes)
               :index
                 (binding [grid/*cols*   12
-                          grid/*shadow* 2]
+                          grid/*shadow* 2
+                          bmdl/*featured-post*]
                   (let [
                   ;featured-post (hfb/fb-cell (fbdb/get-in fb/*db* [:posts @featured-settings]))
                   ]
