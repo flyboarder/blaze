@@ -65,6 +65,7 @@
                           grid/*shadow* 2
                           ]
                   (let []
+                    (prn featured-post)
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
@@ -72,7 +73,7 @@
                         :image (cell= (:image about-settings))
                         :desktop-cols 4)
                       (bmdl/featured-card
-                        :post featured-post 
+                        :post featured-post
                         :image (cell= (:image featured-post))
                         :desktop-cols 8)
                       (bmdl/preview-card)
