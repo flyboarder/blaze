@@ -28,7 +28,7 @@
 
 (defn posts-featured=
   [& [db]]
-  (-> (posts db) (fbdq/sort-by :child "featured") ))
+  (hfb/fb-cell (-> (posts db) (fbdq/sort-by :child "featured"))))
 (cell= (prn (posts=)(posts-featured=)))
 (defn settings
   [& [db]]
