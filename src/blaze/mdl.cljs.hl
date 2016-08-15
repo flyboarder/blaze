@@ -23,7 +23,7 @@
 (defelem featured-card [attr kids]
   (let [post (cell= (:post attr *featured-post*))]
         (prn @post)
-    (for-tpl [p post]
+    (for-tpl [p [post]]
       (grid/cell-card attr
         (card/card-media :css (bg= image))
         (card/card-supporting-text :class [:meta])))))
