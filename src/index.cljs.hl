@@ -73,7 +73,7 @@
                         :image (cell= (:image about-settings))
                         :desktop-cols 4)
                       (bmdl/featured-card
-                        :post featured-post
+                        :post (cell= (:title featured-post))
                         :image (cell= (:image featured-post))
                         :desktop-cols 8)
                       (bmdl/preview-card)
