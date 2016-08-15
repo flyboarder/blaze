@@ -22,8 +22,8 @@
 
 (defelem featured-card [attr kids]
   (let [post (cell= (:post attr *featured-post*))
-        id (cell= (first post))
-        contents (cell= (second post))
+        ;id (cell= (first post))
+        ;contents (cell= (second post))
         image (:image attr (:image post))]
     (grid/cell-card attr
       (card/card-media :css (bg= image))
