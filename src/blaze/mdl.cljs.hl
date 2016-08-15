@@ -21,11 +21,8 @@
 (def ^:dynamic *featured-post* nil)
 
 (defelem featured-card [attr kids]
-  (let [post (cell= (:post attr *featured-post*))
-        ;id (cell= (first post))
-        ;contents (cell= (second post))
+  (let [post (:post attr *featured-post*)
         image (:image attr (:image post))]
-        (cell= (prn post))
     (grid/cell-card attr
       (card/card-media :css (bg= image))
       (card/card-supporting-text :class [:meta]))))
