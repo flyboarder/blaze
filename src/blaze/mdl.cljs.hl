@@ -19,17 +19,18 @@
 (def ^:dynamic *featured-post* nil)
 
 (defelem featured-card [attr kids]
-  (let [post (:post attr)
+  (let [title (:title attr)
         image (:image attr)]
     (grid/cell-card attr
       (card/card-media :css (bg= image))
-      (card/card-supporting-text :class [:meta]))))
+      (card/card-supporting-text :class [:meta :meta--fill]
+        (strong (text "~{title}"))))))
 
 (defelem preview-card [attr kids]
   (let []
     (grid/cell-card
       (card/card-media)
-      (card/card-supporting-text :class [:meta]))))
+      (card/card-supporting-text :class [:meta :meta--fill]))))
 
 (def ^:dynamic *links* nil)
 
