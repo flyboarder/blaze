@@ -25,6 +25,7 @@
     (grid/cell-card
       attr
       (card/card-media
+        :class [:mdl-color-text--grey-50]
         :css (bg= image)
         (h3 (text "~{title}")))
       (card/card-supporting-text :class [:meta :meta--fill]
