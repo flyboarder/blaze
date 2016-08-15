@@ -63,6 +63,7 @@
                           grid/*shadow* 2
                           bmdl/*featured-post* (fb/posts-featured=)]
                   (let [featured-post (cell= (second bmdl/*featured-post*))]
+                  (cell= (prn featured-post))
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
