@@ -75,7 +75,7 @@
                         :image (cell= (:image about-settings))
                         :desktop-cols 4)
                       (bmdl/featured-card
-                        :click #(router :post :id  :prefix prefix)
+                        :click #(router :post :id @featured-id :prefix prefix)
                         :title (cell= (:title featured-meta))
                         :image (cell= (:image featured-meta))
                         :desktop-cols 8)
