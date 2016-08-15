@@ -65,7 +65,7 @@
                   (let [
                   ;featured-post (hfb/fb-cell (fbdb/get-in fb/*db* [:posts @featured-settings]))
                   ]
-                    ;(prn featured-post)
+                    (prn @bmdl/*featured-post*)
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
