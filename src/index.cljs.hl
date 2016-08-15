@@ -76,6 +76,7 @@
                         :click #(router :post :id @featured-id :prefix prefix)
                         :title (cell= (:title featured-meta))
                         :image (cell= (:image featured-meta))
+                        :color (cell= (:color featured-meta))
                         :desktop-cols 8)
                       (bmdl/preview-card)
                       (bmdl/preview-card))))
