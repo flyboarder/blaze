@@ -2,6 +2,7 @@
   (:require [cljsjs.firebase]
             [firebase-cljs.core :as fb]
             [firebase-cljs.database :as fbdb]
+            [firebase-cljs.database.query :as fbdq]
             [hoplon.firebase :as hfb]))
 
 ;; Firebase ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -24,6 +25,10 @@
 (defn posts=
   [& [db]]
   (hfb/fb-cell (posts db)))
+
+(defn posts-featured=
+  [& [db]]
+  (hfb/fb-cell (fbdq/take-last (posts db) 1)))
 
 (defn settings
   [& [db]]
