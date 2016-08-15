@@ -65,7 +65,7 @@
                           grid/*shadow* 2
                           ]
                   (let []
-                    (prn featured-post)
+                    (cell= (prn featured-post))
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
