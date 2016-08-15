@@ -44,7 +44,8 @@
               blaze.core/*router* bidi/route!]
       (let [router blz/*router*
             prefix bidi/*prefix*
-            about-settings (cell= (:about (:cards blz/*settings*)))]
+            about-settings (cell= (:about (:cards blz/*settings*)))
+            featured-post (cell= (second bmdl/*featured-post*))]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
@@ -63,14 +64,17 @@
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
                           ]
-                  (let [featured-post (cell= (second bmdl/*featured-post*))]
+                  (let []
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
                         :title (cell= (:title about-settings))
                         :image (cell= (:image about-settings))
                         :desktop-cols 4)
-                      (bmdl/featured-card :desktop-cols 8 :post featured-post :image (cell= (:image featured-post)))
+                      (bmdl/featured-card
+                        :post featured-post 
+                        :image (cell= (:image featured-post))
+                        :desktop-cols 8)
                       (bmdl/preview-card)
                       (bmdl/preview-card))))
               :categories
