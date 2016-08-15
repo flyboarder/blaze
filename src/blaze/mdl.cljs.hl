@@ -13,6 +13,7 @@
 (defelem about-card [attr kids]
   (let [title (:title attr (:title *about-settings*))
         image (:image attr)]
+        (cell= (prn post))
     (grid/cell-card attr
     (card/card-media :css (bg= image))
     (card/card-supporting-text :class [:meta :meta--fill]
