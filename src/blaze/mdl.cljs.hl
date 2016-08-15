@@ -8,10 +8,8 @@
 (defn bg= [image]
   (cell= {:background-image (str "url('" image "')")}))
 
-(def ^:dynamic *about-settings* nil)
-
 (defelem about-card [attr kids]
-  (let [title (:title attr (:title *about-settings*))
+  (let [title (:title attr)
         image (:image attr)]
     (grid/cell-card attr
     (card/card-media :css (bg= image))
