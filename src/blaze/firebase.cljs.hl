@@ -29,7 +29,7 @@
 (defn posts-featured=
   [& [db]]
   (-> (posts db) (fbdq/sort-by :child "featured") (fbdq/take-last 1)))
-(cell= (prn (posts-featured=)))
+(cell= (prn (posts)(posts-featured=)))
 (defn settings
   [& [db]]
   (fb-ref (or db *db*) [:settings]))
