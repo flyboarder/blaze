@@ -45,7 +45,7 @@
       (let [router blz/*router*
             prefix bidi/*prefix*
             about-settings (cell= (:about (:cards blz/*settings*)))
-            featured-post (cell= (second bmdl/*featured-post*))]
+            featured-post bmdl/*featured-post*]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
