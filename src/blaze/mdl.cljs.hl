@@ -12,7 +12,7 @@
   (let [title (:title attr)
         image (:image attr)]
     (grid/cell-card attr
-      (card/card-media :css (cell= {:background-image (bg-image image)})
+      (card/card-media :css (cell= {:background-image (bg-image image)}))
       (card/card-supporting-text :class [:meta :meta--fill]
         (strong (text "~{title}"))))))
 
