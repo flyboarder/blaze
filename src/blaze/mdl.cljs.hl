@@ -24,9 +24,11 @@
         router (or (:router attr) blz/*router*)]
     (grid/cell-card
       attr
-      (card/card-media :css (bg= image))
+      (card/card-media
+        :css (bg= image)
+        (h3 (text "~{title}")))
       (card/card-supporting-text :class [:meta :meta--fill]
-        (strong (text "~{title}"))))))
+        ))))
 
 (defelem preview-card [attr kids]
   (let []
