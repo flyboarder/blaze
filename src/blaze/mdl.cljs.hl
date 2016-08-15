@@ -22,7 +22,7 @@
 
 (defelem featured-card [attr kids]
   (let [post (:post attr *featured-post*)
-        image (:image post)]
+        image (:image attr)]
     (grid/cell-card attr
       (card/card-media :css (bg= image))
       (card/card-supporting-text :class [:meta]))))
