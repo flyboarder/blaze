@@ -22,6 +22,7 @@
 
 (defelem featured-card [attr kids]
   (let [post (cell= (:post attr *featured-post*))]
+    (cell= (prn post))
     (grid/cell-card attr
       (card/card-media)
       (card/card-supporting-text :class [:meta]))))
