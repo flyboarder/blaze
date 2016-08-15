@@ -62,10 +62,7 @@
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
                           bmdl/*featured-post* (fb/posts-featured=)]
-                  (let [
-                  ;featured-post (hfb/fb-cell (fbdb/get-in fb/*db* [:posts @featured-settings]))
-                  ]
-                    (prn @bmdl/*featured-post*)
+                  (let [featured-post bmdl/*featured-post*]
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
