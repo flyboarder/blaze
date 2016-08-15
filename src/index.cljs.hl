@@ -44,7 +44,7 @@
               blaze.core/*router* bidi/route!]
       (let [router blz/*router*
             prefix bidi/*prefix*
-            about-settings (cell= (:about (:cards blz/*settings*)))
+            about-settings (cell= (-> blz/*settings* :cards :about ))
             featured-post (cell= (-> bmdl/*featured-post* seq first second))]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
