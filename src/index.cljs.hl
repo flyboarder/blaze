@@ -64,10 +64,8 @@
             (route-tpl (bidi/routes)
               :index
                 (binding [grid/*cols*   12
-                          grid/*shadow* 2
-                          ]
+                          grid/*shadow* 2]
                   (let []
-                    (cell= (prn featured-post))
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
