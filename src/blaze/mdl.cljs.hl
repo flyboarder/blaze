@@ -5,8 +5,8 @@
             [material-hl.navigation :as nav]
             [blaze.core :as blz]))
 
-(defn bg= [image]
-  (cell= {:background-image (str "url('" image "')")}))
+(defn bg-image [image]
+  (str "url('" image "')"))
 
 (defelem about-card [attr kids]
   (let [title (:title attr)
