@@ -61,7 +61,7 @@
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          bmdl/*featured-post*]
+                          bmdl/*featured-post* (fb/posts-featured=)]
                   (let [
                   ;featured-post (hfb/fb-cell (fbdb/get-in fb/*db* [:posts @featured-settings]))
                   ]
