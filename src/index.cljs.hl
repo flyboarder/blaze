@@ -70,7 +70,7 @@
                         :title (cell= (:title about-settings))
                         :image (cell= (:image about-settings))
                         :desktop-cols 4)
-                      (bmdl/featured-card :desktop-cols 8 :post featured-post :image (cell= featured-post))
+                      (bmdl/featured-card :desktop-cols 8 :post featured-post :image (cell= (:image featured-post)))
                       (bmdl/preview-card)
                       (bmdl/preview-card))))
               :categories
