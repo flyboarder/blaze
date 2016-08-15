@@ -12,9 +12,9 @@
   (let [title (:title attr)
         image (:image attr)]
     (grid/cell-card attr
-    (card/card-media :css (bg= image))
-    (card/card-supporting-text :class [:meta :meta--fill]
-      (strong (text "~{title}"))))))
+      (card/card-media :css (bg= image))
+      (card/card-supporting-text :class [:meta :meta--fill]
+        (strong (text "~{title}"))))))
 
 (def ^:dynamic *featured-post* nil)
 
