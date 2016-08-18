@@ -46,8 +46,8 @@
             prefix bidi/*prefix*
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post bmdl/*featured-post*
-            featured-id (first featured-post)
-            featured-meta (second featured-post)]
+            featured-id featured-post
+            featured-meta featured-post]
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
