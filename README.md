@@ -8,3 +8,5 @@ Powered by:
  - hoplon
  - mdl
  - firebase
+
+> Expecting to find FIREBASE_* env variables
