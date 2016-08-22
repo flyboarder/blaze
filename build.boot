@@ -84,3 +84,13 @@
     (reload)
     (cljs :optimizations :none)
     (serve :port 8080)))
+
+(deftask demo
+  "Run a demo of the project. (using google closure)"
+  []
+  (comp
+    (watch)
+    (hoplon)
+    (reload)
+    (cljs :optimizations :none)
+    (serve :port 8080)))
