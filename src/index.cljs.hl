@@ -72,8 +72,8 @@
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
                   (let [featured-post (cell= (first (seq blz/*featured-post*)))
-                  featured-id (cell= (first featured-post))
-                  featured-meta (cell= (second featured-post))]
+                        featured-id (cell= (first featured-post))
+                        featured-meta (cell= (second featured-post))]
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
