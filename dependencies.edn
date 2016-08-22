@@ -4,7 +4,7 @@
  [adzerk/bootlaces          "0.1.13"]
  [adzerk/boot-reload        "0.4.12" :scope "test"]
  [adzerk/env                "0.3.0"]
- [hoplon/boot-hoplon        "0.2.4"]
+ [hoplon/boot-hoplon        "0.3.0-SNAPSHOT"]
  [hoplon/hoplon             "6.0.0-alpha16" :scope "provided"]
  [hoplon/brew               "0.2.0-SNAPSHOT" :scope "provided"]
  [degree9/boot-semver       "1.2.4" :scope "test"]
