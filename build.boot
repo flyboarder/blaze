@@ -83,7 +83,7 @@
     (hoplon)
     (reload)
     (cljs :optimizations :none)
-    (target :dir "target/jquery")
+    (target :dir #{"target/jquery"})
     (serve :port 8080)))
 
 (deftask demo-goog
@@ -94,5 +94,5 @@
     (hoplon :goog true)
     (reload)
     (cljs :optimizations :none)
-    (target :dir "target/goog")
+    (target :dir #{"target/goog"})
     (serve :port 8081)))
