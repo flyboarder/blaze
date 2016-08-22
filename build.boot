@@ -90,7 +90,7 @@
   []
   (comp
     (watch)
-    (hoplon)
+    (hoplon :goog true)
     (reload)
     (cljs :optimizations :none)
     (serve :port 8080)))
