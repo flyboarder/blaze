@@ -43,8 +43,8 @@
               blaze.core/*settings* (fb/settings=)
               blaze.mdl/*featured-post* (fb/posts-featured=)
               blaze.core/*router* bidi/route!]
-      ;; Lexically Scoped Variables
-      (let [router blz/*router* ;; Thread Binding to cross thread Lexical Scope
+      ;; Lexically Scoped Variables (cross thread)
+      (let [router blz/*router*
             prefix bidi/*prefix*
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
