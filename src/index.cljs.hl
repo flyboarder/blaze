@@ -65,6 +65,7 @@
           (layout/layout-content
             ;; Route Templating
             (route-tpl (bidi/routes)
+              ;; Landing View
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
@@ -83,6 +84,7 @@
                         :desktop-cols 8)
                       (bmdl/preview-card)
                       (bmdl/preview-card))))
+              ;; Categories View
               :categories
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
@@ -91,11 +93,13 @@
                   (grid/grid
                     :class [:demo-blog__list]
                     (bmdl/list-card :router #(router :category :id % :prefix prefix))))
+              ;; Category View
               :category
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
                   (grid/grid
                     :class [:demo-blog__posts]))
+              ;; Posts View
               :posts
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
@@ -104,6 +108,7 @@
                   (grid/grid
                     :class [:demo-blog__list]
                     (bmdl/list-card :router #(router :post :id % :prefix prefix))))
+              ;; Post View
               :post
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
