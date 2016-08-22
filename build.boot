@@ -84,7 +84,7 @@
     (reload)
     (cljs :optimizations :none)
     (target :dir #{"target/jquery"})
-    (serve :port 8080)))
+    (serve :port 8080 :dir "target/jquery")))
 
 (deftask demo-goog
   "Run a demo of the project. (using google closure)"
@@ -95,4 +95,4 @@
     (reload)
     (cljs :optimizations :none)
     (target :dir #{"target/goog"})
-    (serve :port 8081)))
+    (serve :port 8081 :dir "target/goog")))
