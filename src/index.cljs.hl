@@ -67,7 +67,7 @@
             (bmdl/navigation :router #(router % :prefix prefix)))
           ;; MDL Content
           (layout/layout-content
-            ;; Route Templating (each view is an individual thread)
+            ;; Route Templating (each view is an individual thread, ie. local bindings)
             (route-tpl (bidi/routes)
               ;; Landing View
               :index
