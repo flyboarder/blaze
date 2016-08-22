@@ -85,7 +85,7 @@
     (cljs :optimizations :none)
     (serve :port 8080)))
 
-(deftask demo
+(deftask demo-goog
   "Run a demo of the project. (using google closure)"
   []
   (comp
