@@ -45,7 +45,7 @@
       (let [router blz/*router*
             prefix bidi/*prefix*
             about-settings (cell= (-> blz/*settings* :cards :about))
-            featured-post (cell= (first (seq bmdl/*featured-post*)))
+            featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
         (layout/layout

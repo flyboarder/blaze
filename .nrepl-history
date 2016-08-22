@@ -1,2 +1,7 @@
 (get-deps)
 exit
+(.getProperties System "os.name")
+(.getProperty System "os.name")
+(system/getProperty "os.name")
+(System/getProperty "os.name")
+exit
