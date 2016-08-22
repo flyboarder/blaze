@@ -11,3 +11,5 @@
 (def ^:dynamic *featured-post* nil)
 
 (def ^:dynamic *current-post* nil)
+
+(def ^:dynamic *posts* nil)
