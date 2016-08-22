@@ -63,6 +63,7 @@
           (layout/layout-drawer
             (bmdl/navigation :router #(router % :prefix prefix)))
           (layout/layout-content
+            ;; Route Templating
             (route-tpl (bidi/routes)
               :index
                 (binding [grid/*cols*   12
