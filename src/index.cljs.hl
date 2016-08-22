@@ -45,8 +45,7 @@
               blaze.core/*router* bidi/route!]
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
-            prefix bidi/*prefix*
-            ]
+            prefix bidi/*prefix*]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
