@@ -41,7 +41,7 @@
     (binding [blaze.bidi/*prefix* ""
               blaze.mdl/*links* (fb/navigation=)
               blaze.core/*settings* (fb/settings=)
-              blaze.mdl/*featured-post* (fb/posts-featured=)
+              blaze.core/*featured-post* (fb/posts-featured=)
               blaze.core/*router* bidi/route!]
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
