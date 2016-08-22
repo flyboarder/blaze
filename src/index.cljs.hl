@@ -46,10 +46,7 @@
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
             prefix bidi/*prefix*
-            about-settings (cell= (-> blz/*settings* :cards :about))
-            featured-post (cell= (first (seq blz/*featured-post*)))
-            featured-id (cell= (first featured-post))
-            featured-meta (cell= (second featured-post))]
+            ]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
@@ -73,7 +70,10 @@
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
-                  (let []
+                  (let [about-settings (cell= (-> blz/*settings* :cards :about))
+                        featured-post (cell= (first (seq blz/*featured-post*)))
+                        featured-id (cell= (first featured-post))
+                        featured-meta (cell= (second featured-post))]
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card
