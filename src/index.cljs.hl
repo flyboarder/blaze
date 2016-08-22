@@ -39,7 +39,7 @@
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
     (binding [blaze.bidi/*prefix* ""
-              blaze.mdl/*links* (fb/navigation=)
+              blaze.core/*navigation* (fb/navigation=)
               blaze.core/*settings* (fb/settings=)
               blaze.core/*featured-post* (fb/posts-featured=)
               blaze.core/*router* bidi/route!]
