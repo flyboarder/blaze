@@ -37,12 +37,14 @@
     (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
+    ;; Settings // Root Thread Bindings (available only on first thread)
     (binding [blaze.bidi/*prefix* ""
               blaze.mdl/*links* (fb/navigation=)
               blaze.core/*settings* (fb/settings=)
               blaze.mdl/*featured-post* (fb/posts-featured=)
               blaze.core/*router* bidi/route!]
-      (let [router blz/*router*
+      ;; Lexically Scoped Variables
+      (let [router blz/*router* ;; Thread Binding to cross thread Lexical Scope
             prefix bidi/*prefix*
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
