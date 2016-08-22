@@ -1,37 +1,37 @@
 (ns blaze.core)
 
 (def ^:dynamic *settings*
-  "A bound formula cell containing a settings map."
+  "A thread bound formula cell containing a settings map."
   nil)
 
 (def ^:dynamic *route*
-  "A bound formula cell to the current route handler."
+  "A thread bound formula cell to the current route handler."
   nil)
 
 (def ^:dynamic *route-params*
-  "A bound formula cell to the current route params."
+  "A thread bound formula cell to the current route params."
   nil)
 
 (def ^:dynamic *router*
-  "A bound router function, which should change the current route."
+  "A thread bound router function, which should change the current route."
   nil)
 
 (def ^:dynamic *posts*
-  "A bound formula cell to a list of post meta data."
+  "A thread bound formula cell to a list of post meta data."
   nil)
 
 (def ^:dynamic *featured-post*
-  "A bound formula cell to the last 'featured' post."
+  "A thread bound formula cell to the last 'featured' post."
   nil)
 
 (def ^:dynamic *current-post*
-  "A bound formula cell to the current post."
+  "A thread bound formula cell to the current post."
   nil)
 
 (def ^:dynamic *categories*
-  "A bound formula cell to a list of categories."
+  "A thread bound formula cell to a list of categories."
   nil)
 
 (def ^:dynamic *tags*
-  "A bound formula cell to a list of tags."
+  "A thread bound formula cell to a list of tags."
   nil)
