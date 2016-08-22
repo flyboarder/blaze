@@ -4,9 +4,9 @@
 
 (def ^:dynamic *route* nil)
 
-(def ^:dynamic *router* nil)
-
 (def ^:dynamic *route-params* nil)
+
+(def ^:dynamic *router* nil)
 
 (def ^:dynamic *featured-post* nil)
 
