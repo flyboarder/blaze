@@ -16,8 +16,6 @@
       (card/card-supporting-text :class [:meta :meta--fill]
         (strong (text "~{title}"))))))
 
-(def ^:dynamic *featured-post* nil)
-
 (defelem featured-card [attr kids]
   (let [title (:title attr)
         image (:image attr)
