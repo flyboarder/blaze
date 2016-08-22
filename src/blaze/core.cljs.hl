@@ -7,3 +7,5 @@
 (def ^:dynamic *router* nil)
 
 (def ^:dynamic *route-params* nil)
+
+(def ^:dynamic *featured-post* nil)
