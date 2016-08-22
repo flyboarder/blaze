@@ -13,3 +13,7 @@
 (def ^:dynamic *featured-post* nil)
 
 (def ^:dynamic *current-post* nil)
+
+(def ^:dynamic *categories* nil)
+
+(def ^:dynamic *tags* nil)
