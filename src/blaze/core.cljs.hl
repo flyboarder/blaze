@@ -9,3 +9,5 @@
 (def ^:dynamic *route-params* nil)
 
 (def ^:dynamic *featured-post* nil)
+
+(def ^:dynamic *current-post* nil)
