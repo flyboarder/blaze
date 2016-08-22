@@ -11,6 +11,6 @@
  [hoplon/brew               "0.2.0-SNAPSHOT" :scope "provided"]
  [degree9/boot-semver       "1.2.4" :scope "test"]
  [degree9/boot-codeina      "0.1.0-SNAPSHOT" :scope "test"]
- [degree9/material-hl       "0.2.0-SNAPSHOT"]
+ [degree9/material-hl       "0.2.0"]
  [tolitius/boot-check       "0.1.1" :scope "test"]
  [pandeiro/boot-http        "0.7.0" :scope "test"]]
