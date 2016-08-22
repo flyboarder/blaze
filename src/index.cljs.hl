@@ -50,18 +50,22 @@
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
+        ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
           :drawer-button true
           :desktop-drawer-button true
+          ;; MDL Header
           (layout/layout-header
             :scroll true
             :transparent true
             (layout/header-row
               (layout/layout-spacer)
               (bmdl/navigation :router #(router % :prefix prefix))))
+          ;; MDL Drawer
           (layout/layout-drawer
             (bmdl/navigation :router #(router % :prefix prefix)))
+          ;; MDL Content
           (layout/layout-content
             ;; Route Templating
             (route-tpl (bidi/routes)
