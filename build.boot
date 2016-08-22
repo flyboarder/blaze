@@ -93,4 +93,4 @@
     (hoplon :goog true)
     (reload)
     (cljs :optimizations :none)
-    (serve :port 8080)))
+    (serve :port 8081)))
