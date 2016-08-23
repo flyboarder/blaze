@@ -39,7 +39,7 @@
   (hfb/fb-cell (-> (posts db) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
 (defn posts-current=
-  [& [db]]
+  [id & [db]]
   (hfb/fbonce-cell (post db)))
 
 (defn settings
