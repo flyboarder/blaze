@@ -52,7 +52,7 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
-            current-post (fb/post)
+            current-post (fb/post=)
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
