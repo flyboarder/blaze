@@ -30,6 +30,10 @@
   [& [db]]
   (hfb/fb-cell (-> (posts db) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
+(defn posts-current=
+  [id & [db]]
+  (hfb/fb-cell (-> (posts db) (fbdb/get-in [(keyword id)]))))
+
 (defn settings
   [& [db]]
   (fb-ref (or db *db*) [:settings]))
