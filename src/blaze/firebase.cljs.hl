@@ -22,6 +22,10 @@
   [& [db]]
   (fb-ref (or db *db*) [:posts :content]))
 
+(defn post=
+  [& [db]]
+  (hfb/fb-cell (post db)))
+
 (defn posts
   [& [db]]
   (fb-ref (or db *db*) [:posts :meta]))
