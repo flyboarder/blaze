@@ -96,11 +96,12 @@
               :categories
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          bmdl/*title* "Categories:"
-                          bmdl/*items* (fb/categories=)]
+                          bmdl/*title* "Categories:"]
                   (grid/grid
                     :class [:demo-blog__list]
-                    (bmdl/list-card :router #(router :category :id % :prefix prefix))))
+                    (bmdl/list-card
+                      :items categories
+                      :router #(router :category :id % :prefix prefix))))
               ;; Category View
               :category
                 (binding [grid/*cols*   12
@@ -114,7 +115,9 @@
                           bmdl/*title* "All Posts:"]
                   (grid/grid
                     :class [:demo-blog__list]
-                    (bmdl/list-card :items posts :router #(router :post :id % :prefix prefix))))
+                    (bmdl/list-card
+                      :items posts
+                      :router #(router :post :id % :prefix prefix))))
               ;; Post View
               :post
                 (binding [grid/*cols*   12
