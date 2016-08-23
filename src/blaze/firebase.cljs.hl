@@ -18,6 +18,10 @@
   ([db ref] (fbdb/get-in db ref)))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defn post
+  [& [db]]
+  (fb-ref (or db *db*) [:posts :content]))
+
 (defn posts
   [& [db]]
   (fb-ref (or db *db*) [:posts :meta]))
@@ -32,7 +36,7 @@
 
 (defn posts-current=
   [id & [db]]
-  (hfb/fbonce-cell (-> (posts db) (fbdb/get-in [(keyword id)]))))
+  (hfb/fbonce-cell (-> (post db) (fbdb/get-in [(keyword id)]))))
 
 (defn settings
   [& [db]]
