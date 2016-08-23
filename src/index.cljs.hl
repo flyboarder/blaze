@@ -51,6 +51,7 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
+            current-post (fb/posts-current= route-params)
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
@@ -127,5 +128,5 @@
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card
-                      :post (fb/posts-current= route-params)))))
+                      :post current-post))))
           (footer/mini-footer)))))))
