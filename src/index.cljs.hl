@@ -39,6 +39,7 @@
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
     (binding [blaze.bidi/*prefix* ""
+              blaze.core/*route-params* (bidi/route-params)
               blaze.core/*navigation* (fb/navigation=)
               blaze.core/*settings* (fb/settings=)
               blaze.core/*categories* (fb/categories=)
@@ -47,7 +48,7 @@
               blaze.core/*router* bidi/route!]
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
-            route-params (bidi/route-params)
+            route-params blz/*route-params*
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
