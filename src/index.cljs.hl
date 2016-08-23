@@ -52,7 +52,7 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
-            current-post (firebase-cljs.database/listen-once (fb/post) event #(prn %))
+            current-post (firebase-cljs.database/listen-once (fb/post) "value" #(prn %))
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
