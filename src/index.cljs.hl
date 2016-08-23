@@ -123,14 +123,9 @@
               ;; Post View
               :post
                 (binding [grid/*cols*   12
-                          grid/*shadow* 2
-                          blz/*current-post* (fb/posts-current= route-params)]
+                          grid/*shadow* 2]
                   (grid/grid
                     :class [:demo-blog__posts]
-                    (grid/cell-card
-                      (card/card-media :class [:mdl-color-text--grey-50]
-                        (h3 "Title"))
-                      (card/card-supporting-text :class [:meta])
-                      (card/card-supporting-text)
-                      (card/card-supporting-text :class [:comments])))))
+                    (bmdl/post-card
+                      :post (fb/posts-current= route-params)))))
           (footer/mini-footer)))))))
