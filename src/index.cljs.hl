@@ -52,13 +52,12 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
-            current-post nil
+            current-post (fb/posts-current= "blarg")
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
-            (prn (fb/post))
-            (firebase-cljs.database/listen-once fb/*db* "value" #(prn %))
+            (cell= (prn current-post))
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
