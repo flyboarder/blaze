@@ -56,7 +56,7 @@
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
-            (cell= (prn route-params))
+            (cell= (prn current-post))
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
