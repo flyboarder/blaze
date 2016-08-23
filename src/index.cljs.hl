@@ -51,7 +51,7 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
-            current-post (fb/posts-current= route-params)
+            current-post (fb/posts-current= (:id route-params))
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
