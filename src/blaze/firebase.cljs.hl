@@ -20,7 +20,7 @@
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn posts
   [& [db]]
-  (fb-ref (or db *db*) [:posts]))
+  (fb-ref (or db *db*) [:posts :meta]))
 
 (defn posts=
   [& [db]]
