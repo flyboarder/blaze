@@ -58,7 +58,7 @@
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
             (let [fbc (cell nil)]
-              (fbdb/listen-once (fb/post) "value" #(prn (hfb/fb->clj %))))
+              (fbdb/listen-once (fb/post) "value" #(reset! fbc (hfb/fb->clj %))))
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
