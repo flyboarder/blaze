@@ -32,7 +32,8 @@
 
 (defn posts-current=
   [id & [db]]
-  (hfb/fb-cell (-> (posts db) (fbdb/get-in [(keyword id)]))))
+  (when id
+    (hfb/fb-cell (-> (posts db) (fbdb/get-in [(keyword id)])))))
 
 (defn settings
   [& [db]]
