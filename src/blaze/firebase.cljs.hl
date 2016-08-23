@@ -36,7 +36,9 @@
 
 (defn posts-current=
   [id & [db]]
-  (hfb/fbonce-cell (-> (post db) (fbdb/get-in [(keyword id)]))))
+  (prn id)
+  ;(hfb/fbonce-cell (-> (post db) (fbdb/get-in [(keyword id)])))
+  )
 
 (defn settings
   [& [db]]
