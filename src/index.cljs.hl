@@ -47,7 +47,7 @@
               blaze.core/*router* bidi/route!]
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
-            route-params (fb/posts-current=)
+            route-params (bidi/route-params)
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
