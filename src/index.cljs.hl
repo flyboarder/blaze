@@ -109,11 +109,10 @@
               :posts
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          bmdl/*title* "All Posts:"
-                          bmdl/*items* (fb/posts=)]
+                          bmdl/*title* "All Posts:"]
                   (grid/grid
                     :class [:demo-blog__list]
-                    (bmdl/list-card :router #(router :post :id % :prefix prefix))))
+                    (bmdl/list-card :items posts :router #(router :post :id % :prefix prefix))))
               ;; Post View
               :post
                 (binding [grid/*cols*   12
