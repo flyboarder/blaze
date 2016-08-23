@@ -40,7 +40,7 @@
 
 (defn posts-current=
   [& [db]]
-  (hfb/fbonce-cell (-> (post db) )))
+  (hfb/fbonce-cell (post db)))
 
 (defn settings
   [& [db]]
