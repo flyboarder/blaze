@@ -123,7 +123,8 @@
               ;; Post View
               :post
                 (binding [grid/*cols*   12
-                          grid/*shadow* 2]
+                          grid/*shadow* 2
+                          blz/*current-post* (fb/posts-current= route-params)]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (grid/cell-card
