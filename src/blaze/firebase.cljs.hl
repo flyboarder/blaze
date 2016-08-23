@@ -36,7 +36,7 @@
 
 (defn posts-current=
   [& [db]]
-  (hfb/fbonce-cell (-> (post db) (fbdb/get-in [:blarg]))))
+  (hfb/fbonce-cell (-> (post db) )))
 
 (defn settings
   [& [db]]
