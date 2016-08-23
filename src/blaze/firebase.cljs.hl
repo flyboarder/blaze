@@ -22,10 +22,6 @@
   [& [db]]
   (fb-ref (or db *db*) [:posts :content]))
 
-(defn post=
-  [& [db]]
-  (hfb/fbonce-cell (post db)))
-
 (defn posts
   [& [db]]
   (fb-ref (or db *db*) [:posts :meta]))
@@ -40,7 +36,8 @@
 
 (defn posts-current=
   [id & [db]]
-  (hfb/fbonce-cell (post db)))
+  (hfb/fbonce-cell (-> (post db) (fbdb/get-in [(keyword id)])))
+  )
 
 (defn settings
   [& [db]]
