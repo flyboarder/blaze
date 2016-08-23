@@ -57,6 +57,7 @@
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
+            (prn (fb/post))
             (firebase-cljs.database/listen-once (fb/post) "value" #(prn %))
         ;; MDL Layout
         (layout/layout
