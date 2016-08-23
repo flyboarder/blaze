@@ -57,7 +57,7 @@
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
-            (fbdb/listen-once (fb/post) "value" #(prn %))
+            (fbdb/listen-once (fb/post) "value" #(prn (hfb/db->clj %)))
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
