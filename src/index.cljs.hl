@@ -47,6 +47,7 @@
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
             prefix bidi/*prefix*
+            posts blz/*posts*
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
