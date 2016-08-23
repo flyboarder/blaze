@@ -83,3 +83,12 @@
               :avatar (cell= (:icon item "../images/avatar.png"))
               (text "~{title}")))
           ))))
+
+(defelem post-card [attr kids]
+  (let [post (:items attr blz/*current-post*)]
+    (grid/cell-card
+      (card/card-media :class [:mdl-color-text--grey-50]
+        (h3 "Title"))
+      (card/card-supporting-text :class [:meta])
+      (card/card-supporting-text)
+      (card/card-supporting-text :class [:comments]))))
