@@ -43,7 +43,7 @@
               blaze.core/*settings* (fb/settings=)
               blaze.core/*categories* (fb/categories=)
               blaze.core/*posts* (fb/posts=)
-              blaze.core/*current-post* (fb/posts-current= (:id (bidi/route-params)))
+              blaze.core/*current-post* (fb/posts-current= (:id @(bidi/route-params)))
               blaze.core/*featured-post* (fb/posts-featured=)
               blaze.core/*router* bidi/route!]
       ;; Lexically Scoped Variables (cross thread)
