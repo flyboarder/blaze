@@ -24,7 +24,7 @@
 
 (defn post=
   [& [db]]
-  (hfb/fb-cell (post db)))
+  (hfb/fbonce-cell (post db)))
 
 (defn posts
   [& [db]]
