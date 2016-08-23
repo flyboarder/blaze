@@ -41,6 +41,7 @@
     (binding [blaze.bidi/*prefix* ""
               blaze.core/*navigation* (fb/navigation=)
               blaze.core/*settings* (fb/settings=)
+              blaze.core/*categories* (fb/categories=)
               blaze.core/*posts* (fb/posts=)
               blaze.core/*featured-post* (fb/posts-featured=)
               blaze.core/*router* bidi/route!]
