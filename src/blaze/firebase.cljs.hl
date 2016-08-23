@@ -32,7 +32,7 @@
 
 (defn posts=
   [& [db]]
-  (hfb/fbone-cell (posts db)))
+  (hfb/fbonce-cell (posts db)))
 
 (defn posts-featured=
   [& [db]]
