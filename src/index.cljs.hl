@@ -52,13 +52,13 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
-            current-post (cell= (hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id route-params))])))
+            ;current-post (cell= (hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id route-params))])))
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
-            (cell= (prn ~(hfb/fbonce-cell (fb/post))))
-            (cell= (prn (hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id route-params))]))))
+            ;(cell= (prn ~(hfb/fbonce-cell (fb/post))))
+            ;(cell= (prn (hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id route-params))]))))
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
@@ -132,5 +132,6 @@
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card
-                      :post current-post))))
+                      ;:post current-post
+                      ))))
           (footer/mini-footer)))))))
