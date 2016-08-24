@@ -34,18 +34,6 @@
   [& [db]]
   (hfb/fb-cell (-> (posts db) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
-(defn posts-current=
-  [& [id db]]
-  (let [id (or id (:id blz/*route-params*))
-        fbc (cell nil)]
-        (prn id)
-    (fbdb/listen-once
-      (fbdb/get-in (post db) [(keyword id)])
-      "value"
-      #(reset! fbc (hfb/fb->clj %)))
-    (cell= (prn fbc))
-    (cell= fbc)))
-
 (defn settings
   [& [db]]
   (fb-ref (or db *db*) [:settings]))
