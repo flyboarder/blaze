@@ -60,7 +60,7 @@
             ;(cell= (prn (fbonce-cell (fb/post))))
             (let [fbc   (cell nil)
                   ]
-              (fbdb/listen-once (fb/post) "value" #(reset! fbc (fbdb/fb->clj %)))
+              (fbdb/listen-once (fb/post) "value" #(reset! fbc (hfb/fb->clj %)))
               (cell= (prn fbc))))
         ;; MDL Layout
         (layout/layout
