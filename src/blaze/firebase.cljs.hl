@@ -36,7 +36,7 @@
 
 (defn posts-current=
   [& [id db]]
-  (let [params (cell= (or id (:id blz/*route-params*)))]
+  (let [id (cell= (or id (:id blz/*route-params*)))]
     ))
 
 (defn settings
