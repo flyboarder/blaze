@@ -1,5 +1,5 @@
 (ns blaze.firebase
-  (:require [cljsjs.firebase]
+  (:require [blaze.core :as blz]
             [firebase-cljs.core :as fb]
             [firebase-cljs.database :as fbdb]
             [firebase-cljs.database.query :as fbdq]
@@ -35,9 +35,9 @@
   (hfb/fb-cell (-> (posts db) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
 (defn posts-current=
-  [id & [db]]
-  (hfb/fbonce-cell (if id (fbdb/get-in (post db) [(keyword id)])
-                          (post db))))
+  [& [db]]
+  (let [id (cell= (:id blz/*route-params*))]
+    ))
 
 (defn settings
   [& [db]]
