@@ -35,8 +35,8 @@
   (hfb/fb-cell (-> (posts db) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
 (defn posts-current=
-  [& [db]]
-  (let [id (cell= (:id blz/*route-params*))]
+  [& [id db]]
+  (let [params (cell= (or id (:id blz/*route-params*)))]
     ))
 
 (defn settings
