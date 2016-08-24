@@ -25,7 +25,7 @@
   nil)
 
 (def ^:dynamic *current-post*
-  "A thread bound formula cell to the current post."
+  "A thread bound cell to the current post."
   nil)
 
 (def ^:dynamic *navigation*
