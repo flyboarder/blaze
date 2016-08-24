@@ -58,7 +58,7 @@
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
             ;(cell= (prn ~(hfb/fbonce-cell (fb/post))))
-            (cell= (prn current-post))
+            (cell= (prn route-params))
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
