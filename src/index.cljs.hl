@@ -57,7 +57,7 @@
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
-            ;(cell= (prn ~(hfb/fbonce-cell (fb/post))))
+            (cell= (prn ~(hfb/fbonce-cell (fb/post))))
             (cell= (prn ~(hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id route-params))]))))
         ;; MDL Layout
         (layout/layout
