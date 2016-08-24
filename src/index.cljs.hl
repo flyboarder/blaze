@@ -126,7 +126,9 @@
               ;; Post View
               :post
                 (binding [grid/*cols*   12
-                          grid/*shadow* 2]
+                          grid/*shadow* 2
+                          blaze/*current-post* (let [fbc (cell nil)]
+                                                (cell= (fbdb/listen-once (fbdb/get-in (fb/post) (:id route-params)) "value" #(prn %))))]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card
