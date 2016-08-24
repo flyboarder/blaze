@@ -36,7 +36,7 @@
 
 (defn posts-current=
   [& [id db]]
-  (let [id (cell= (or id (:id blz/*route-params*)))
+  (let [id (or id (:id blz/*route-params*))
         fbc (cell nil)]
         (prn id)
     (fbdb/listen-once
