@@ -52,7 +52,7 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
-            current-post (cell= (hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id route-params))])))
+            current-post (cell= (hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id @route-params))])))
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
