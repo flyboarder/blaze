@@ -38,7 +38,10 @@
   [& [id db]]
   (let [id (cell= (or id (:id blz/*route-params*)))
         fbc (cell nil)]
-    (fbdb/listen-once (fbdb/get-in (post db) [(keyword id)]) #(reset! fbc (hfb/fb->clj %)))
+    (fbdb/listen-once
+      (fbdb/get-in (post db) [(keyword id)])
+      "value"
+      #(reset! fbc (hfb/fb->clj %)))
     (cell= fbc)))
 
 (defn settings
