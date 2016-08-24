@@ -57,10 +57,10 @@
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
-            (cell= (prn (hfb/fbonce-cell (fb/post))))
+            (cell= (prn (fbonce-cell (fb/post))))
             (let [fbc   (cell nil)
-                  event (clojure.string/underscored (or event "value"))]
-              (fbdb/listen-once (fb/post) event #(reset! fbc (fb->clj %)))
+                  ]
+              (fbdb/listen-once (fb/post) "value" #(reset! fbc (fb->clj %)))
               (cell= (prn fbc))))
         ;; MDL Layout
         (layout/layout
