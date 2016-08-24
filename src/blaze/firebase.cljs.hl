@@ -42,6 +42,7 @@
       (fbdb/get-in (post db) [(keyword id)])
       "value"
       #(reset! fbc (hfb/fb->clj %)))
+    (cell= (prn fbc))
     (cell= fbc)))
 
 (defn settings
