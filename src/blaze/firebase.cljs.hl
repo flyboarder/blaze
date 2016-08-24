@@ -38,6 +38,7 @@
   [& [id db]]
   (let [id (cell= (or id (:id blz/*route-params*)))
         fbc (cell nil)]
+        (prn id)
     (fbdb/listen-once
       (fbdb/get-in (post db) [(keyword id)])
       "value"
