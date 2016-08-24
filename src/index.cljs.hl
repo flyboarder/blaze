@@ -52,15 +52,13 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
-            current-post (cell= (when (:id route-params) @(fb/posts-current= (:id route-params))))
+            current-post (cell= (when (:id route-params) (fb/posts-current= (:id route-params))))
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
-            (let [fbc (cell nil)]
-              (fbdb/listen-once (fb/post) "value" #(reset! fbc (hfb/fb->clj %))
-              (cell= (prn fbc))
-              ))
+            (cell= (prn (fbonce-cell (fb/post))))
+          
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
