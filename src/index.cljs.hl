@@ -57,7 +57,7 @@
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))]
-            (prn (hfb/fbonce-cell (fb/post)))
+            (hfb/fbonce-cell (fb/post))
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
