@@ -51,6 +51,7 @@
             route-params blz/*route-params*
             prefix bidi/*prefix*
             post-router #(router :post :id @featured-id :prefix prefix)
+            category-router #(router :category :id % :prefix prefix)
             categories blz/*categories*
             posts blz/*posts*
             about-settings (cell= (-> blz/*settings* :cards :about))
@@ -100,7 +101,7 @@
                     (bmdl/list-card
                       :title "Categories:"
                       :items categories
-                      :router #(router :category :id % :prefix prefix))))
+                      :router category-router)))
               ;; Category View
               :category
                 (binding [grid/*cols*   12
