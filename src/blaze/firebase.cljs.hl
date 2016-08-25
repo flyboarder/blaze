@@ -61,8 +61,8 @@
 (defn current-post=
   [& [route-params db]]
   (cell=
-    (assoc ~(fb/current-meta= route-params db)
-      :content ~(fb/current-content= route-params db))))
+    (assoc ~(current-meta= route-params db)
+      :content ~(current-content= route-params db))))
 
 (defn settings
   [& [db]]
