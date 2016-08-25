@@ -129,6 +129,7 @@
           (let [copyright (cell= (:copyright general-settings))]
             (cell= (prn copyright))
             (footer/mini-footer
+              "test"
               (footer/mini-footer-left "test")
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
