@@ -25,8 +25,12 @@
 (defn current-post=
   [& [route-params db]]
   (let [fbc (cell nil)]
-    (cell= (when (:id route-params)
-             (fbdb/listen-once (fbdb/get-in (fb/post) (:id route-params)) "value" ~#(reset! fbc (hfb/fb->clj %)))))
+    (cell=
+      (when (:id route-params)
+        (fbdb/listen-once
+          (fbdb/get-in (fb/post db) (:id route-params))
+          "value"
+          ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc)))
 
 (defn posts
