@@ -133,7 +133,7 @@
                           ;                                      (fbdb/listen-once (fbdb/get-in (fb/post) (:id route-params)) "value" ~#(reset! fbc (hfb/fb->clj %)))))
                           ;                            (cell= fbc))
                           ]
-                          ;(prn (macroexpand-1 '(fbwhen-cell (:id route-params) (fbdb/get-in (fb/post) [(keyword (:id route-params))]))))
+                          (prn (macroexpand-1 '(fbwhen-cell (:id route-params) (fbdb/get-in (fb/post) [(keyword (:id route-params))]))))
                           ;(cell= (prn blz/*current-post*))
                   (grid/grid
                     :class [:demo-blog__posts]
