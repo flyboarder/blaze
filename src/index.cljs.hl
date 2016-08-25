@@ -130,4 +130,4 @@
             (footer/mini-footer
               (footer/mini-footer-left)
               (footer/mini-footer-right
-                (span "©" ))))))))))
+                (span "©" (text "~{(:copyright general-settings)}")))))))))))
