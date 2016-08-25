@@ -90,5 +90,6 @@
       (card/card-media :class [:mdl-color-text--grey-50]
         (h3 "Title"))
       (card/card-supporting-text :class [:meta])
-      (card/card-supporting-text)
+      (card/card-supporting-text
+        (text "~{post}"))
       (card/card-supporting-text :class [:comments]))))
