@@ -50,6 +50,7 @@
       (let [router blz/*router*
             route-params blz/*route-params*
             prefix bidi/*prefix*
+            post-router #(router :post :id @featured-id :prefix prefix)
             categories blz/*categories*
             posts blz/*posts*
             about-settings (cell= (-> blz/*settings* :cards :about))
@@ -88,7 +89,7 @@
                     :class [:demo-blog__posts]
                     (bmdl/about-card :desktop-cols 4)
                     (bmdl/featured-card :desktop-cols 8
-                      :click #(router :post :id @featured-id :prefix prefix))
+                      :click )
                     (bmdl/preview-card)
                     (bmdl/preview-card)))
               ;; Categories View
