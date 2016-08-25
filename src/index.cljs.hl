@@ -57,7 +57,7 @@
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))
             post-router #(router :post :id @featured-id :prefix prefix)
-            category-router #(router :category :id % :prefix prefix)
+
             ]
         ;; MDL Layout
         (layout/layout
@@ -97,12 +97,13 @@
               :categories
                 (binding [grid/*cols*   12
                           grid/*shadow* 2]
-                  (grid/grid
-                    :class [:demo-blog__list]
-                    (bmdl/list-card
-                      :title "Categories:"
-                      :items categories
-                      :router category-router)))
+                  (let [category-router #(router :category :id % :prefix prefix)]
+                    (grid/grid
+                      :class [:demo-blog__list]
+                      (bmdl/list-card
+                        :title "Categories:"
+                        :items categories
+                        :router category-router))))
               ;; Category View
               :category
                 (binding [grid/*cols*   12
