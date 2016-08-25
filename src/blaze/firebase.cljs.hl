@@ -22,7 +22,7 @@
   [& [db]]
   (fb-ref (or db *db*) [:posts :content]))
 
-(defn current-post=
+(defn current-content=
   [& [route-params db]]
   (let [route-params (or route-params blz/*route-params*)
         fbc (cell nil)]
@@ -57,7 +57,7 @@
           "value"
           ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc)))
-    
+
 (defn settings
   [& [db]]
   (fb-ref (or db *db*) [:settings]))
