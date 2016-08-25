@@ -104,8 +104,7 @@
               ;; Category View
               :category
                 (binding [grid/*cols*   12
-                          grid/*shadow* 2
-                          blz/*router* #(router :post :id % :prefix prefix)]
+                          grid/*shadow* 2]
                   (grid/grid
                     :class [:demo-blog__posts]))
               ;; Posts View
