@@ -55,9 +55,7 @@
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
-            featured-meta (cell= (second featured-post))
-            featured-router #(router :post :id @featured-id :prefix prefix)
-            ]
+            featured-meta (cell= (second featured-post))]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
