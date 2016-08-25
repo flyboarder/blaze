@@ -58,6 +58,12 @@
           ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc)))
 
+(defn current-post=
+  [& [route-params db]]
+  (cell=
+    (assoc ~(fb/current-meta= route-params db)
+      :content ~(fb/current-content= route-params db))))
+
 (defn settings
   [& [db]]
   (fb-ref (or db *db*) [:settings]))
