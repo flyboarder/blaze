@@ -128,7 +128,7 @@
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
                           blz/*current-post* (cell= (when (:id route-params)
-                                                      (hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id route-params))]))))
+                                                      ~(hfb/fbonce-cell (fbdb/get-in (fb/post) [(keyword (:id route-params))]))))
                           ;blz/*current-post* (hfb/fbwhen-cell (cell= (:id route-params)) (fbdb/get-in (fb/post) [(keyword (:id route-params))]))
                           ;blaze.core/*current-post* (let [fbc (cell nil)]
                           ;                            (cell= (when (:id route-params)
