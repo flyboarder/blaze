@@ -22,6 +22,13 @@
   [& [db]]
   (fb-ref (or db *db*) [:posts :content]))
 
+(defn current-post=
+  [& [route-params db]]
+  (let [fbc (cell nil)]
+    (cell= (when (:id route-params)
+             (fbdb/listen-once (fbdb/get-in (fb/post) (:id route-params)) "value" ~#(reset! fbc (hfb/fb->clj %)))))
+    (cell= fbc)))
+
 (defn posts
   [& [db]]
   (fb-ref (or db *db*) [:posts :meta]))
