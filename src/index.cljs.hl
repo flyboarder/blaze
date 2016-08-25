@@ -126,8 +126,8 @@
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
-          (let []
+          (let [copyright (cell= (:copyright general-settings))]
             (footer/mini-footer
               (footer/mini-footer-left)
               (footer/mini-footer-right
-                (span "©" (text "~{(:copyright general-settings)}")))))))))))
+                (span "©" (text "~{copyright}")))))))))))
