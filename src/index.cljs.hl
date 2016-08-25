@@ -83,8 +83,7 @@
                           mdl/*about-image* (cell= (:image about-settings))
                           mdl/*featured-title* (cell= (:title featured-meta))
                           mdl/*featured-image* (cell= (:image featured-meta))
-                          mdl/*featured-color* (cell= (:image featured-meta))
-                          ]
+                          mdl/*featured-color* (cell= (:image featured-meta))]
                   (let []
                     (grid/grid
                       :class [:demo-blog__posts]
