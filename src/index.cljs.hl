@@ -129,7 +129,7 @@
           (let [copyright (cell= (:copyright general-settings))]
             (cell= (prn copyright))
             (footer/mini-footer
-              "test"
+              (div :class [:mdl-mini-footer--left-section])
               (footer/mini-footer-left "test")
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
