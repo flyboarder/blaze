@@ -133,6 +133,7 @@
                 (footer/footer-logo)
                 (a :href "http://twitter.com"
                   (footer/mini-footer-social-button
+                    :icon "twitter"
                     :class [:social-btn])))
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
