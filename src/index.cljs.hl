@@ -11,7 +11,7 @@
             [firebase-cljs.database :as fbdb]
             [blaze.bidi :as bidi]
             [blaze.mdl :as bmdl])
-  (:require-macros [hoplon.firebase :refer [with-auth!]]
+  (:require-macros [hoplon.firebase :refer [with-auth! fbwhen-cell]]
                    [hoplon.bidi :refer [route-tpl]]))
 
 ;; Index Page
