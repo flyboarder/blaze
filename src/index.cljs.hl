@@ -83,7 +83,7 @@
                           bmdl/*about-image* (cell= (:image about-settings))
                           bmdl/*featured-title* (cell= (:title featured-meta))
                           bmdl/*featured-image* (cell= (:image featured-meta))
-                          bmdl/*featured-color* (cell= (:image featured-meta))]
+                          bmdl/*featured-color* (cell= (:color featured-meta))]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/about-card :desktop-cols 4)
