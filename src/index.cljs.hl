@@ -130,7 +130,5 @@
                           blaze.core/*current-post* (fb/current-post= route-params)]
                   (grid/grid
                     :class [:demo-blog__posts]
-                    (bmdl/post-card
-                      ;:post current-post
-                      ))))
+                    (bmdl/post-card))))
           (footer/mini-footer)))))))
