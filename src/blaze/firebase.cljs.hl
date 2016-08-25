@@ -46,6 +46,18 @@
   [& [db]]
   (hfb/fb-cell (-> (posts db) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
+(defn current-meta=
+  [& [route-params db]]
+  (let [route-params (or route-params blz/*route-params*)
+        fbc (cell nil)]
+    (cell=
+      (when (:id route-params)
+        (fbdb/listen-once
+          (fbdb/get-in (posts db) (:id route-params))
+          "value"
+          ~#(reset! fbc (hfb/fb->clj %)))))
+    (cell= fbc)))
+    
 (defn settings
   [& [db]]
   (fb-ref (or db *db*) [:settings]))
