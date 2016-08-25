@@ -121,7 +121,7 @@
               :post
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          blaze.core/*current-post* (hfb/fbmulti-cell (fbdb/get-in (posts db) (:id route-params)))];(fb/current-post= route-params)]
+                          blaze.core/*current-post* (hfb/fbmulti-cell (fbdb/get-in (fb/posts) (:id route-params)))];(fb/current-post= route-params)]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
