@@ -128,7 +128,7 @@
                     (bmdl/post-card))))
           (let [copyright (cell= (:copyright general-settings))]
             (footer/mini-footer
-              (div :class [:mdl-mini-footer--left-section] "")
+              (footer/footer-logo)
               (footer/mini-footer-left "test")
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
