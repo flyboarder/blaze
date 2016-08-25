@@ -50,14 +50,14 @@
       (let [router blz/*router*
             route-params blz/*route-params*
             prefix bidi/*prefix*
-            post-router #(router :post :id @featured-id :prefix prefix)
-            category-router #(router :category :id % :prefix prefix)
             categories blz/*categories*
             posts blz/*posts*
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
-            featured-meta (cell= (second featured-post))]
+            featured-meta (cell= (second featured-post))
+            post-router #(router :post :id @featured-id :prefix prefix)
+            category-router #(router :category :id % :prefix prefix)]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
