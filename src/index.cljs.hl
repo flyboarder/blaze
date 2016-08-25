@@ -1,6 +1,6 @@
 (page "index.html"
   (:require [material-hl.core :as mdl]
-            [material-hl.button :as btn]
+            [material-hl.buttons :as btn]
             [material-hl.layout :as layout]
             [material-hl.navigation :as nav]
             [material-hl.grid :as grid]
@@ -130,6 +130,7 @@
           (let [copyright (cell= (:copyright general-settings))]
             (footer/mini-footer
               (footer/mini-footer-left
-                (footer/footer-logo))
+                (footer/footer-logo)
+                (btn/))
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
