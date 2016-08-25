@@ -131,7 +131,8 @@
             (footer/mini-footer
               (footer/mini-footer-left
                 (footer/footer-logo)
-                (footer/mini-footer-social-button
-                  :class [:social-btn] (a :href "http://twitter.com")))
+                (a :href "http://twitter.com"
+                  (footer/mini-footer-social-button
+                    :class [:social-btn])))
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
