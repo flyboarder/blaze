@@ -79,11 +79,11 @@
               :index
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          mdl/*about-title* (cell= (:title about-settings))
-                          mdl/*about-image* (cell= (:image about-settings))
-                          mdl/*featured-title* (cell= (:title featured-meta))
-                          mdl/*featured-image* (cell= (:image featured-meta))
-                          mdl/*featured-color* (cell= (:image featured-meta))]
+                          bmdl/*about-title* (cell= (:title about-settings))
+                          bmdl/*about-image* (cell= (:image about-settings))
+                          bmdl/*featured-title* (cell= (:title featured-meta))
+                          bmdl/*featured-image* (cell= (:image featured-meta))
+                          bmdl/*featured-color* (cell= (:image featured-meta))]
                   (let []
                     (grid/grid
                       :class [:demo-blog__posts]
