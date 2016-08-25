@@ -131,7 +131,7 @@
                           blaze.core/*current-post* (let [fbc (cell nil)]
                                                       (cell= (when (:id route-params)
                                                                 (comp (fbdb/listen-once (fbdb/get-in (fb/post) (:id route-params)) "value" ~#(reset! fbc (hfb/fb->clj %)))
-                                                                      ~fbc))))
+                                                                      fbc))))
                           ]
                           (cell= (prn blz/*current-post*))
                   (grid/grid
