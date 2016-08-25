@@ -84,18 +84,13 @@
                           mdl/*featured-title* (cell= (:title featured-meta))
                           mdl/*featured-image* (cell= (:image featured-meta))
                           mdl/*featured-color* (cell= (:image featured-meta))
-                          mdl/*featured-bg* (cell= (:bg featured-meta))
                           ]
                   (let []
                     (grid/grid
                       :class [:demo-blog__posts]
                       (bmdl/about-card :desktop-cols 4)
-                      (bmdl/featured-card
-                        :click #(router :post :id @featured-id :prefix prefix)
-                        :title (cell= (:title featured-meta))
-                        :image (cell= (:image featured-meta))
-                        :color (cell= (:color featured-meta))
-                        :desktop-cols 8)
+                      (bmdl/featured-card :desktop-cols 8
+                        :click #(router :post :id @featured-id :prefix prefix))
                       (bmdl/preview-card)
                       (bmdl/preview-card))))
               ;; Categories View
