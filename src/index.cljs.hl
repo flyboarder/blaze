@@ -127,7 +127,7 @@
               :post
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          blz/*current-post* (hfb/fbwhen-cell (:id route-params) (fbdb/get-in (fb/post) [(keyword (:id route-params))]))
+                          blz/*current-post* (fbwhen-cell (:id route-params) (fbdb/get-in (fb/post) [(keyword (:id route-params))]))
                           ;blaze.core/*current-post* (let [fbc (cell nil)]
                           ;                            (cell= (when (:id route-params)
                           ;                                      (fbdb/listen-once (fbdb/get-in (fb/post) (:id route-params)) "value" ~#(reset! fbc (hfb/fb->clj %)))))
