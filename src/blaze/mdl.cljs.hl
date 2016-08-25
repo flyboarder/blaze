@@ -8,9 +8,12 @@
 (defn bg-image [image]
   (str "url('" image "')"))
 
+(def ^:dynamic *about-title* nil)
+(def ^:dynamic *about-image* nil)
+
 (defelem about-card [attr kids]
-  (let [title (:title attr)
-        image (:image attr)]
+  (let [title (:title attr *about-title*)
+        image (:image attr *about-image*)]
     (grid/cell-card attr
       (card/card-media :css (cell= {:background-image (bg-image image)}))
       (card/card-supporting-text :class [:meta :meta--fill]
