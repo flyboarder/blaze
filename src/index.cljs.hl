@@ -125,7 +125,7 @@
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
                           blaze.core/*current-post* (cell= (assoc ~(fb/current-meta=)
-                                                              :content ~(fb/current-post= route-params))]
+                                                              :content ~(fb/current-post= route-params)))]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
