@@ -27,7 +27,7 @@
   (let [title (:title attr *featured-title*)
         image (:image attr *featured-image*)
         color (:color attr *featured-color*)
-        router (or (:router attr) blz/*router*)]
+        router (:router attr blz/*router*)]
     (grid/cell-card
       attr
       (card/card-media
