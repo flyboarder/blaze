@@ -88,8 +88,7 @@
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/about-card :desktop-cols 4)
-                    (bmdl/featured-card :desktop-cols 8
-                      :click post-router)
+                    (bmdl/featured-card :desktop-cols 8 :click post-router)
                     (bmdl/preview-card)
                     (bmdl/preview-card)))
               ;; Categories View
