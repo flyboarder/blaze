@@ -127,9 +127,8 @@
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
           (let [copyright (cell= (:copyright general-settings))]
-            (cell= (prn copyright))
             (footer/mini-footer
-              (div :class [:mdl-mini-footer--left-section])
+              (div :class [:mdl-mini-footer--left-section] "")
               (footer/mini-footer-left "test")
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
