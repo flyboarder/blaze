@@ -24,9 +24,9 @@
 (def ^:dynamic *featured-color* nil)
 
 (defelem featured-card [attr kids]
-  (let [title (:title attr)
-        image (:image attr)
-        color (:color attr)
+  (let [title (:title attr *featured-title*)
+        image (:image attr *featured-image*)
+        color (:color attr *featured-color*)
         router (or (:router attr) blz/*router*)]
     (grid/cell-card
       attr
