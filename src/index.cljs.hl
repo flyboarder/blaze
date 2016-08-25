@@ -78,14 +78,13 @@
               ;; Landing View
               :index
                 (binding [grid/*cols*   12
-                          grid/*shadow* 2]
+                          grid/*shadow* 2
+                          mdl/*about-title* (cell= (:title about-settings))
+                          mdl/*about-image* (cell= (:image about-settings))]
                   (let []
                     (grid/grid
                       :class [:demo-blog__posts]
-                      (bmdl/about-card
-                        :title (cell= (:title about-settings))
-                        :image (cell= (:image about-settings))
-                        :desktop-cols 4)
+                      (bmdl/about-card :desktop-cols 4)
                       (bmdl/featured-card
                         :click #(router :post :id @featured-id :prefix prefix)
                         :title (cell= (:title featured-meta))
