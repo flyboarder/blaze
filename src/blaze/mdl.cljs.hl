@@ -106,7 +106,7 @@
 
 (defelem footer [attr kids]
   (let [copyright (:copyright attr)
-        social (:social-links attr)]
+        social (:social-links attr *social-links*)]
     (footer/mini-footer
       (footer/mini-footer-left
         (footer/footer-logo)
