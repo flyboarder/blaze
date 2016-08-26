@@ -105,7 +105,7 @@
 (def ^:dynamic *social-links*)
 
 (defelem footer [attr kids]
-  (let [copyright (cell= (:copyright blz/*settings*))]
+  (let [copyright (:copyright attr)]
     (footer/mini-footer
       (footer/mini-footer-left
         (footer/footer-logo)
