@@ -130,4 +130,4 @@
                     (bmdl/post-card))))
           (let [copyright (cell= (:copyright general-settings))
                 social (cell= social-settings)]
-            (bmdl/footer))))))))
+            (bmdl/footer :copyright copyright :social-links))))))))
