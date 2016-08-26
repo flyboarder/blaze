@@ -53,7 +53,8 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
-            general-settings (cell= (-> blz/*settings* :general))
+            general-settings (cell= (:general blz/*settings*))
+            social-settings (cell= (:social blz/*settings*))
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
@@ -128,7 +129,7 @@
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
           (let [copyright (cell= (:copyright general-settings))
-                social (cell= (:social general-settings))]
+                social (cell= (:social))]
                 (cell= (prn general-settings))
             (footer/mini-footer
               (footer/mini-footer-left
