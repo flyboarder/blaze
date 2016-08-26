@@ -116,5 +116,5 @@
             (footer/mini-footer-social-button
               :icon true
               :class (cell= [:social-btn (keyword (str "social-btn__" (name icon)))])))))
-      (footer/mini-footer-right
+      (hoplon.core/footer/mini-footer-right
         (span (text "© ~{copyright}"))))))
