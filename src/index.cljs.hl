@@ -128,7 +128,7 @@
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
           (let [copyright (cell= (:copyright general-settings))
-                social (cell= (-> general-settings :social))]
+                social (cell= (:social general-settings))]
                 (cell= (prn social))
             (footer/mini-footer
               (footer/mini-footer-left
