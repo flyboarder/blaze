@@ -39,14 +39,14 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
-    (binding [blaze.bidi/*prefix* ""
-              blaze.core/*route-params* (bidi/route-params)
-              blaze.core/*navigation* (fb/navigation=)
-              blaze.core/*settings* (fb/settings=)
-              blaze.core/*categories* (fb/categories=)
-              blaze.core/*posts* (fb/posts=)
-              blaze.core/*featured-post* (fb/posts-featured=)
-              blaze.core/*router* bidi/route!]
+    (binding [bidi/*prefix* ""
+              blz/*route-params* (bidi/route-params)
+              blz/*navigation* (fb/navigation=)
+              blz/*settings* (fb/settings=)
+              blz/*categories* (fb/categories=)
+              blz/*posts* (fb/posts=)
+              blz/*featured-post* (fb/posts-featured=)
+              blz/*router* bidi/route!]
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
             route-params blz/*route-params*
@@ -124,7 +124,7 @@
               :post
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          blaze.core/*current-post* (fb/current-post= route-params)]
+                          blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
