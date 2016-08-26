@@ -133,10 +133,10 @@
             (footer/mini-footer
               (footer/mini-footer-left
                 (footer/footer-logo)
-                (for-tpl [[s url] social]
+                (for-tpl [[icon url] social]
                   (a :href (cell= url)
                     (footer/mini-footer-social-button
                       :icon true
-                      :class (cell= [:social-btn (keyword (str "social-btn__" (name s)))])))))
+                      :class (cell= [:social-btn (keyword (str "social-btn__" (name icon)))])))))
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
