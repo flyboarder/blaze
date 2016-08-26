@@ -4,6 +4,7 @@
             [material-hl.cards :as card]
             [material-hl.grid :as grid]
             [material-hl.navigation :as nav]
+            [material-hl.footer :as footer]
             [blaze.core :as blz]))
 
 (defn bg-image [image]
@@ -116,5 +117,5 @@
             (footer/mini-footer-social-button
               :icon true
               :class (cell= [:social-btn (keyword (str "social-btn__" (name icon)))])))))
-      (hoplon.core/footer/mini-footer-right
+      (footer/mini-footer-right
         (span (text "© ~{copyright}"))))))
