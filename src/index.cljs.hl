@@ -137,6 +137,6 @@
                   (a :href (cell= url)
                     (footer/mini-footer-social-button
                       :icon true
-                      :class (cell= [:social-btn ])))))
+                      :class (cell= [:social-btn (-> s #(str "social-btn__" %) keyword)])))))
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
