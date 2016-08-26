@@ -1,4 +1,5 @@
 (ns blaze.mdl
+  (:refer-hoplon :exclude [footer])
   (:require [material-hl.core :as mdl]
             [material-hl.cards :as card]
             [material-hl.grid :as grid]
@@ -102,3 +103,5 @@
       (card/card-supporting-text :class [:comments]))))
 
 (def ^:dynamic *social-links*)
+
+(defelem footer)
