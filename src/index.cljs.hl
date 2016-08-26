@@ -127,7 +127,8 @@
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
-          (let [copyright (cell= (:copyright general-settings))]
+          (let [copyright (cell= (:copyright general-settings))
+                twitter (cell= (-> general-settings :social :twitter))]
             (footer/mini-footer
               (footer/mini-footer-left
                 (footer/footer-logo)
