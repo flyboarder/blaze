@@ -128,13 +128,13 @@
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
           (let [copyright (cell= (:copyright general-settings))
-                twitter (cell= (-> general-settings :social :twitter))]
+                social (cell= (-> general-settings :social))]
             (footer/mini-footer
               (footer/mini-footer-left
                 (footer/footer-logo)
                 (a :href "http://twitter.com"
                   (footer/mini-footer-social-button
                     :icon true
-                    :class [:social-btn :social-btn__twitter])))
+                    :class [:social-btn (keyword (str social-btn__))])))
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
