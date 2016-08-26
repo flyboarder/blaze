@@ -132,9 +132,10 @@
             (footer/mini-footer
               (footer/mini-footer-left
                 (footer/footer-logo)
-                (a :href "http://twitter.com"
-                  (footer/mini-footer-social-button
-                    :icon true
-                    :class [:social-btn (keyword (str social-btn__))])))
+                (for-tpl [[s url] social]
+                  (a :href url
+                    (footer/mini-footer-social-button
+                      :icon true
+                      :class [:social-btn (keyword (str "social-btn__" s))]))))
               (footer/mini-footer-right
                 (span (text "© ~{copyright}")))))))))))
