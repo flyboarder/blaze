@@ -102,10 +102,11 @@
         (text "~{(:content post)}"))
       (card/card-supporting-text :class [:comments]))))
 
+(def ^:dynamic *copyright* nil)
 (def ^:dynamic *social-links* nil)
 
 (defelem footer [attr kids]
-  (let [copyright (:copyright attr)
+  (let [copyright (:copyright attr *copyright*)
         social (:social-links attr *social-links*)]
     (footer/mini-footer
       (footer/mini-footer-left
