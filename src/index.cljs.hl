@@ -128,6 +128,6 @@
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
-          (let [copyright (cell= (:copyright general-settings))
-                social (cell= social-settings)]
-            (bmdl/footer :copyright copyright :social-links social))))))))
+          (binding [bmdl/*copyright* (cell= (:copyright general-settings))
+                    bmdl/*social-links* (cell= social-settings)]
+            (bmdl/footer))))))))
