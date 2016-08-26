@@ -129,7 +129,7 @@
                     (bmdl/post-card))))
           (let [copyright (cell= (:copyright general-settings))
                 social (cell= (:social general-settings))]
-                (cell= (prn social))
+                (cell= (prn general-settings))
             (footer/mini-footer
               (footer/mini-footer-left
                 (footer/footer-logo)
