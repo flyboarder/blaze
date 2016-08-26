@@ -508,10 +508,13 @@ body .demo-blog {
   opacity: 0.46;
   border-radius: 2px;
 }
+.social-btn__instagram {
+  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_instagram_black_24dp.png');
+}
 .social-btn__twitter {
   background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png');
 }
-.social-btn__blogger {
+.social-btn__facebook {
   background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png');
 }
 .social-btn__gplus {

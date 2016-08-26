@@ -100,3 +100,5 @@
       (card/card-supporting-text
         (text "~{(:content post)}"))
       (card/card-supporting-text :class [:comments]))))
+
+(def ^:dynamic *social-links*)
