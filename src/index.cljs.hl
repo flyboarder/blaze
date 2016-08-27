@@ -115,8 +115,9 @@
                          nil blz/*router*      post-router
                          nil bmdl/*list-title* "All Posts:"
                          nil bmdl/*list-items* posts]
-                  (grid/grid :class [:demo-blog__list]
-                    (bmdl/list-card)))
+                  [(div :class [:demo-back])
+                   (grid/grid :class [:demo-blog__list]
+                    (bmdl/list-card))])
               ;; Post View
               :post
                 (config [nil grid/*cols*        width-cols
