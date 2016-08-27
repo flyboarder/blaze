@@ -17,9 +17,9 @@
     [(first kids) in (second kids)]))
 
 (defelem bottom-nav [attr kids]
-  (let [router (:router attr blz/*router*)]
+  (let []
     (grid/cell attr
-      (at-half (div :class [:section-spacer]) 
+      (at-half (div :class [:section-spacer])
         kids))))
 
 (def ^:dynamic *about-title* nil)
