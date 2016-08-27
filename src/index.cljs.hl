@@ -82,13 +82,13 @@
             (route-tpl (bidi/routes)
               ;; Landing View
               :index
-                (binding [grid/*cols* width-cols
-                          grid/*shadow* shadow
-                          bmdl/*about-title* (cell= (:title about-settings))
-                          bmdl/*about-image* (cell= (:image about-settings))
-                          bmdl/*featured-title* (cell= (:title featured-meta))
-                          bmdl/*featured-image* (cell= (:image featured-meta))
-                          bmdl/*featured-color* (cell= (:color featured-meta))]
+                (config [nil grid/*cols* width-cols
+                         nil grid/*shadow* shadow
+                         nil  bmdl/*about-title* (cell= (:title about-settings))
+                         nil  bmdl/*about-image* (cell= (:image about-settings))
+                         nil  bmdl/*featured-title* (cell= (:title featured-meta))
+                         nil  bmdl/*featured-image* (cell= (:image featured-meta))
+                         nil  bmdl/*featured-color* (cell= (:color featured-meta))]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/about-card :desktop-cols 4)
