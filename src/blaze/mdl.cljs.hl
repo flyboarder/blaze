@@ -14,8 +14,8 @@
 (defelem bottom-nav [attr kids]
   (grid/cell attr
     (div :class [:section-spacer])
-    (a
-      (btn/button))))
+    (a :class [:demo-nav__button]
+      (btn/button :class [:demo]))))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
