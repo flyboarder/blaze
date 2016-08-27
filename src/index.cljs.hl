@@ -80,6 +80,7 @@
               :index
                 (config [nil grid/*cols*           width-cols
                          nil grid/*shadow*         shadow
+                         nil blz/*router*          router
                          nil bmdl/*about-title*    (cell= (:title about-settings))
                          nil bmdl/*about-image*    (cell= (:image about-settings))
                          nil bmdl/*featured-title* (cell= (:title featured-meta))
@@ -91,8 +92,7 @@
                       :click featured-router)
                     (bmdl/preview-card)
                     (bmdl/preview-card)
-                    (bmdl/bottom-nav :class [:demo-nav]
-                      :click #(router :posts :prefix prefix))))
+                    (bmdl/bottom-nav :class [:demo-nav])))
               ;; Categories View
               :categories
                 (config [nil grid/*cols*       width-cols
