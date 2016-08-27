@@ -107,13 +107,7 @@
                          nil bmdl/*list-title* "Categories:"
                          nil bmdl/*list-items* categories]
                     (grid/grid :class [:demo-blog__list]
-                      (bmdl/list-card)
-                      (bmdl/bottom-nav :class [:demo-nav]
-                        (bmdl/nav-backward :class [:demo-nav__button]
-                          :href "#")
-                        (div :class [:section-spacer])
-                        (bmdl/nav-forward :class [:demo-nav__button]
-                          :href "#"))))
+                      (bmdl/list-card)))
               ;; Category View
               :category
                 (config [nil grid/*cols*   width-cols
