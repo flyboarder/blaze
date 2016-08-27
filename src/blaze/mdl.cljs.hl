@@ -11,6 +11,11 @@
 (defn bg-image [image]
   (str "url('" image "')"))
 
+(defn at-half [in kids]
+  (let [half (/ (count kids) 2)
+        kids (split-at half kids)]
+    [(first kids) in (second kids)]))
+
 (defelem bottom-nav [attr kids]
   (let [router (:router attr blz/*router*)]
     (grid/cell attr
