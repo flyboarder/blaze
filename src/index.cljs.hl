@@ -47,7 +47,7 @@
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
     ;; config
-    (binding [;bidi/*prefix* ""
+    (binding [bidi/*prefix* ""
               blz/*route-params* (bidi/route-params)
               blz/*navigation* (fb/navigation=)
               blz/*settings* (fb/settings=)
@@ -58,7 +58,7 @@
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
             route-params blz/*route-params*
-            ;prefix bidi/*prefix*
+            prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
             width-cols 12
