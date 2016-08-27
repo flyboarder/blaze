@@ -68,10 +68,8 @@
             (layout/header-row
               ;; Nav Back Button
               (if-tpl (cell= (not= route :index))
-                (div :class [:demo-back]
-                  :click #(router :index :prefix prefix)
-                  (btn/button :icon true
-                    (i :class [:material-icons] "arrow_backward"))))
+                (bmdl/nav-backward :class [:demo-back]
+                  :href "#"))
               (layout/layout-spacer)
               (bmdl/navigation :router nav-router)))
           ;; MDL Drawer
