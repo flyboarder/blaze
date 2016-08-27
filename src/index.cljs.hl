@@ -99,11 +99,11 @@
                     (bmdl/bottom-nav)))
               ;; Categories View
               :categories
-                (binding [grid/*cols* width-cols
-                          grid/*shadow* shadow
-                          blz/*router* category-router
-                          bmdl/*list-items* categories
-                          bmdl/*list-title* "Categories:"]
+                (config [nil grid/*cols* width-cols
+                         nil grid/*shadow* shadow
+                         nil  blz/*router* category-router
+                         nil  bmdl/*list-items* categories
+                         nil  bmdl/*list-title* "Categories:"]
                     (grid/grid
                       :class [:demo-blog__list]
                       (bmdl/list-card)))
