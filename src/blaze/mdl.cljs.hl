@@ -13,7 +13,7 @@
 
 (defelem bottom-nav [attr kids]
   (let [router (:router attr blz/*router*)
-        prefix (:prefix attr blz/*router*)]
+        prefix (:prefix attr blz/*prefix*)]
     (grid/cell attr
       (div :class [:section-spacer])
       (a :class [:demo-nav__button]
