@@ -1,6 +1,6 @@
 (ns blaze.core)
 
-(defn- partition-let [conf]
+(defn- partition-lets [conf]
   (->> conf
       (map
         (fn [[l b e]]
@@ -40,7 +40,7 @@
   {:pre (mod (count conf) 3)}
   (let [conf (partition 3 conf)
         bindings (partition-bindings conf)
-        lets (partition-let conf)]
+        lets (partition-lets conf)]
     `(binding ~bindings
       (let ~lets
         ~body))))
