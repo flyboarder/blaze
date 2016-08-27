@@ -109,8 +109,8 @@
                       (bmdl/list-card)))
               ;; Category View
               :category
-                (binding [grid/*cols* width-cols
-                          grid/*shadow* shadow]
+                (config [nil grid/*cols* width-cols
+                         nil grid/*shadow* shadow]
                   (grid/grid
                     :class [:demo-blog__posts]))
               ;; Posts View
