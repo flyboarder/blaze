@@ -68,7 +68,7 @@
             :scroll true
             :transparent true
             (layout/header-row
-              (if-tpl route
+              (if-tpl (cell= (not= route :index)
                 (div :class [:demo-back]
                   :click #(router :index :prefix prefix)
                   (btn/button :icon true
