@@ -11,7 +11,8 @@
             [blaze.firebase :as fb]
             [firebase-cljs.database :as fbdb]
             [blaze.bidi :as bidi]
-            [blaze.mdl :as bmdl])
+            [blaze.mdl :as bmdl]
+            [cljs.pprint :as pp])
   (:require-macros [hoplon.firebase :refer [with-auth!]]
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
