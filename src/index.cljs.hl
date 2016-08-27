@@ -61,8 +61,8 @@
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
-          :drawer-button true
-          :desktop-drawer-button true
+          ;:drawer-button true
+          ;:desktop-drawer-button true
           ;; MDL Header
           (layout/layout-header
             :scroll true
