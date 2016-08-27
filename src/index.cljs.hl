@@ -114,11 +114,11 @@
               :posts
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          bmdl/*list-title* "All Posts:"]
+                          bmdl/*list-title* "All Posts:"
+                          bmdl/*list-items* posts]
                   (grid/grid
                     :class [:demo-blog__list]
                     (bmdl/list-card
-                      :items posts
                       :router #(router :post :id % :prefix prefix))))
               ;; Post View
               :post
