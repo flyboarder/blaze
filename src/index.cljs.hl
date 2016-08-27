@@ -100,7 +100,7 @@
                     (bmdl/bottom-nav :class [:demo-nav]
                       (div :class [:section-spacer])
                       (a :class [:demo-nav__button]
-                         :click #(router :posts :prefix prefix)
+                         :href "#posts"
                          (btn/button :icon true
                            (i :class [:material-icons] "arrow_forward"))))))
               ;; Categories View
