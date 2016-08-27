@@ -78,10 +78,10 @@
             (route-tpl (bidi/routes)
               ;; Landing View
               :index
-                (config [nil grid/*cols* width-cols
-                         nil grid/*shadow* shadow
-                         nil bmdl/*about-title* (cell= (:title about-settings))
-                         nil bmdl/*about-image* (cell= (:image about-settings))
+                (config [nil grid/*cols*           width-cols
+                         nil grid/*shadow*         shadow
+                         nil bmdl/*about-title*    (cell= (:title about-settings))
+                         nil bmdl/*about-image*    (cell= (:image about-settings))
                          nil bmdl/*featured-title* (cell= (:title featured-meta))
                          nil bmdl/*featured-image* (cell= (:image featured-meta))
                          nil bmdl/*featured-color* (cell= (:color featured-meta))]
@@ -95,9 +95,9 @@
                     (bmdl/bottom-nav)))
               ;; Categories View
               :categories
-                (config [nil grid/*cols* width-cols
-                         nil grid/*shadow* shadow
-                         nil blz/*router* category-router
+                (config [nil grid/*cols*       width-cols
+                         nil grid/*shadow*     shadow
+                         nil blz/*router*      category-router
                          nil bmdl/*list-title* "Categories:"
                          nil bmdl/*list-items* categories]
                     (grid/grid
@@ -105,15 +105,15 @@
                       (bmdl/list-card)))
               ;; Category View
               :category
-                (config [nil grid/*cols* width-cols
+                (config [nil grid/*cols*   width-cols
                          nil grid/*shadow* shadow]
                   (grid/grid
                     :class [:demo-blog__posts]))
               ;; Posts View
               :posts
-                (config [nil grid/*cols* width-cols
-                         nil grid/*shadow* shadow
-                         nil blz/*router* post-router
+                (config [nil grid/*cols*       width-cols
+                         nil grid/*shadow*     shadow
+                         nil blz/*router*      post-router
                          nil bmdl/*list-title* "All Posts:"
                          nil bmdl/*list-items* posts]
                   (grid/grid
@@ -121,13 +121,13 @@
                     (bmdl/list-card)))
               ;; Post View
               :post
-                (config [nil grid/*cols* width-cols
-                         nil grid/*shadow* shadow
+                (config [nil grid/*cols*        width-cols
+                         nil grid/*shadow*      shadow
                          nil blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
           ;; MDL Footer
-          (config [nil bmdl/*copyright* (cell= (:copyright general-settings))
+          (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer)))))))
