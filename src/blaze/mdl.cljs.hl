@@ -17,10 +17,9 @@
     [(first kids) in (second kids)]))
 
 (defelem bottom-nav [attr kids]
-  (let []
-    (grid/cell attr
-      (at-half (div :class [:section-spacer])
-        kids))))
+  (grid/cell attr
+    (at-half (div :class [:section-spacer])
+      kids)))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
