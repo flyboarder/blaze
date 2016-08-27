@@ -99,10 +99,8 @@
                     (bmdl/preview-card)
                     (bmdl/bottom-nav :class [:demo-nav]
                       (div :class [:section-spacer])
-                      (a :class [:demo-nav__button]
-                         :href "#/posts"
-                         (btn/button :icon true
-                           (i :class [:material-icons] "arrow_forward"))))))
+                      (bmdl/nav-forward :class [:demo-nav__button] 
+                        :href "#/posts"))))
               ;; Categories View
               :categories
                 (config [nil grid/*cols*       width-cols
