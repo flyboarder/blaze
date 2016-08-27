@@ -111,7 +111,9 @@
                       (bmdl/bottom-nav :class [:demo-nav]
                         (bmdl/nav-backward :class [:demo-nav__button]
                           :href "#")
-                        (div :class [:section-spacer]))))
+                        (div :class [:section-spacer])
+                        (bmdl/nav-forward :class [:demo-nav__button]
+                          :href "#"))))
               ;; Category View
               :category
                 (config [nil grid/*cols*   width-cols
