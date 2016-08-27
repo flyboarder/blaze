@@ -55,7 +55,6 @@
             posts blz/*posts*
             width-cols 12
             shadow 2
-            post-router #(router :post :id % :prefix prefix)
             general-settings (cell= (:general blz/*settings*))
             social-settings (cell= (:social blz/*settings*))
             about-settings (cell= (-> blz/*settings* :cards :about))
@@ -63,6 +62,7 @@
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))
             featured-router #(router :post :id @featured-id :prefix prefix)
+            post-router #(router :post :id % :prefix prefix)
             nav-router #(router % :prefix prefix)]
         ;; MDL Layout
         (layout/layout
