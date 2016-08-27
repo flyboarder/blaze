@@ -75,8 +75,8 @@
           kids)))))
 
 (defelem list-card [attr kids]
-  (let [items (:items attr *items*)
-        title (:title attr *title*)
+  (let [items (:items attr *list-items*)
+        title (:title attr *list-title*)
         router (:router attr blz/*router*)]
     (grid/cell-card
       (card/card-media :class [:mdl-color-text--grey-50]
