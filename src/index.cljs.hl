@@ -68,7 +68,10 @@
             :scroll true
             :transparent true
             (layout/header-row
-              (if-tpl )
+              (if-tpl route
+                (div :class [:demo-back]
+                  (btn/button :icon true
+                    (i :class [:material-icons] "arrow_backward"))))
               (layout/layout-spacer)
               (bmdl/navigation :router nav-router)))
           ;; MDL Drawer
