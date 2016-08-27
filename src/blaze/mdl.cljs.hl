@@ -19,11 +19,8 @@
 (defelem bottom-nav [attr kids]
   (let [router (:router attr blz/*router*)]
     (grid/cell attr
-      (div :class [:section-spacer])
-      (a :class [:demo-nav__button]
-         :click router
-         (btn/button :icon true
-           (i :class [:material-icons] "arrow_forward"))))))
+      (at-half (div :class [:section-spacer]) 
+        kids))))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
