@@ -42,31 +42,26 @@
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
     ;; config
-    (config [prefix        bidi/*prefix*       ""
-             router        blz/*router*        bidi/route!
-             route-params  blz/*route-params*  (bidi/route-params)
-             nil           blz/*navigation*    (fb/navigation=)
-             nil           blz/*settings*      (fb/settings=)
-             categories    blz/*categories*    (fb/categories=)
-             posts         blz/*posts*         (fb/posts=)
-             nil           blz/*featured-post* (fb/posts-featured=)
-             featured-post nil                 (cell= (first (seq blz/*featured-post*)))
-             width-cols    nil                 12
-             shadow        nil                 2]
-      ;; Lexically Scoped Variables (cross thread)
-      (let [
-
-
-            general-settings (cell= (:general blz/*settings*))
-            social-settings (cell= (:social blz/*settings*))
-            about-settings (cell= (-> blz/*settings* :cards :about))
-
-            featured-id (cell= (first featured-post))
-            featured-meta (cell= (second featured-post))
-            featured-router #(router :post :id @featured-id :prefix prefix)
-            post-router #(router :post :id % :prefix prefix)
-            nav-router #(router % :prefix prefix)
-            category-router #(router :category :id % :prefix prefix)]
+    (config [prefix           bidi/*prefix*       ""
+             router           blz/*router*        bidi/route!
+             route-params     blz/*route-params*  (bidi/route-params)
+             nil              blz/*navigation*    (fb/navigation=)
+             nil              blz/*settings*      (fb/settings=)
+             categories       blz/*categories*    (fb/categories=)
+             posts            blz/*posts*         (fb/posts=)
+             nil              blz/*featured-post* (fb/posts-featured=)
+             featured-post    nil                 (cell= (first (seq blz/*featured-post*)))
+             width-cols       nil                 12
+             shadow           nil                 2
+             general-settings nil                 (cell= (:general blz/*settings*))
+             social-settings  nil                 (cell= (:social blz/*settings*))
+             about-settings   nil                 (cell= (-> blz/*settings* :cards :about))
+             featured-id      nil                 (cell= (first featured-post))
+             featured-meta    nil                 (cell= (second featured-post))
+             featured-router  nil                 #(router :post :id @featured-id :prefix prefix)
+             post-router      nil                 #(router :post :id % :prefix prefix)
+             nav-router       nil                 #(router % :prefix prefix)
+             category-router  nil                 #(router :category :id % :prefix prefix)]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
@@ -140,4 +135,4 @@
           ;; MDL Footer
           (binding [bmdl/*copyright* (cell= (:copyright general-settings))
                     bmdl/*social-links* (cell= social-settings)]
-            (bmdl/footer))))))))
+            (bmdl/footer)))))))
