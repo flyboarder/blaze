@@ -135,7 +135,7 @@
                     (bmdl/post-card)
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
-                        :href "#")
+                        :href "#/posts")
                       (div :class [:section-spacer])))))
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
