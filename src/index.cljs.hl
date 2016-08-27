@@ -62,7 +62,7 @@
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))
-            featured-router #(router :post :id @featured-id :prefix prefix))
+            featured-router #(router :post :id @featured-id :prefix prefix)
             nav-router #(router % :prefix prefix)]
         ;; MDL Layout
         (layout/layout
