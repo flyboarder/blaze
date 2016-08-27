@@ -12,6 +12,8 @@
 
 (def ^:dynamic *db*   (fbdb/get-in (fb/get-db) [:_blaze]))
 
+(def ^:dynamic *fb-attr* nil)
+
 ;; Helper Fn's ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn fb-ref
   ([ref] (fb-ref *db* ref))
