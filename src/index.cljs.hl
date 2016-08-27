@@ -60,7 +60,7 @@
              featured-router  nil                 #(router :post :id @featured-id :prefix prefix)
              post-router      nil                 #(router :post :id % :prefix prefix)
              nav-router       nil                 #(router % :prefix prefix)
-             category-router                   #(router :category :id % :prefix prefix)]
+             category-router  nil                 #(router :category :id % :prefix prefix)]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
