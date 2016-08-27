@@ -99,7 +99,8 @@
                     (bmdl/featured-card :desktop-cols 8
                       :click featured-router)
                     (bmdl/preview-card)
-                    (bmdl/preview-card)))
+                    (bmdl/preview-card)
+                    (bmdl/bottom-nav)))
               ;; Categories View
               :categories
                 (binding [grid/*cols* width-cols
