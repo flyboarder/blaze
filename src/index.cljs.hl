@@ -84,11 +84,11 @@
               :index
                 (config [nil grid/*cols* width-cols
                          nil grid/*shadow* shadow
-                         nil  bmdl/*about-title* (cell= (:title about-settings))
-                         nil  bmdl/*about-image* (cell= (:image about-settings))
-                         nil  bmdl/*featured-title* (cell= (:title featured-meta))
-                         nil  bmdl/*featured-image* (cell= (:image featured-meta))
-                         nil  bmdl/*featured-color* (cell= (:color featured-meta))]
+                         nil bmdl/*about-title* (cell= (:title about-settings))
+                         nil bmdl/*about-image* (cell= (:image about-settings))
+                         nil bmdl/*featured-title* (cell= (:title featured-meta))
+                         nil bmdl/*featured-image* (cell= (:image featured-meta))
+                         nil bmdl/*featured-color* (cell= (:color featured-meta))]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/about-card :desktop-cols 4)
@@ -101,9 +101,9 @@
               :categories
                 (config [nil grid/*cols* width-cols
                          nil grid/*shadow* shadow
-                         nil  blz/*router* category-router
-                         nil  bmdl/*list-items* categories
-                         nil  bmdl/*list-title* "Categories:"]
+                         nil blz/*router* category-router
+                         nil bmdl/*list-items* categories
+                         nil bmdl/*list-title* "Categories:"]
                     (grid/grid
                       :class [:demo-blog__list]
                       (bmdl/list-card)))
