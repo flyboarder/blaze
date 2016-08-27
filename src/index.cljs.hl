@@ -16,6 +16,12 @@
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
 
+(prn (macroexpand-1
+  '(config [prefix bidi/*prefix* ""
+         router blz/*router* bidi/route!
+         nil blz/*navigation* (fb/navigation=)
+         shadow nil 2] )))
+
 ;; Index Page
 (html
   (head
@@ -40,10 +46,7 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
-    (config [prefix bidi/*prefix* ""
-                  router blz/*router* bidi/route!
-                  nil blz/*navigation* (fb/navigation=)
-                  shadow nil 2] )
+    ;; config
     (binding [;bidi/*prefix* ""
               blz/*route-params* (bidi/route-params)
               blz/*navigation* (fb/navigation=)
