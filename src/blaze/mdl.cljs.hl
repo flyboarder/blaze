@@ -1,6 +1,7 @@
 (ns blaze.mdl
   (:refer-hoplon :exclude [footer])
   (:require [material-hl.core :as mdl]
+            [material-hl.buttons :as btn]
             [material-hl.cards :as card]
             [material-hl.grid :as grid]
             [material-hl.navigation :as nav]
@@ -9,6 +10,12 @@
 
 (defn bg-image [image]
   (str "url('" image "')"))
+
+(defelem bottom-nav [attr kids]
+  (grid/cell attr
+    (div :class [:section-spacer])
+    (a
+      ())))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
