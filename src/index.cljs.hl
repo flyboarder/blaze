@@ -98,12 +98,12 @@
               :categories
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          blz/*router* #(router :category :id % :prefix prefix)]
+                          blz/*router* #(router :category :id % :prefix prefix)
+                          bmdl/*list-items* categories
+                          bmdl/*list-title* "Categories:"]
                     (grid/grid
                       :class [:demo-blog__list]
-                      (bmdl/list-card
-                        :title "Categories:"
-                        :items categories)))
+                      (bmdl/list-card)))
               ;; Category View
               :category
                 (binding [grid/*cols*   12
