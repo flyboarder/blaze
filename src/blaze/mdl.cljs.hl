@@ -12,7 +12,8 @@
   (str "url('" image "')"))
 
 (defelem bottom-nav [attr kids]
-  (let [router (:router attr blz/*router*)]
+  (let [router (:router attr blz/*router*)
+        prefix (:prefix attr blz/*router*)]
     (grid/cell attr
       (div :class [:section-spacer])
       (a :class [:demo-nav__button]
