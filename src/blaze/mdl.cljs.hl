@@ -26,6 +26,11 @@
      (btn/button :icon true
        (i :class [:material-icons] "arrow_forward"))))
 
+(defelem nav-backward [attr kids]
+  (a attr
+     (btn/button :icon true
+       (i :class [:material-icons] "arrow_backward"))))
+
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
 
