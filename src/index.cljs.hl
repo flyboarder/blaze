@@ -53,6 +53,7 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
+            post-router #(router :post :id % :prefix prefix)
             general-settings (cell= (:general blz/*settings*))
             social-settings (cell= (:social blz/*settings*))
             about-settings (cell= (-> blz/*settings* :cards :about))
@@ -115,7 +116,7 @@
               :posts
                 (binding [grid/*cols*   12
                           grid/*shadow* 2
-                          blz/*router* #(router :post :id % :prefix prefix)
+                          blz/*router* post-router
                           bmdl/*list-title* "All Posts:"
                           bmdl/*list-items* posts]
                   (grid/grid
