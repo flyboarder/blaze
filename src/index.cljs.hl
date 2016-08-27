@@ -85,8 +85,7 @@
                          nil bmdl/*featured-title* (cell= (:title featured-meta))
                          nil bmdl/*featured-image* (cell= (:image featured-meta))
                          nil bmdl/*featured-color* (cell= (:color featured-meta))]
-                  (grid/grid
-                    :class [:demo-blog__posts]
+                  (grid/grid :class [:demo-blog__posts]
                     (bmdl/about-card :desktop-cols 4)
                     (bmdl/featured-card :desktop-cols 8
                       :click featured-router)
@@ -100,15 +99,13 @@
                          nil blz/*router*      category-router
                          nil bmdl/*list-title* "Categories:"
                          nil bmdl/*list-items* categories]
-                    (grid/grid
-                      :class [:demo-blog__list]
+                    (grid/grid :class [:demo-blog__list]
                       (bmdl/list-card)))
               ;; Category View
               :category
                 (config [nil grid/*cols*   width-cols
                          nil grid/*shadow* shadow]
-                  (grid/grid
-                    :class [:demo-blog__posts]))
+                  (grid/grid :class [:demo-blog__posts]))
               ;; Posts View
               :posts
                 (config [nil grid/*cols*       width-cols
@@ -116,16 +113,14 @@
                          nil blz/*router*      post-router
                          nil bmdl/*list-title* "All Posts:"
                          nil bmdl/*list-items* posts]
-                  (grid/grid
-                    :class [:demo-blog__list]
+                  (grid/grid :class [:demo-blog__list]
                     (bmdl/list-card)))
               ;; Post View
               :post
                 (config [nil grid/*cols*        width-cols
                          nil grid/*shadow*      shadow
                          nil blz/*current-post* (fb/current-post= route-params)]
-                  (grid/grid
-                    :class [:demo-blog__posts]
+                  (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card))))
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
