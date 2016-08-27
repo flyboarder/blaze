@@ -17,6 +17,12 @@
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
 
+(pp/pprint (macroexpand
+  '(config [prefix bidi/*prefix* ""
+         router blz/*router* bidi/route!
+         nil blz/*navigation* (fb/navigation=)
+         shadow nil 2] )))
+
 ;; Index Page
 (html
   (head
@@ -42,36 +48,32 @@
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
     ;; config
-    (config [prefix bidi/*prefix* ""
-           router blz/*router* bidi/route!
-           nil blz/*navigation* (fb/navigation=)
-           shadow nil 2]
-    ;(binding [bidi/*prefix* ""
-    ;          blz/*route-params* (bidi/route-params)
-    ;          blz/*navigation* (fb/navigation=)
-    ;          blz/*settings* (fb/settings=)
-    ;          blz/*categories* (fb/categories=)
-    ;          blz/*posts* (fb/posts=)
-    ;          blz/*featured-post* (fb/posts-featured=)
-    ;          blz/*router* bidi/route!]
+    (binding [bidi/*prefix* ""
+              blz/*route-params* (bidi/route-params)
+              blz/*navigation* (fb/navigation=)
+              blz/*settings* (fb/settings=)
+              blz/*categories* (fb/categories=)
+              blz/*posts* (fb/posts=)
+              blz/*featured-post* (fb/posts-featured=)
+              blz/*router* bidi/route!]
       ;; Lexically Scoped Variables (cross thread)
-    ;  (let [router blz/*router*
-    ;        route-params blz/*route-params*
-    ;        prefix bidi/*prefix*
-    ;        categories blz/*categories*
-    ;        posts blz/*posts*
-    ;        width-cols 12
-    ;        shadow 2
-    ;        general-settings (cell= (:general blz/*settings*))
-    ;        social-settings (cell= (:social blz/*settings*))
-    ;        about-settings (cell= (-> blz/*settings* :cards :about))
-    ;        featured-post (cell= (first (seq blz/*featured-post*)))
-    ;        featured-id (cell= (first featured-post))
-    ;        featured-meta (cell= (second featured-post))
-    ;        featured-router #(router :post :id @featured-id :prefix prefix)
-    ;        post-router #(router :post :id % :prefix prefix)
-    ;        nav-router #(router % :prefix prefix)
-    ;        category-router #(router :category :id % :prefix prefix)]
+      (let [router blz/*router*
+            route-params blz/*route-params*
+            prefix bidi/*prefix*
+            categories blz/*categories*
+            posts blz/*posts*
+            width-cols 12
+            shadow 2
+            general-settings (cell= (:general blz/*settings*))
+            social-settings (cell= (:social blz/*settings*))
+            about-settings (cell= (-> blz/*settings* :cards :about))
+            featured-post (cell= (first (seq blz/*featured-post*)))
+            featured-id (cell= (first featured-post))
+            featured-meta (cell= (second featured-post))
+            featured-router #(router :post :id @featured-id :prefix prefix)
+            post-router #(router :post :id % :prefix prefix)
+            nav-router #(router % :prefix prefix)
+            category-router #(router :category :id % :prefix prefix)]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
@@ -145,4 +147,4 @@
           ;; MDL Footer
           (binding [bmdl/*copyright* (cell= (:copyright general-settings))
                     bmdl/*social-links* (cell= social-settings)]
-            (bmdl/footer)))))))
+            (bmdl/footer))))))))
