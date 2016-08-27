@@ -58,7 +58,8 @@
             about-settings (cell= (-> blz/*settings* :cards :about))
             featured-post (cell= (first (seq blz/*featured-post*)))
             featured-id (cell= (first featured-post))
-            featured-meta (cell= (second featured-post))]
+            featured-meta (cell= (second featured-post))
+            featured-router #(router :post :id @featured-id :prefix prefix))]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
@@ -91,7 +92,7 @@
                     :class [:demo-blog__posts]
                     (bmdl/about-card :desktop-cols 4)
                     (bmdl/featured-card :desktop-cols 8
-                      :click #(router :post :id @featured-id :prefix prefix))
+                      :click featured-router
                     (bmdl/preview-card)
                     (bmdl/preview-card)))
               ;; Categories View
