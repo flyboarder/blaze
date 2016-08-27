@@ -45,14 +45,14 @@
     (config [prefix           bidi/*prefix*       ""
              router           blz/*router*        bidi/route!
              route-params     blz/*route-params*  (bidi/route-params)
-             nil              blz/*navigation*    (fb/navigation=)
-             nil              blz/*settings*      (fb/settings=)
              categories       blz/*categories*    (fb/categories=)
              posts            blz/*posts*         (fb/posts=)
+             nil              blz/*navigation*    (fb/navigation=)
+             nil              blz/*settings*      (fb/settings=)
              nil              blz/*featured-post* (fb/posts-featured=)
-             featured-post    nil                 (cell= (first (seq blz/*featured-post*)))
              width-cols       nil                 12
              shadow           nil                 2
+             featured-post    nil                 (cell= (first (seq blz/*featured-post*)))
              general-settings nil                 (cell= (:general blz/*settings*))
              social-settings  nil                 (cell= (:social blz/*settings*))
              about-settings   nil                 (cell= (-> blz/*settings* :cards :about))
