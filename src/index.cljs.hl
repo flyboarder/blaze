@@ -18,10 +18,11 @@
                    [blaze.core :refer [config]]))
 
 (pp/pprint
-  (config [prefix bidi/*prefix* ""
+  (macroexpand
+  '(config [prefix bidi/*prefix* ""
          router blz/*router* bidi/route!
          nil blz/*navigation* (fb/navigation=)
-         shadow nil 2] ))
+         shadow nil 2] )))
 
 ;; Index Page
 (html
