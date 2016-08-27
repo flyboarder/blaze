@@ -39,6 +39,7 @@
     ;; App Settings // Sugar for binding & let
     (config [prefix           bidi/*prefix*       ""
              router           blz/*router*        bidi/route!
+             route            blz/*route*         (bidi/route)
              route-params     blz/*route-params*  (bidi/route-params)
              categories       blz/*categories*    (fb/categories=)
              posts            blz/*posts*         (fb/posts=)
@@ -67,6 +68,7 @@
             :scroll true
             :transparent true
             (layout/header-row
+              (if-tpl )
               (layout/layout-spacer)
               (bmdl/navigation :router nav-router)))
           ;; MDL Drawer
