@@ -58,9 +58,8 @@
           (text "~{(second l)}")))
       kids)))
 
-(def ^:dynamic *title* nil)
-
-(def ^:dynamic *items* nil)
+(def ^:dynamic *list-title* nil)
+(def ^:dynamic *list-items* nil)
 
 (defelem list-card-item [attr kids]
   (let [meta (:meta-header attr)
