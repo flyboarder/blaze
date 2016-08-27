@@ -98,6 +98,7 @@
                     (bmdl/preview-card)
                     (bmdl/preview-card)
                     (bmdl/bottom-nav :class [:demo-nav]
+                      (div)
                       (a :class [:demo-nav__button]
                          :click #(router :posts :prefix prefix)
                          (btn/button :icon true
