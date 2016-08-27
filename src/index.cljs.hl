@@ -36,7 +36,7 @@
     (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
-    ;; App Settings // Sugar for Thread Bindings w/ Optional Local Reference
+    ;; App Settings // Sugar for binding & let
     (config [prefix           bidi/*prefix*       ""
              router           blz/*router*        bidi/route!
              route-params     blz/*route-params*  (bidi/route-params)
