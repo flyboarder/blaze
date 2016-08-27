@@ -115,11 +115,11 @@
                     :class [:demo-blog__posts]))
               ;; Posts View
               :posts
-                (binding [grid/*cols* width-cols
-                          grid/*shadow* shadow
-                          blz/*router* post-router
-                          bmdl/*list-title* "All Posts:"
-                          bmdl/*list-items* posts]
+                (config [nil grid/*cols* width-cols
+                         nil grid/*shadow* shadow
+                         nil blz/*router* post-router
+                         nil bmdl/*list-title* "All Posts:"
+                         nil bmdl/*list-items* posts]
                   (grid/grid
                     :class [:demo-blog__list]
                     (bmdl/list-card)))
