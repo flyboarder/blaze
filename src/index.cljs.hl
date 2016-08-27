@@ -42,27 +42,25 @@
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
     ;; config
-    (config [prefix       bidi/*prefix* ""
-             router       blz/*router* bidi/route!
-             route-params blz/*route-params* (bidi/route-params)
-             nil          blz/*navigation* (fb/navigation=)
-             nil          blz/*settings* (fb/settings=)
-             categories   blz/*categories* (fb/categories=)
-             posts        blz/*posts* (fb/posts=)
-             nil          blz/*featured-post* (fb/posts-featured=)
-             ]
+    (config [prefix        bidi/*prefix*       ""
+             router        blz/*router*        bidi/route!
+             route-params  blz/*route-params*  (bidi/route-params)
+             nil           blz/*navigation*    (fb/navigation=)
+             nil           blz/*settings*      (fb/settings=)
+             categories    blz/*categories*    (fb/categories=)
+             posts         blz/*posts*         (fb/posts=)
+             nil           blz/*featured-post* (fb/posts-featured=)
+             featured-post nil                 (cell= (first (seq blz/*featured-post*)))
+             width-cols    nil                 12
+             shadow        nil                 2]
       ;; Lexically Scoped Variables (cross thread)
-      (let [ blz/*router*
-             blz/*route-params*
-             bidi/*prefix*
-             blz/*categories*
-             blz/*posts*
-            width-cols 12
-            shadow 2
+      (let [
+
+
             general-settings (cell= (:general blz/*settings*))
             social-settings (cell= (:social blz/*settings*))
             about-settings (cell= (-> blz/*settings* :cards :about))
-            featured-post (cell= (first (seq blz/*featured-post*)))
+
             featured-id (cell= (first featured-post))
             featured-meta (cell= (second featured-post))
             featured-router #(router :post :id @featured-id :prefix prefix)
