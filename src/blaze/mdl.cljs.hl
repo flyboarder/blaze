@@ -15,7 +15,7 @@
   (grid/cell attr
     (div :class [:section-spacer])
     (a
-      ())))
+      (btn/button))))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
