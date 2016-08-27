@@ -134,6 +134,7 @@
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
+          ;; Footer
           (binding [bmdl/*copyright* (cell= (:copyright general-settings))
                     bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer))))))))
