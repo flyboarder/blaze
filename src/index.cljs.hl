@@ -109,8 +109,8 @@
                     (grid/grid :class [:demo-blog__list]
                       (bmdl/list-card)
                       (bmdl/bottom-nav :class [:demo-nav]
-                        (bmdl/nav-forward :class [:demo-nav__button]
-                          :href "#/posts")
+                        (bmdl/nav-backward :class [:demo-nav__button]
+                          :href "#")
                         (div :class [:section-spacer]))))
               ;; Category View
               :category
