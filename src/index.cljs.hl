@@ -39,7 +39,11 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
-    (binding [bidi/*prefix* ""
+    (binding-let [prefix bidi/*prefix* ""
+                  router blz/*router* bidi/route!
+                  nil blz/*navigation* (fb/navigation=)
+                  shadow nil 2] )
+    (binding [;bidi/*prefix* ""
               blz/*route-params* (bidi/route-params)
               blz/*navigation* (fb/navigation=)
               blz/*settings* (fb/settings=)
@@ -50,7 +54,7 @@
       ;; Lexically Scoped Variables (cross thread)
       (let [router blz/*router*
             route-params blz/*route-params*
-            prefix bidi/*prefix*
+            ;prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
             width-cols 12
