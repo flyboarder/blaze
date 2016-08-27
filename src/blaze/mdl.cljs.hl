@@ -12,12 +12,13 @@
   (str "url('" image "')"))
 
 (defelem bottom-nav [attr kids]
-  (grid/cell attr
-    (div :class [:section-spacer])
-    (a :class [:demo-nav__button]
-       :click #(router :posts :prefix prefix)
-       (btn/button :icon true
-         (i :class [:material-icons] "arrow_forward")))))
+  (let [router (:router attr blz/*router*)]
+    (grid/cell attr
+      (div :class [:section-spacer])
+      (a :class [:demo-nav__button]
+         :click #(router :posts :prefix prefix)
+         (btn/button :icon true
+           (i :class [:material-icons] "arrow_forward"))))))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
