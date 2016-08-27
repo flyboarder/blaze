@@ -115,7 +115,9 @@
                          nil blz/*router*      post-router
                          nil bmdl/*list-title* "All Posts:"
                          nil bmdl/*list-items* posts]
-                  [(div :class [:demo-back])
+                  [(div :class [:demo-back]
+                    (btn/button :icon true
+                      (i :class [:material-icons] "arrow_backward")))
                    (grid/grid :class [:demo-blog__list]
                     (bmdl/list-card))])
               ;; Post View
