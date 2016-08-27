@@ -132,7 +132,11 @@
                          nil grid/*shadow*      shadow
                          nil blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid :class [:demo-blog__posts]
-                    (bmdl/post-card))))
+                    (bmdl/post-card)
+                    (bmdl/bottom-nav :class [:demo-nav]
+                      (bmdl/nav-backward :class [:demo-nav__button]
+                        :href "#")
+                      (div :class [:section-spacer])))))
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
