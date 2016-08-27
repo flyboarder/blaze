@@ -63,7 +63,8 @@
             featured-meta (cell= (second featured-post))
             featured-router #(router :post :id @featured-id :prefix prefix)
             post-router #(router :post :id % :prefix prefix)
-            nav-router #(router % :prefix prefix)]
+            nav-router #(router % :prefix prefix)
+            category-router #(router :category :id % :prefix prefix)]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
@@ -103,7 +104,7 @@
               :categories
                 (binding [grid/*cols* width-cols
                           grid/*shadow* shadow
-                          blz/*router* #(router :category :id % :prefix prefix)
+                          blz/*router* category-router
                           bmdl/*list-items* categories
                           bmdl/*list-title* "Categories:"]
                     (grid/grid
