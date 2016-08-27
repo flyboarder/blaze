@@ -21,6 +21,11 @@
     (at-half (div :class [:section-spacer])
       kids)))
 
+(defelem nav-forward [attr kids]
+  (a attr
+     (btn/button :icon true
+       (i :class [:material-icons] "arrow_forward"))))
+
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
 
