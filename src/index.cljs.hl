@@ -125,9 +125,9 @@
                     (bmdl/list-card)))
               ;; Post View
               :post
-                (binding [grid/*cols* width-cols
-                          grid/*shadow* shadow
-                          blz/*current-post* (fb/current-post= route-params)]
+                (config [nil grid/*cols* width-cols
+                         nil grid/*shadow* shadow
+                         nil blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid
                     :class [:demo-blog__posts]
                     (bmdl/post-card))))
