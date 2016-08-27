@@ -53,6 +53,8 @@
             prefix bidi/*prefix*
             categories blz/*categories*
             posts blz/*posts*
+            width-cols 12
+            shadow 2
             post-router #(router :post :id % :prefix prefix)
             general-settings (cell= (:general blz/*settings*))
             social-settings (cell= (:social blz/*settings*))
@@ -83,8 +85,8 @@
             (route-tpl (bidi/routes)
               ;; Landing View
               :index
-                (binding [grid/*cols*   12
-                          grid/*shadow* 2
+                (binding [grid/*cols* width-cols
+                          grid/*shadow* shadow
                           bmdl/*about-title* (cell= (:title about-settings))
                           bmdl/*about-image* (cell= (:image about-settings))
                           bmdl/*featured-title* (cell= (:title featured-meta))
@@ -99,8 +101,8 @@
                     (bmdl/preview-card)))
               ;; Categories View
               :categories
-                (binding [grid/*cols*   12
-                          grid/*shadow* 2
+                (binding [grid/*cols* width-cols
+                          grid/*shadow* shadow
                           blz/*router* #(router :category :id % :prefix prefix)
                           bmdl/*list-items* categories
                           bmdl/*list-title* "Categories:"]
@@ -109,14 +111,14 @@
                       (bmdl/list-card)))
               ;; Category View
               :category
-                (binding [grid/*cols*   12
-                          grid/*shadow* 2]
+                (binding [grid/*cols* width-cols
+                          grid/*shadow* shadow]
                   (grid/grid
                     :class [:demo-blog__posts]))
               ;; Posts View
               :posts
-                (binding [grid/*cols*   12
-                          grid/*shadow* 2
+                (binding [grid/*cols* width-cols
+                          grid/*shadow* shadow
                           blz/*router* post-router
                           bmdl/*list-title* "All Posts:"
                           bmdl/*list-items* posts]
@@ -125,8 +127,8 @@
                     (bmdl/list-card)))
               ;; Post View
               :post
-                (binding [grid/*cols*   12
-                          grid/*shadow* 2
+                (binding [grid/*cols* width-cols
+                          grid/*shadow* shadow
                           blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid
                     :class [:demo-blog__posts]
