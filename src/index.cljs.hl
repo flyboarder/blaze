@@ -91,7 +91,7 @@
                       :click featured-router)
                     (bmdl/preview-card)
                     (bmdl/preview-card)
-                    (bmdl/bottom-nav)))
+                    (bmdl/bottom-nav :class [:demo-nav])))
               ;; Categories View
               :categories
                 (config [nil grid/*cols*       width-cols
