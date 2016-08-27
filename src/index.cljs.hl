@@ -66,7 +66,7 @@
             :scroll true
             :transparent true
             (layout/header-row
-              ;; MDL Back Button
+              ;; Nav Back Button
               (if-tpl (cell= (not= route :index))
                 (div :class [:demo-back]
                   :click #(router :index :prefix prefix)
@@ -99,7 +99,7 @@
                     (bmdl/preview-card)
                     (bmdl/bottom-nav :class [:demo-nav]
                       (div :class [:section-spacer])
-                      (bmdl/nav-forward :class [:demo-nav__button] 
+                      (bmdl/nav-forward :class [:demo-nav__button]
                         :href "#/posts"))))
               ;; Categories View
               :categories
