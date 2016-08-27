@@ -17,7 +17,7 @@
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
 
-(pp/pprint (macroexpand-1
+(pp/pprint (macroexpand-all
   '(config [prefix bidi/*prefix* ""
          router blz/*router* bidi/route!
          nil blz/*navigation* (fb/navigation=)
