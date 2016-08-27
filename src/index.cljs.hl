@@ -66,6 +66,12 @@
             :scroll true
             :transparent true
             (layout/header-row
+              ;; MDL Back Button
+              (if-tpl (cell= (not= route :index))
+                (div :class [:demo-back]
+                  :click #(router :index :prefix prefix)
+                  (btn/button :icon true
+                    (i :class [:material-icons] "arrow_backward"))))
               (layout/layout-spacer)
               (bmdl/navigation :router nav-router)))
           ;; MDL Drawer
@@ -73,12 +79,6 @@
             (bmdl/navigation :router nav-router))
           ;; MDL Content
           (layout/layout-content
-            ;; MDL Back Button
-            (if-tpl (cell= (not= route :index))
-              (div :class [:demo-back]
-                :click #(router :index :prefix prefix)
-                (btn/button :icon true
-                  (i :class [:material-icons] "arrow_backward"))))
             ;; Route Templating (each view is an individual thread, ie. local bindings)
             (route-tpl (bidi/routes)
               ;; Landing View
