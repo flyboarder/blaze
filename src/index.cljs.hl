@@ -98,8 +98,8 @@
                 (config [nil grid/*cols* width-cols
                          nil grid/*shadow* shadow
                          nil blz/*router* category-router
-                         nil bmdl/*list-items* categories
-                         nil bmdl/*list-title* "Categories:"]
+                         nil bmdl/*list-title* "Categories:"
+                         nil bmdl/*list-items* categories]
                     (grid/grid
                       :class [:demo-blog__list]
                       (bmdl/list-card)))
