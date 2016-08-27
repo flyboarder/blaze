@@ -42,20 +42,21 @@
   (body
     ;; App Settings // Thread Bindings (available only on first thread)
     ;; config
-    (config [bidi/*prefix* ""
-             blz/*route-params* (bidi/route-params)
-             blz/*navigation* (fb/navigation=)
-             blz/*settings* (fb/settings=)
-             blz/*categories* (fb/categories=)
-             blz/*posts* (fb/posts=)
-             blz/*featured-post* (fb/posts-featured=)
-             blz/*router* bidi/route!]
+    (config [prefix       bidi/*prefix* ""
+             router       blz/*router* bidi/route!
+             route-params blz/*route-params* (bidi/route-params)
+             nil          blz/*navigation* (fb/navigation=)
+             nil          blz/*settings* (fb/settings=)
+             categories   blz/*categories* (fb/categories=)
+             posts        blz/*posts* (fb/posts=)
+             nil          blz/*featured-post* (fb/posts-featured=)
+             ]
       ;; Lexically Scoped Variables (cross thread)
-      (let [router blz/*router*
-            route-params blz/*route-params*
-            prefix bidi/*prefix*
-            categories blz/*categories*
-            posts blz/*posts*
+      (let [ blz/*router*
+             blz/*route-params*
+             bidi/*prefix*
+             blz/*categories*
+             blz/*posts*
             width-cols 12
             shadow 2
             general-settings (cell= (:general blz/*settings*))
