@@ -12,12 +12,11 @@
   (str "url('" image "')"))
 
 (defelem bottom-nav [attr kids]
-  (let [router (:router attr blz/*router*)
-        prefix (:prefix attr blz/*prefix*)]
+  (let [router (:router attr blz/*router*)]
     (grid/cell attr
       (div :class [:section-spacer])
       (a :class [:demo-nav__button]
-         :click #(router :posts :prefix prefix)
+         :click router
          (btn/button :icon true
            (i :class [:material-icons] "arrow_forward"))))))
 
