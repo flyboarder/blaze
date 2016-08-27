@@ -112,7 +112,11 @@
               :category
                 (config [nil grid/*cols*   width-cols
                          nil grid/*shadow* shadow]
-                  (grid/grid :class [:demo-blog__posts]))
+                  (grid/grid :class [:demo-blog__posts]
+                    (bmdl/bottom-nav :class [:demo-nav]
+                      (bmdl/nav-backward :class [:demo-nav__button]
+                        :href "#")
+                      (div :class [:section-spacer]))))
               ;; Posts View
               :posts
                 (config [nil grid/*cols*       width-cols
