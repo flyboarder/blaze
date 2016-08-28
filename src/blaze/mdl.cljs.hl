@@ -59,6 +59,8 @@
         :class [:mdl-color-text--grey-50]
         :css (cell= {:background-image (bg-image image) :background-color color})
         (h3 (text "~{title}")))
+      (card/card-supporting-text :class [:mdl-color-text--grey-600]
+        (span (text "~{(:desc meta)}")))
       (card/card-supporting-text :class [:meta]
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
         (div (strong (text "~{(:header meta)}")))))))
@@ -82,7 +84,7 @@
       (card/card-media
         :class [:mdl-color-text--grey-50]
         :css (cell= {:background-image (bg-image image) :background-color color})
-      (h3 (text "~{title}")))
+        (h3 (text "~{title}")))
       (card/card-supporting-text :class [:mdl-color-text--grey-600]
         (span (text "~{(:desc meta)}")))
       (card/card-supporting-text :class [:meta]
