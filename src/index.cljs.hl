@@ -94,12 +94,12 @@
                     (bmdl/featured-card :desktop-cols 8
                       :click featured-router)
                     (for-tpl [p (cell= (take 2 posts))]
-                      (config [nil bmdl/*preview-id* (cell= (-> p first))
+                      (config [id  bmdl/*preview-id* (cell= (-> p first))
                                nil bmdl/*preview-title* (cell= (-> p second :title))
                                nil bmdl/*preview-image* (cell= (-> p second :image))
                                nil bmdl/*preview-color* (cell= (-> p second :color))]
                         (bmdl/preview-card
-                          :click #(router :post :id :prefix prefix))))
+                          :click #(router :post :id id :prefix prefix))))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (div :class [:section-spacer])
                       (bmdl/nav-forward :class [:demo-nav__button]
