@@ -75,9 +75,9 @@
               (layout/layout-spacer)
               (bmdl/navigation :router nav-router))
             (layout/tab-bar-container
-              ;(layout/tab-bar
+              (layout/tab-bar
                 (layout/tab "Edit"))
-                ;)
+                )
                 )
           ;; MDL Drawer
           (layout/layout-drawer
