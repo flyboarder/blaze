@@ -132,8 +132,7 @@
               :click #(router (first @i))
               :meta (cell= {:header (:header item) :desc (:desc item)})
               :avatar (cell= (:icon item "../images/avatar.png"))
-              (text "~{title}")))
-          ))))
+              (text "~{title}")))))))
 
 (defelem post-card [attr kids]
   (let [post (:items attr blz/*current-post*)]
