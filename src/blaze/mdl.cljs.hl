@@ -45,13 +45,14 @@
 (def ^:dynamic *featured-title* nil)
 (def ^:dynamic *featured-image* nil)
 (def ^:dynamic *featured-color* nil)
+(def ^:dynamic *featured-meta* nil)
 
 (defelem featured-card [attr kids]
   (let [title (:title attr *featured-title*)
         image (:image attr *featured-image*)
         color (:color attr *featured-color*)
         router (:router attr blz/*router*)
-        meta (:meta attr *preview-meta*)]
+        meta (:meta attr *featured-meta*)]
     (grid/cell-card
       attr
       (card/card-media
