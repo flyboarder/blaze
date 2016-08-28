@@ -63,9 +63,10 @@
 (def ^:dynamic *preview-meta* nil)
 
 (defelem preview-card [attr kids]
-  (let [post (:post attr *preview-meta*)]
+  (let [post (:post attr *preview-meta*)
+        title (cell= (:title post))]
     (grid/cell-card
-      (card/card-media)
+      (card/card-media (text "~{title}"))
       (card/card-supporting-text :class [:meta :meta--fill]))))
 
 (def ^:dynamic *links* nil)
