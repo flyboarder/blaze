@@ -60,8 +60,10 @@
       (card/card-supporting-text :class [:meta :meta--fill]
         ))))
 
+(def ^:dynamic *preview-meta* nil)
+
 (defelem preview-card [attr kids]
-  (let []
+  (let [post (:post attr *preview-meta*)]
     (grid/cell-card
       (card/card-media)
       (card/card-supporting-text :class [:meta :meta--fill]))))
