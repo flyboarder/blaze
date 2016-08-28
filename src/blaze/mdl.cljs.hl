@@ -102,7 +102,7 @@
 
 (def ^:dynamic *list-title* nil)
 (def ^:dynamic *list-items* nil)
-(def ^:dynamic *list-meta* nil)
+(def ^:dynamic *item-meta* nil)
 
 (defelem list-card-item [attr kids]
   (let [meta (:meta-header attr)
