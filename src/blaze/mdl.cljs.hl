@@ -111,8 +111,8 @@
       (div :class [:meta]
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
         (div
-          (strong (text "~{meta}"))
-          (span (text "~{desc}"))))
+          (strong (text "~{(:header meta)}"))
+          (span (text "~{(:desc meta)}"))))
       (a (h5 :class [:mdl-color-text--grey-600]
           kids)))))
 
