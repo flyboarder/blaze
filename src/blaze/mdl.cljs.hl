@@ -60,6 +60,7 @@
       (card/card-supporting-text :class [:meta :meta--fill]
         ))))
 
+(def ^:dynamic *preview-id* nil)
 (def ^:dynamic *preview-title* nil)
 (def ^:dynamic *preview-image* nil)
 (def ^:dynamic *preview-color* nil)
