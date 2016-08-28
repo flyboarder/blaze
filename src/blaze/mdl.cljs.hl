@@ -65,6 +65,7 @@
 (def ^:dynamic *preview-title* nil)
 (def ^:dynamic *preview-image* nil)
 (def ^:dynamic *preview-color* nil)
+(def ^:dynamic *preview-meta* nil)
 
 (defelem preview-card [attr kids]
   (let [id (:id attr *preview-id*)
