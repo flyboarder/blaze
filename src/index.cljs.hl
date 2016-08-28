@@ -77,6 +77,7 @@
             (layout/tab-bar-container
               (layout/tab-bar
                 :css {:background-color "transparent"}
+                (layout/layout-spacer)
                 (layout/tab "Edit"))
                 )
                 )
