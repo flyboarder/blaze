@@ -43,6 +43,7 @@
         image (:image attr *about-image*)]
     (grid/cell-card attr
       (card/card-media :css (cell= {:background-image (bg-image image)}))
+      (card-button)
       (card/card-supporting-text :class [:meta :meta--fill]
         (strong (text "~{title}"))))))
 
