@@ -31,6 +31,9 @@
      (btn/button :icon true
        (i :class [:material-icons] "arrow_backward"))))
 
+(defelem card-button [attr kids]
+  (div :id "card-admin-button"))
+
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
 

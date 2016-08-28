@@ -230,7 +230,7 @@ body .demo-blog {
       -ms-flex-align: center;
           align-items: center;
 }
-.demo-blog .something-else > button {
+.demo-blog .demo-card > button {
   position: absolute;
   top: 0;
   right: 28px;
