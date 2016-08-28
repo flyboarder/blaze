@@ -129,7 +129,7 @@
             (list-card-item
               :click #(router (first @i))
               :meta-header (cell= (:desc-header item ""))
-              :meta-description (cell= (:desc (:meta item) ""))
+              :meta-description (cell= (:desc item ""))
               :avatar (cell= (:icon item "../images/avatar.png"))
               (text "~{title}")))
           ))))
