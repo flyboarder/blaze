@@ -58,6 +58,7 @@
         :css (cell= {:background-image (bg-image image) :background-color color})
         (h3 (text "~{title}")))
       (card/card-supporting-text :class [:meta :meta--fill]
+        (div :class [:minilogo] :style {:background-image (:avatar attr)})
         ))))
 
 (def ^:dynamic *preview-id* nil)
