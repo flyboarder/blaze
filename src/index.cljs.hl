@@ -138,9 +138,9 @@
                     (bmdl/list-card)))
               ;; Post View
               :post
-                (config [nil grid/*cols*        width-cols
-                         nil grid/*shadow*      shadow
-                         nil blz/*current-post* (fb/current-post= route-params)]
+                (config [nil  grid/*cols*        width-cols
+                         nil  grid/*shadow*      shadow
+                         post blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       :markdown (cell= (:content post)))
