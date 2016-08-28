@@ -36,7 +36,8 @@
   (div :id "card-admin-button" :class [:mdl-button--admin_button-container]
     (btn/button :fab true :class [:mdl-color--accent]
       (i :class [:material-icons :mdl-color-text--white] "more_vert"))
-    ()))
+    (menu/menu :top true :bottom true
+      (menu/menu-item "Admin Items"))))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
