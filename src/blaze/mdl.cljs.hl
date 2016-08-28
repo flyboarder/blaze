@@ -73,7 +73,7 @@
       (card/card-media
         :class [:mdl-color-text--grey-50]
         :css (cell= {:background-image (bg-image image) :background-color color})
-        (text "~{title}"))
+      (h3 (text "~{title}")))
       (card/card-supporting-text :class [:meta :meta--fill]))))
 
 (def ^:dynamic *links* nil)
