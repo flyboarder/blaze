@@ -85,6 +85,7 @@
           ;; MDL Content
           (layout/layout-content
             ;; Route Templating (each view is an individual thread, ie. local bindings)
+            (layout/tab-panel
             (route-tpl (bidi/routes)
               ;; Landing View
               :index
@@ -156,4 +157,4 @@
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
-            (bmdl/footer)))))))
+            (bmdl/footer))))))))
