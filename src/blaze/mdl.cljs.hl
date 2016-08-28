@@ -73,6 +73,7 @@
         router (:router attr blz/*router*)]
     (grid/cell-card
       attr
+      :click #(router @id)
       (card/card-media
         :class [:mdl-color-text--grey-50]
         :css (cell= {:background-image (bg-image image) :background-color color})
