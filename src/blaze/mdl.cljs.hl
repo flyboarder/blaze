@@ -84,8 +84,8 @@
       (card/card-supporting-text :class [:meta :meta--fill]
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
         (div
-          (strong (text "~{meta}"))
-          (span (text "~{desc}")))))))
+          (strong (text "~{(:header meta)}"))
+          (span (text "~{(:desc meta)}")))))))
 
 (def ^:dynamic *links* nil)
 
