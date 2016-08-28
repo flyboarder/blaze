@@ -114,9 +114,7 @@
       :click (:click attr)
       (div :class [:meta]
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
-        (div
-          (strong (text "~{(:header meta)}"))
-          (span (text "~{(:desc meta)}"))))
+        (div (strong (text "~{(:header meta)}"))))
       (a (h5 :class [:mdl-color-text--grey-600]
           kids)))))
 
