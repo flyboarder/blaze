@@ -105,8 +105,7 @@
 (def ^:dynamic *item-meta* nil)
 
 (defelem list-card-item [attr kids]
-  (let [meta (:meta-header attr)
-        desc (:meta-description attr)]
+  (let [meta (:meta attr *item-meta*)]
     (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
       :click (:click attr)
       (div :class [:meta]
