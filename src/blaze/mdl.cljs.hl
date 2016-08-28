@@ -72,8 +72,7 @@
         image (:image attr *preview-image*)
         color (:color attr *preview-color*)
         router (:router attr blz/*router*)
-        meta (:meta-header attr)
-        desc (:meta-description attr)]
+        meta (:meta attr *preview-meta*)]
     (grid/cell-card
       attr
       :click #(router @id)
