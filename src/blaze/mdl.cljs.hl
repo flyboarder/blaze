@@ -4,6 +4,7 @@
             [material-hl.buttons :as btn]
             [material-hl.cards :as card]
             [material-hl.grid :as grid]
+            [material-hl.menus :as menu]
             [material-hl.navigation :as nav]
             [material-hl.footer :as footer]
             [blaze.core :as blz]))
@@ -34,7 +35,8 @@
 (defelem card-button [attr kids]
   (div :id "card-admin-button" :class [:mdl-button--admin_button-container]
     (btn/button :fab true :class [:mdl-color--accent]
-      (i :class [:material-icons :mdl-color-text--white] "more_vert"))))
+      (i :class [:material-icons :mdl-color-text--white] "more_vert"))
+    ()))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
