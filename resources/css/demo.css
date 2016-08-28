@@ -150,6 +150,10 @@ body .demo-blog {
   box-sizing: border-box;
   min-height: 76px;
 }
+
+.demo-blog .mdl-card__supporting-text:last-child {
+  background-color: #F5F5F5;
+}
 .demo-blog:not(.demo-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
   border-top: 1px solid rgba(0,0,0,0.1);
 }
