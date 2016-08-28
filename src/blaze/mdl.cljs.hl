@@ -128,8 +128,7 @@
               title (cell= (:title item))]
             (list-card-item
               :click #(router (first @i))
-              :meta-header (cell= (:desc-header item ""))
-              :meta-description (cell= (:desc item ""))
+              :meta (cell= {:header (:header item) :desc (:desc item)})
               :avatar (cell= (:icon item "../images/avatar.png"))
               (text "~{title}")))
           ))))
