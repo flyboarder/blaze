@@ -93,7 +93,7 @@
                     (bmdl/about-card :desktop-cols 4)
                     (bmdl/featured-card :desktop-cols 8
                       :click featured-router)
-                    (for-tpl [p (cell= (take 0 posts))]
+                    (for-tpl [p (cell= (take 2 posts))]
                       (bmdl/preview-card :post p))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (div :class [:section-spacer])
