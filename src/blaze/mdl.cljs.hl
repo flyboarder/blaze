@@ -143,8 +143,7 @@
         (h3 (text "~{(:title post)}")))
       (card/card-supporting-text :class [:meta])
       (card/card-supporting-text
-        :markdown (cell= (:content post))
-        ;(text "~{(:content post)}")
+        attr;(text "~{(:content post)}")
         )
       (card/card-supporting-text :class [:comments]))))
 
