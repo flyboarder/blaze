@@ -100,7 +100,7 @@
                                nil bmdl/*preview-title* (cell= (-> post second :title))
                                nil bmdl/*preview-image* (cell= (-> post second :image))
                                nil bmdl/*preview-color* (cell= (-> post second :color))
-                               nil bmdl/*preview-meta* (cell= {:header (:header item) :desc (:desc item)})]
+                               nil bmdl/*preview-meta* (cell= {:header (:header post) :desc (:desc post)})]
                         (bmdl/preview-card
                           :router #(router :post :id % :prefix prefix))))
                     (bmdl/bottom-nav :class [:demo-nav]
