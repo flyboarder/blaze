@@ -143,7 +143,9 @@
         (h3 (text "~{(:title post)}")))
       (card/card-supporting-text :class [:meta])
       (card/card-supporting-text
-        (text "~{(:content post)}"))
+        :markdown (cell= (:content post))
+        ;(text "~{(:content post)}")
+        )
       (card/card-supporting-text :class [:comments]))))
 
 (def ^:dynamic *copyright* nil)
