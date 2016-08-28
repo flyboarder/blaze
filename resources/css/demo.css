@@ -158,6 +158,13 @@ body .demo-blog {
   margin-left: 0;
 }
 
+.demo-blog .mdl-card #card-admin-button {
+  position: absolute;
+  top: calc(100% - 92px);
+  right: 16px;
+  /*transform: translate(0px, -28px);*/
+}
+
 .mdl-button--admin_button-container.is-showing-options > button i {
   transition: transform 0.3s linear;
   transform: rotate(45deg);
