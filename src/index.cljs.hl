@@ -66,6 +66,7 @@
           (layout/layout-header
             :scroll true
             :transparent true
+            :fixed-tabs true
             (layout/header-row
               ;; Nav Back Button
               (if-tpl (cell= (not= route :index))
