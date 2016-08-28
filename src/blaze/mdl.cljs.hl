@@ -32,7 +32,8 @@
        (i :class [:material-icons] "arrow_backward"))))
 
 (defelem card-button [attr kids]
-  (div :id "card-admin-button"))
+  (div :id "card-admin-button"
+    (btn/button :icon true :fab true)))
 
 (def ^:dynamic *about-title* nil)
 (def ^:dynamic *about-image* nil)
