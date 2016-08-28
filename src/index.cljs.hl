@@ -78,7 +78,7 @@
               (layout/tab-bar
                 :css {:background-color "transparent"}
                 (layout/layout-spacer)
-                (layout/tab :class [:is-active] "Edit"))))
+                (layout/tab "Edit"))))
           ;; MDL Drawer
           (layout/layout-drawer
             (bmdl/navigation :router nav-router))
