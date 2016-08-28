@@ -63,12 +63,14 @@
 (def ^:dynamic *preview-meta* nil)
 
 (defelem preview-card [attr kids]
-  (let [post (:post attr *preview-meta*)
-        id (cell= (first post))
-        meta (cell= (second post))
-        title (cell= (:title meta))]
+  (let [image (:image attr *featured-image*)
+        color (:color attr *featured-color*)
+        router (:router attr blz/*router*)]
     (grid/cell-card
-      (card/card-media (text "~{title}"))
+      (card/card-media
+        :class [:mdl-color-text--grey-50]
+        :css (cell= {:background-image (bg-image image) :background-color color})
+        (text "~{title}"))
       (card/card-supporting-text :class [:meta :meta--fill]))))
 
 (def ^:dynamic *links* nil)
