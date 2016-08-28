@@ -1,5 +1,9 @@
 (ns blaze.core)
 
+(def ^:dynamic *user*
+  "A thread bound formula cell containing a user map."
+  nil)
+
 (def ^:dynamic *settings*
   "A thread bound formula cell containing a settings map."
   nil)
