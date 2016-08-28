@@ -33,7 +33,7 @@
 
 (defelem card-button [attr kids]
   (div :id "card-admin-button" :class [:mdl-button--admin_button-container]
-    (btn/button :icon true :fab true
+    (btn/button :fab true
       (i :class [:material-icons] "add"))))
 
 (def ^:dynamic *about-title* nil)
