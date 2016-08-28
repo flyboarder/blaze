@@ -85,7 +85,7 @@
           ;; MDL Content
           (layout/layout-content
             ;; Route Templating (each view is an individual thread, ie. local bindings)
-            (layout/tab-panel
+            (layout/tab-panel :id "preview-tab"
             (route-tpl (bidi/routes)
               ;; Landing View
               :index
