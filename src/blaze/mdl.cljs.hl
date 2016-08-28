@@ -107,13 +107,13 @@
   (let [meta (:meta-header attr)
         desc (:meta-description attr)]
     (div :class [:mdl-card__list-item :mdl-color-text--grey-600]
+      :click (:click attr)
       (div :class [:meta]
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
         (div
           (strong (text "~{meta}"))
           (span (text "~{desc}"))))
-      (a :click (:click attr)
-        (h5 :class [:mdl-color-text--grey-600]
+      (a (h5 :class [:mdl-color-text--grey-600]
           kids)))))
 
 (defelem list-card [attr kids]
