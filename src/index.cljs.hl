@@ -76,6 +76,7 @@
               (bmdl/navigation :router nav-router))
             (layout/tab-bar-container
               (layout/tab-bar
+                :css {:background-color "transparent"}
                 (layout/tab "Edit"))
                 )
                 )
