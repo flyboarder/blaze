@@ -141,7 +141,8 @@
                          nil grid/*shadow*      shadow
                          nil blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid :class [:demo-blog__posts]
-                    (bmdl/post-card)
+                    (bmdl/post-card
+                      :markdown (cell= (:content post)))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
