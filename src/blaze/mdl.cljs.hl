@@ -45,7 +45,7 @@
     (grid/cell-card attr
       (card/card-media :css (cell= {:background-image (bg-image image)}))
       (card-button)
-      (card/card-supporting-text :class [:meta :meta--fill]
+      (card/card-supporting-text :class [:meta :meta--fill :mdl-color-text--grey-600]
         (strong (text "~{title}"))))))
 
 (def ^:dynamic *featured-title* nil)
