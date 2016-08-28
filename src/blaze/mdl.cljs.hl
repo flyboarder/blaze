@@ -50,7 +50,8 @@
   (let [title (:title attr *featured-title*)
         image (:image attr *featured-image*)
         color (:color attr *featured-color*)
-        router (:router attr blz/*router*)]
+        router (:router attr blz/*router*)
+        meta (:meta attr *preview-meta*)]
     (grid/cell-card
       attr
       (card/card-media
