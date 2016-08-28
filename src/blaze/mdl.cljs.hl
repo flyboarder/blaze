@@ -64,6 +64,8 @@
 
 (defelem preview-card [attr kids]
   (let [post (:post attr *preview-meta*)
+        id (cell= (first post))
+        meta (cell= (second post))
         title (cell= (:title post))]
     (grid/cell-card
       (card/card-media (text "~{title}"))
