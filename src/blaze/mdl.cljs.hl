@@ -65,8 +65,8 @@
 (def ^:dynamic *preview-color* nil)
 
 (defelem preview-card [attr kids]
-  (let [image (:image attr *featured-image*)
-        color (:color attr *featured-color*)
+  (let [image (:image attr *preview-image*)
+        color (:color attr *preview-color*)
         router (:router attr blz/*router*)]
     (grid/cell-card
       (card/card-media
