@@ -71,7 +71,9 @@
         title (:title attr *preview-title*)
         image (:image attr *preview-image*)
         color (:color attr *preview-color*)
-        router (:router attr blz/*router*)]
+        router (:router attr blz/*router*)
+        meta (:meta-header attr)
+        desc (:meta-description attr)]
     (grid/cell-card
       attr
       :click #(router @id)
@@ -81,7 +83,9 @@
       (h3 (text "~{title}")))
       (card/card-supporting-text :class [:meta :meta--fill]
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
-        ))))
+        (div
+          (strong (text "~{meta}"))
+          (span (text "~{desc}")))))))
 
 (def ^:dynamic *links* nil)
 
