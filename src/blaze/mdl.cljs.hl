@@ -85,9 +85,7 @@
         (div :class [:minilogo] :style {:background-image (:avatar attr)})
         (div
           (strong (text "~{meta}"))
-          (span (text "~{desc}"))))
-      (a (h5 :class [:mdl-color-text--grey-600]
-          (text "~{title}"))))))
+          (span (text "~{desc}")))))))
 
 (def ^:dynamic *links* nil)
 
