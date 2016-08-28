@@ -72,13 +72,7 @@
                 (bmdl/nav-backward :class [:demo-back]
                   :href "#"))
               (layout/layout-spacer)
-              (bmdl/navigation :router nav-router))
-            (layout/tab-bar-container
-              (layout/tab-bar
-                :css {:background-color "transparent"}
-                (layout/layout-spacer)
-                (layout/tab :href "" "Edit")
-                (layout/tab :href "" "Preview"))))
+              (bmdl/navigation :router nav-router)))
           ;; MDL Drawer
           (layout/layout-drawer
             (bmdl/navigation :router nav-router))
