@@ -88,7 +88,8 @@
                          nil bmdl/*about-image*    (cell= (:image about-settings))
                          nil bmdl/*featured-title* (cell= (:title featured-meta))
                          nil bmdl/*featured-image* (cell= (:image featured-meta))
-                         nil bmdl/*featured-color* (cell= (:color featured-meta))]
+                         nil bmdl/*featured-color* (cell= (:color featured-meta))
+                         nil bmdl/*featured-meta*  (cell= {:header (:header featured-meta) :desc (:desc featured-meta)})]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/about-card :desktop-cols 4)
                     (bmdl/featured-card :desktop-cols 8
