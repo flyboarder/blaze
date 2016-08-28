@@ -99,7 +99,7 @@
                                nil bmdl/*preview-image* (cell= (-> p second :image))
                                nil bmdl/*preview-color* (cell= (-> p second :color))]
                         (bmdl/preview-card
-                          :click #(router :post :id @id :prefix prefix))))
+                          :router #(router :post :id % :prefix prefix))))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (div :class [:section-spacer])
                       (bmdl/nav-forward :class [:demo-nav__button]
