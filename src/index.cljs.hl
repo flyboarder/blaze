@@ -152,4 +152,4 @@
                    nil bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer)))))))
 
-(.addEventListener js/window "hashchange" #(let [] (prn "hi!") (.upgradeAllRegistered js/componentHandler)))
+(.addEventListener js/window "onhashchange" #(let [] (prn "hi!") (.upgradeAllRegistered js/componentHandler)))
