@@ -159,7 +159,9 @@
           (span))
         (div :class [:section-spacer])
         (btn/button :icon true
-          (i :class [:material-icons] "bookmark")))
+          (i :class [:material-icons] "bookmark"))
+        (btn/button :icon true
+          (i :class [:material-icons] "share")))
       (card/card-supporting-text attr)
       (card/card-supporting-text :class [:comments]))))
 
