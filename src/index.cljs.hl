@@ -116,7 +116,7 @@
                          nil blz/*router*      category-router
                          nil bmdl/*list-title* "Categories:"
                          nil bmdl/*list-items* categories]
-                    (grid/grid :class [:demo-blog__list]
+                    (grid/grid :class [:demo-blog__list] :upgrade route
                       (bmdl/list-card)))
               ;; Category View
               :category
