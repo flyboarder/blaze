@@ -1,0 +1,8 @@
+(ns blaze.markdown-it
+  (:require [cljsjs.markdown-it]))
+
+(defmethod hoplon.core/do! :markdown
+  [elem _ v]
+  (when v
+    (do! elem :html
+      (.. js/window markdownit (render v)))))
