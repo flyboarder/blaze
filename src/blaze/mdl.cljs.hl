@@ -172,6 +172,3 @@
               :class (cell= [:social-btn (keyword (str "social-btn__" (name icon)))])))))
       (footer/mini-footer-right
         (span (text "© ~{copyright}"))))))
-
-(def route (route-cell))
-(cell= (when route (comp (prn "hi!") (.upgradeAllRegistered js/componentHandler))))
