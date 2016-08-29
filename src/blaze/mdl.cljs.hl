@@ -153,7 +153,11 @@
       (card/card-media :class [:mdl-color-text--grey-50]
         (h3 (text "~{(:title post)}")))
       (card/card-supporting-text :class [:meta]
-        (div :class [:minilogo]))
+        (div :class [:minilogo])
+        (div
+          (strong)
+          (span))
+        (div :class [:section-spacer]))
       (card/card-supporting-text attr)
       (card/card-supporting-text :class [:comments]))))
 
