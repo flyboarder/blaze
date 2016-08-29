@@ -32,8 +32,10 @@
      (btn/button :icon true
        (i :class [:material-icons] "arrow_backward"))))
 
+(def ^:dynamic *admin-menu* nil)
+
 (defelem card-button [attr kids]
-  (let [id (:id attr (-> "admin-button" gensym name str))]
+  (let [id (:id attr *admin-menu*)]
     (div :id "card-admin-button" :class [:mdl-button--admin_button-container]
       (btn/button :id id :fab true :class [:mdl-color--accent]
         (i :class [:material-icons :mdl-color-text--white] "more_vert"))
