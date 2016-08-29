@@ -37,9 +37,9 @@
 (defelem card-button [attr kids]
   (let [id (:id attr *admin-menu*)]
     (div :id "card-admin-button" :class [:mdl-button--admin_button-container]
-      (btn/button :id id :fab true :class [:mdl-color--accent]
+      (btn/button :id id :fab true :class [:mdl-color--accent] :upgrade true
         (i :class [:material-icons :mdl-color-text--white] "more_vert"))
-      (menu/menu :top-right true :data-mdl-for id
+      (menu/menu :top-right true :data-mdl-for id :upgrade true
         (menu/menu-item "Admin Item")))))
 
 (def ^:dynamic *about-title* nil)
