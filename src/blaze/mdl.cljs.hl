@@ -50,7 +50,7 @@
         image (:image attr *about-image*)]
     (grid/cell-card attr
       (card/card-media :css (cell= {:background-image (bg-image image)}))
-      (card-button)
+      (card-button :id "about-admin")
       (card/card-supporting-text :class [:meta :meta--fill :mdl-color-text--grey-600]
         (strong (text "~{title}"))))))
 
