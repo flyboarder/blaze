@@ -151,3 +151,5 @@
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer)))))))
+
+(.onhashchange js/window #(.. js/componentHandler upgradeAllRegistered))
