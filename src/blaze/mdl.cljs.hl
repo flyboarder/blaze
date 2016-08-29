@@ -148,7 +148,7 @@
               (text "~{title}")))))))
 
 (defelem post-card [attr kids]
-  (let [post (:items attr blz/*current-post*)]
+  (let [post (:post attr blz/*current-post*)]
     (grid/cell-card
       (card/card-media :class [:mdl-color-text--grey-50]
         (h3 (text "~{(:title post)}")))
