@@ -152,7 +152,8 @@
     (grid/cell-card
       (card/card-media :class [:mdl-color-text--grey-50]
         (h3 (text "~{(:title post)}")))
-      (card/card-supporting-text :class [:meta])
+      (card/card-supporting-text :class [:meta]
+        (div :class [:minilogo]))
       (card/card-supporting-text attr)
       (card/card-supporting-text :class [:comments]))))
 
