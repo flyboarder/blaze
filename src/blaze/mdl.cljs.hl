@@ -173,4 +173,5 @@
       (footer/mini-footer-right
         (span (text "© ~{copyright}"))))))
 
-(cell= (let [r (route-cell)] (when r (comp (prn "hi!") (.upgradeAllRegistered js/componentHandler)))))
+(def route (route-cell))
+(cell= (when route (comp (prn "hi!") (.upgradeAllRegistered js/componentHandler))))
