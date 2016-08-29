@@ -10,7 +10,7 @@
             [hoplon.firebase :as hfb]
             [firebase-cljs.database :as fbdb]
             [blaze.markdown-it]
-            [hoplon.ace])
+            [hoplon.ace :as ace])
   (:require-macros [hoplon.firebase :refer [with-auth!]]
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
