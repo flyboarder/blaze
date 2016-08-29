@@ -152,4 +152,4 @@
                    nil bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer)))))))
 
-(.onhashchange js/window #(.. js/componentHandler upgradeAllRegistered))
+(.. js/window onhashchange #(.. js/componentHandler upgradeAllRegistered))
