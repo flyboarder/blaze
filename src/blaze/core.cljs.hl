@@ -43,3 +43,7 @@
 (def ^:dynamic *tags*
   "A thread bound formula cell to a list of tags."
   nil)
+
+(def ^:dynamic *permissions*
+  "A thread bound formula cell to a list of permissions."
+  nil)
