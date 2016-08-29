@@ -60,7 +60,7 @@
              nav-router       nil                 #(router % :prefix prefix)
              category-router  nil                 #(router :category :id % :prefix prefix)]
         ;; MDL Layout
-        (layout/layout
+        (layout/layout :upgrade route
           :class [:demo-blog :demo-blog--blogpost]
           ;; MDL Header
           (layout/layout-header
