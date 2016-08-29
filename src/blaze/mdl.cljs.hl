@@ -37,7 +37,7 @@
     (div :id "card-admin-button" :class [:mdl-button--admin_button-container]
       (btn/button :id id :fab true :class [:mdl-color--accent]
         (i :class [:material-icons :mdl-color-text--white] "more_vert"))
-      (menu/menu :top true :right true :data-mdl-for id
+      (menu/menu :data-mdl-for id
         (menu/menu-item "Admin Item")
         )
         )))
