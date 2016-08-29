@@ -43,3 +43,27 @@
 (def ^:dynamic *permissions*
   "A thread bound formula cell to a list of permissions."
   nil)
+
+(def ^:dynamic *user*
+  "A thread bound formula cell containing a user map."
+  nil)
+
+(def ^:dynamic *users*
+  "A thread bound formula cell containing a list of users."
+  nil)
+
+(def ^:dynamic *reviewers*
+  "A thread bound formula cell containing a list of reviewers."
+  nil)
+
+(def ^:dynamic *editors*
+  "A thread bound formula cell containing a list of editors."
+  nil)
+
+(def ^:dynamic *authors*
+  "A thread bound formula cell containing a list of authors."
+  nil)
+
+(def ^:dynamic *publishers*
+  "A thread bound formula cell containing a list of publishers."
+  nil)
