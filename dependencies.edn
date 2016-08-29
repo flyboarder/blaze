@@ -15,4 +15,4 @@
  [degree9/material-hl       "0.4.0-SNAPSHOT"]
  [tolitius/boot-check       "0.1.1" :scope "test"]
  [pandeiro/boot-http        "0.7.0" :scope "test"]
- [degree9/firebase-cljs     "1.2.0"]]
+ [degree9/firebase-cljs     "1.3.0"]]
