@@ -152,10 +152,10 @@
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
-            (bmdl/footer))))
+            (bmdl/footer)))))
             ;; Ace Editor
             (script :src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js")
-            )))
+            ))
 
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
 (mdl/auto-upgrade!)
