@@ -154,7 +154,7 @@
                    nil bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer)))))
             ;; Ace Editor
-            (script :src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js")
+            ;(script :src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js")
             ))
 
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
