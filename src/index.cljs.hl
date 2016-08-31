@@ -38,6 +38,8 @@
     (html-meta :http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1")
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
 
+    ;; Ace Editor
+    (script :src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js")
   (body
     ;; App Settings // Sugar for binding & let
     (config [prefix           bidi/*prefix*       ""
@@ -152,10 +154,7 @@
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
-            (bmdl/footer)))))
-            ;; Ace Editor
-            (script :src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js")
-            ))
+            (bmdl/footer)))))))
 
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
 (mdl/auto-upgrade!)
