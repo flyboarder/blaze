@@ -81,7 +81,7 @@
   (comp
     (watch)
     (sift :add-jar {'cljsjs/ace #"cljsjs/ace/development/(.*)"})
-    ;(sift :move #{#"cljsjs/ace/development/(.*)" "ace"})
+    (sift :move {#"cljsjs/ace/development/(.*)" "ace"})
     (hoplon)
     (reload)
     (cljs :optimizations :none)
