@@ -163,7 +163,7 @@
         (btn/button :icon true
           (i :class [:material-icons] "share")))
       (card/card-supporting-text
-        (div :css {:position "absolute"} attr kids))
+        (div :css {:height "100%"} attr kids))
       (card/card-supporting-text :class [:comments]))))
 
 (def ^:dynamic *copyright* nil)
