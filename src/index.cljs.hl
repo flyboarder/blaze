@@ -164,4 +164,4 @@
 (mdl/auto-upgrade!)
 
 ;; SimpleMDE Init
-(smde/init!)
+(smde/init! {:forceSync true})
