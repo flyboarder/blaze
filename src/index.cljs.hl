@@ -164,4 +164,5 @@
 (mdl/auto-upgrade!)
 
 ;; SimpleMDE Init
-(smde/init! {:forceSync true})
+(smde/init! {:forceSync true
+             :placeholder "Post Content..."})
