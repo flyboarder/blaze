@@ -164,4 +164,4 @@
 (bmdl/auto-upgrade!)
 
 ;; SimpleMDE Init
-(smde/init! {:placeholder "Post Content..."})
+;(smde/init! {:placeholder "Post Content..."})
