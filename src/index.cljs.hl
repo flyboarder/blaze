@@ -147,7 +147,7 @@
                          nil  grid/*shadow*      shadow
                          post blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid :class [:demo-blog__posts]
-                    (bmdl/post-card (textarea :id "blaze-editor"))
+                    (bmdl/post-card (textarea :id "blaze-editor" :simplemdl {}))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
@@ -163,4 +163,4 @@
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
 (mdl/auto-upgrade!)
 
-(js/SimpleMDE.)
+;(js/SimpleMDE.)
