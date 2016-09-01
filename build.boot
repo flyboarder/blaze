@@ -80,8 +80,7 @@
   []
   (comp
     (watch)
-    ;(sift :add-jar {'cljsjs/ace #"cljsjs/ace/common/(.*)"})
-    ;(sift :move {#"cljsjs/ace/development/(.*)" "ace"})
+    (sift :add-jar {'cljsjs/simplemde #"cljsjs/simplemde/production/simplemde.min.css"})
     (hoplon)
     (reload)
     (cljs :optimizations :none)
