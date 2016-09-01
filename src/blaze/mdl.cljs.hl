@@ -9,6 +9,9 @@
             [material-hl.footer :as footer]
             [blaze.core :as blz]))
 
+(defn auto-upgrade! []
+  (.addEventListener js/window "hashchange" #(.. js/componentHandler upgradeAllRegistered)))
+
 (defn bg-image [image]
   (str "url('" image "')"))
 
