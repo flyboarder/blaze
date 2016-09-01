@@ -159,3 +159,5 @@
 
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
 (mdl/auto-upgrade!)
+
+(js/SimpleMDE.)
