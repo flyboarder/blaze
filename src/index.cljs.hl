@@ -161,7 +161,7 @@
             ))
 
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
-(mdl/auto-upgrade!)
+(bmdl/auto-upgrade!)
 
 ;; SimpleMDE Init
 (smde/init! {:forceSync true
