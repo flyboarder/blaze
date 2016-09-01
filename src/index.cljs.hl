@@ -164,5 +164,4 @@
 (bmdl/auto-upgrade!)
 
 ;; SimpleMDE Init
-(smde/init! {:forceSync true
-             :placeholder "Post Content..."})
+(smde/init! {:placeholder "Post Content..."})
