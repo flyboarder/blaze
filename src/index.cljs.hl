@@ -149,7 +149,7 @@
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       (let [textarea (textarea)
-                            editor (smde/editor! {:placeholder "Post Content..." :element textarea})]
+                            editor (when-dom textarea (smde/editor! {:placeholder "Post Content..." :element textarea}))]
                         textarea))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
