@@ -43,7 +43,7 @@
 (html
   (head
     ;; CodeMirror CSS
-    (link :rel "stylesheet" :href "cljsjs/codemirror/development/codemirror.css")
+    ;(link :rel "stylesheet" :href "cljsjs/codemirror/development/codemirror.css")
 
     ;; MDL Font Roboto
     (mdl/include-fonts)
@@ -58,7 +58,7 @@
     (link :rel "stylesheet" :href "css/demo.css")
 
     ;; SimpleMDE CSS
-    ;(link :rel "stylesheet" :href "cljsjs/simplemde/production/simplemde.min.css")
+    (link :rel "stylesheet" :href "cljsjs/simplemde/production/simplemde.min.css")
 
     ;; Title
     (title "Blaze - A (No Backend) Blog")
