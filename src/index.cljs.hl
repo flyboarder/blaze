@@ -165,4 +165,3 @@
 
 ;; SimpleMDE Init
 (smde/editor! {:placeholder "Post Content..."})
-(smde/editor! {:placeholder "Post Content..."})
