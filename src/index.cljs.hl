@@ -56,6 +56,8 @@
 
     ;; SimpleMDE CSS
     (link :rel "stylesheet" :href "cljsjs/simplemde/production/simplemde.min.css")
+    ;; CodeMirror CSS
+    (link :rel "stylesheet" :href "cljsjs/codemirror/development/codemirror.css")
 
     ;; Title
     (title "Blaze - A (No Backend) Blog")
