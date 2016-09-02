@@ -81,6 +81,7 @@
   (comp
     (watch)
     (sift :add-jar {'cljsjs/simplemde #"cljsjs/simplemde/production/simplemde.min.css"})
+    (sift :add-jar {'cljsjs/codemirror #"cljsjs/codemirror/development/codemirror.css"})
     (hoplon)
     (reload)
     (cljs :optimizations :none)
