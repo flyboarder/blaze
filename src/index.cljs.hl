@@ -55,7 +55,7 @@
     (link :rel "stylesheet" :href "css/demo.css")
 
     ;; SimpleMDE CSS
-    (link :rel "stylesheet" :href "cljsjs/simplemde/production/simplemde.min.css")
+    ;(link :rel "stylesheet" :href "cljsjs/simplemde/production/simplemde.min.css")
     ;; CodeMirror CSS
     (link :rel "stylesheet" :href "cljsjs/codemirror/development/codemirror.css")
 
