@@ -148,9 +148,7 @@
                          post blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
-                      (let [textarea (textarea)
-                            editor (with-dom textarea (smde/editor! {:placeholder "Post Content..." :element textarea}))]
-                        textarea))
+                      (smde/editor :config {:placeholder "Post Content..."}))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
