@@ -148,7 +148,7 @@
                          post blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
-                      (smde/editor :config {:placeholder "Post Content..."} :post post))
+                      (smde/editor :config {:placeholder "Post Content..." :forceSync true} :post post))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
