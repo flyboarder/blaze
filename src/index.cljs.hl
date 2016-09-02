@@ -147,7 +147,7 @@
                          nil  grid/*shadow*      shadow
                          post blz/*current-post* (fb/current-post= route-params)]
                   (grid/grid :class [:demo-blog__posts]
-                    (bmdl/post-card (div :css {:height "100%" :width "100%"} (textarea)))
+                    (bmdl/post-card (textarea))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
