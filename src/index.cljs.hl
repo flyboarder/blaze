@@ -15,6 +15,28 @@
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
 
+;; App Settings // Sugar for binding & let
+(config [prefix           bidi/*prefix*       ""
+         router           blz/*router*        bidi/route!
+         route            blz/*route*         (bidi/route)
+         route-params     blz/*route-params*  (bidi/route-params)
+         categories       blz/*categories*    (fb/categories=)
+         posts            blz/*posts*         (fb/posts=)
+         nil              blz/*navigation*    (fb/navigation=)
+         nil              blz/*settings*      (fb/settings=)
+         nil              blz/*featured-post* (fb/posts-featured=)
+         width-cols       nil                 12
+         shadow           nil                 2
+         featured-post    nil                 (cell= (first (seq blz/*featured-post*)))
+         general-settings nil                 (cell= (:general blz/*settings*))
+         social-settings  nil                 (cell= (:social blz/*settings*))
+         about-settings   nil                 (cell= (-> blz/*settings* :cards :about))
+         featured-id      nil                 (cell= (first featured-post))
+         featured-meta    nil                 (cell= (second featured-post))
+         featured-router  nil                 #(router :post :id @featured-id :prefix prefix)
+         post-router      nil                 #(router :post :id % :prefix prefix)
+         nav-router       nil                 #(router % :prefix prefix)
+         category-router  nil                 #(router :category :id % :prefix prefix)]
 ;; Index Page
 (html
   (head
@@ -42,28 +64,6 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
 
   (body
-    ;; App Settings // Sugar for binding & let
-    (config [prefix           bidi/*prefix*       ""
-             router           blz/*router*        bidi/route!
-             route            blz/*route*         (bidi/route)
-             route-params     blz/*route-params*  (bidi/route-params)
-             categories       blz/*categories*    (fb/categories=)
-             posts            blz/*posts*         (fb/posts=)
-             nil              blz/*navigation*    (fb/navigation=)
-             nil              blz/*settings*      (fb/settings=)
-             nil              blz/*featured-post* (fb/posts-featured=)
-             width-cols       nil                 12
-             shadow           nil                 2
-             featured-post    nil                 (cell= (first (seq blz/*featured-post*)))
-             general-settings nil                 (cell= (:general blz/*settings*))
-             social-settings  nil                 (cell= (:social blz/*settings*))
-             about-settings   nil                 (cell= (-> blz/*settings* :cards :about))
-             featured-id      nil                 (cell= (first featured-post))
-             featured-meta    nil                 (cell= (second featured-post))
-             featured-router  nil                 #(router :post :id @featured-id :prefix prefix)
-             post-router      nil                 #(router :post :id % :prefix prefix)
-             nav-router       nil                 #(router % :prefix prefix)
-             category-router  nil                 #(router :category :id % :prefix prefix)]
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
