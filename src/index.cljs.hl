@@ -10,9 +10,7 @@
             [hoplon.firebase :as hfb]
             [firebase-cljs.database :as fbdb]
             [blaze.markdown-it]
-            [blaze.simplemde :as smde]
-            ;[blaze.codemirror :as cm]
-            )
+            [blaze.simplemde :as smde])
   (:require-macros [hoplon.firebase :refer [with-auth!]]
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
@@ -67,7 +65,7 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
 
   (body
-    
+
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
