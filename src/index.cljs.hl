@@ -143,7 +143,7 @@
                          nil grid/*shadow*     shadow
                          nil blz/*router*      post-router
                          nil bmdl/*list-title* "All Posts:"
-                         nil bmdl/*list-items* (reverse posts)]
+                         nil bmdl/*list-items* (Cell= (reverse posts))]
                   (grid/grid :class [:demo-blog__list]
                     (bmdl/list-card)))
               ;; Post View
