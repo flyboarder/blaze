@@ -58,7 +58,7 @@
           ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc)))
 
-(defn current-post=
+(defn post=
   [& [route-params db]]
   (cell=
     (assoc ~(current-meta= route-params db)
