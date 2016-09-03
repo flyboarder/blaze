@@ -150,7 +150,7 @@
               :post
                 (config [nil  grid/*cols*        width-cols
                          nil  grid/*shadow*      shadow
-                         post blz/*current-post* (fb/current-post= route-params)]
+                         post blz/*current-post* (fb/post= route-params)]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       ;(cm/editor)
