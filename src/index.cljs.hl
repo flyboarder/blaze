@@ -42,8 +42,6 @@
 ;; Index Page
 (html
   (head
-    ;; CodeMirror CSS
-    ;(link :rel "stylesheet" :href "cljsjs/codemirror/development/codemirror.css")
 
     ;; MDL Font Roboto
     (mdl/include-fonts)
@@ -168,8 +166,6 @@
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer)))))
-            ;; Ace Editor
-            ;(script :src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js")
             ))
 
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
