@@ -157,7 +157,7 @@
                       ;(cm/editor)
                       (smde/editor :config {:placeholder "Post Content..." :forceSync true}
                                    :content content
-                                   :change #(reset! ))
+                                   :change #(reset! content %))
                       )
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
