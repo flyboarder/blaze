@@ -388,6 +388,7 @@ body .demo-blog {
           align-items: center;
 }
 .demo-blog--blogpost .meta + .mdl-card__supporting-text {
+  min-height: 500px;
   border: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -404,7 +405,7 @@ body .demo-blog {
 }*/
 
 .demo-blog--blogpost .meta + .mdl-card__supporting-text > div {
-  width: 80%;
+  width: 90%;
   margin: 16px auto;
 }
 
