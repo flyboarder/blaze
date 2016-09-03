@@ -105,7 +105,7 @@
                     (bmdl/about-card :desktop-cols 4)
                     (bmdl/featured-card :desktop-cols 8
                       :click featured-router)
-                    (for-tpl [post (cell= (take 2 posts))]
+                    (for-tpl [post (cell= (take 2 (reverse posts)))]
                       (config [nil grid/*cols*           width-cols
                                nil grid/*shadow*         shadow
                                nil bmdl/*preview-id* (cell= (-> post first))
