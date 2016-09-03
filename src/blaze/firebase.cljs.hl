@@ -32,7 +32,7 @@
           (fbdb/get-in (post db) (:id route-params))
           "value"
           ~#(reset! fbc (hfb/fb->clj %)))))
-    (cell= fbc)))
+    (cell= fbc #(fbdb/reset! (fbdb/get-in (post db) (:id @route-params)) %))))
 
 (defn posts
   [& [db]]
