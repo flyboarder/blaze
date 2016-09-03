@@ -155,7 +155,7 @@
                     (bmdl/post-card
                       ;(cm/editor)
                       (smde/editor :config {:placeholder "Post Content..." :forceSync true}
-                                   :content (cell= (:content post))
+                                   :content (fb/post= route-params)
                                    :change #(prn %))
                       )
                     (bmdl/bottom-nav :class [:demo-nav]
