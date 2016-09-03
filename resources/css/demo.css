@@ -3,9 +3,9 @@
   https://github.com/jchatkinson/demoMDL/
  **/
 
-.CodeMirror {
+/*.CodeMirror {
     width: 100%;
-}
+}*/
 
 body::before {
     background-size: cover;
@@ -403,10 +403,10 @@ body .demo-blog {
   line-height: 28px;
 }*/
 
-/*.demo-blog--blogpost .meta + .mdl-card__supporting-text div {
+.demo-blog--blogpost .meta + .mdl-card__supporting-text > div {
   width: 80%;
   margin: 16px auto;
-}*/
+}
 
 .demo-blog--blogpost .comments {
   display: -webkit-flex;
