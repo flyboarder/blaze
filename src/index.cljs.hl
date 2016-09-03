@@ -156,7 +156,7 @@
                       ;(cm/editor)
                       (smde/editor :config {:placeholder "Post Content..." :forceSync true}
                                    :content (cell= (:content post))
-                                   :change #(prn %1 %2))
+                                   :change #(prn (.getValue %1) %2))
                       )
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
