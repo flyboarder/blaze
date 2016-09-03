@@ -156,6 +156,7 @@
                     (bmdl/post-card
                       (smde/editor :placeholder "Post Content..."
                                    :autosave false
+                                   :hideIcons ["side-by-side" "fullscreen"]
                                    :status ["lines" "words"]
                                    :content content
                                    :change #(reset! content %)))
