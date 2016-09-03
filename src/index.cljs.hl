@@ -155,6 +155,7 @@
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       (smde/editor :placeholder "Post Content..."
+                                   :autosave false
                                    :content content
                                    :change #(reset! content %)))
                     (bmdl/bottom-nav :class [:demo-nav]
