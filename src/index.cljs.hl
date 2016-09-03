@@ -155,7 +155,8 @@
                     (bmdl/post-card
                       ;(cm/editor)
                       (smde/editor :config {:placeholder "Post Content..." :forceSync true}
-                                   :content (fb/current-content= route-params))
+                                   :content (fb/current-content= route-params)
+                                   :sync true)
                       )
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
