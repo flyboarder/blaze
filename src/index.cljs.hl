@@ -154,11 +154,9 @@
                          content blz/*current-content* (fb/current-content= route-params)]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
-                      ;(cm/editor)
-                      (smde/editor :config {:placeholder "Post Content..." :forceSync true}
+                      (smde/editor :config {:placeholder "Post Content..."}
                                    :content content
-                                   :change #(reset! content %))
-                      )
+                                   :change #(reset! content %)))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
