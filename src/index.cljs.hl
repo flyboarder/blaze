@@ -156,6 +156,7 @@
                     (bmdl/post-card
                       (smde/editor :placeholder "Post Content..."
                                    :autosave false
+                                   :status ["lines" "words"]
                                    :content content
                                    :change #(reset! content %)))
                     (bmdl/bottom-nav :class [:demo-nav]
