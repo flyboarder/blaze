@@ -40,7 +40,7 @@
 
 (defn posts=
   [& [db]]
-  (hfb/fb-cell (-> (posts db) (fbdq/take 25) reverse)))
+  (hfb/fb-cell (-> (posts db) (fbdq/take 25))))
 
 (defn posts-featured=
   [& [db]]
