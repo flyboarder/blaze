@@ -54,11 +54,11 @@
     ;; MDL Colors
     (mdl/include-colors :grey :orange)
 
-    ;; Custom CSS
-    (link :rel "stylesheet" :href "css/demo.css")
-
     ;; SimpleMDE CSS
     (link :rel "stylesheet" :href "cljsjs/simplemde/production/simplemde.min.css")
+
+    ;; Custom CSS
+    (link :rel "stylesheet" :href "css/demo.css")
 
     ;; Title
     (title "Blaze - A (No Backend) Blog")
