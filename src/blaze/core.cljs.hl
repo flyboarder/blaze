@@ -28,6 +28,10 @@
   "A thread bound cell to the current post."
   nil)
 
+(def ^:dynamic *current-content*
+  "A thread bound cell to the current post."
+  nil)
+
 (def ^:dynamic *navigation*
   "A thread bound formula cell to a list of navigation links."
   nil)
