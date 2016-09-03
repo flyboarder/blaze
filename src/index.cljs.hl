@@ -154,7 +154,7 @@
                          content blz/*current-content* (fb/current-content= route-params)]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
-                      (smde/editor :config {:placeholder "Post Content..."}
+                      (smde/editor :placeholder "Post Content..."
                                    :content content
                                    :change #(reset! content %)))
                     (bmdl/bottom-nav :class [:demo-nav]
