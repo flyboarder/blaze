@@ -154,7 +154,7 @@
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       ;(cm/editor)
-                      (smde/editor :config {:placeholder "Post Content..." :forceSync true} :post post)
+                      (smde/editor :config {:placeholder "Post Content..." :forceSync true} :content (cell= (:content post))
                       )
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
