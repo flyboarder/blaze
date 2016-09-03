@@ -150,13 +150,14 @@
               :post
                 (config [nil  grid/*cols*        width-cols
                          nil  grid/*shadow*      shadow
-                         post blz/*current-post* (fb/post= route-params)]
+                         post blz/*current-post* (fb/post= route-params)
+                         content nil (fb/current-content= route-params)]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       ;(cm/editor)
                       (smde/editor :config {:placeholder "Post Content..." :forceSync true}
-                                   :content (fb/current-content= route-params)
-                                   :sync true)
+                                   :content content
+                                   :change #(reset! ))
                       )
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
