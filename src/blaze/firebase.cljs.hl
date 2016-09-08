@@ -109,5 +109,5 @@
   ((or router blz/*router*) :index))
 
 (defn logout
-  []
+  [& [router]]
   (prn "Logout!"))
