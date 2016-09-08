@@ -170,9 +170,9 @@
                         (h3 "Login"))
                       (card/card-supporting-text
                         (layout/layout-spacer)
-                        (btn/button)
-                        (btn/button)
-                        (btn/button)
+                        (btn/button :fab true)
+                        (btn/button :fab true)
+                        (btn/button :fab true)
                         (layout/layout-spacer))
                       (card/card-actions))
                     (layout/layout-spacer))))
