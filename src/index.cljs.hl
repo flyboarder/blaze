@@ -166,8 +166,8 @@
                   (grid/grid :class [:demo-blog__posts]
                     (layout/layout-spacer)
                     (grid/cell-card :cols 6
-                      (card/card-title :class [:mdl-color-text--grey-50]
-                        (card/card-title-text "Login"))
+                      (card/card-media :class [:mdl-color-text--grey-50]
+                        (h3 "Login"))
                       (card/card-actions
                         (layout/layout-spacer)
                         (btn/button
