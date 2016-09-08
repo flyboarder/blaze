@@ -6,32 +6,32 @@
             [firebase-cljs.auth.provider :as fbprov]
             [blaze.firebase :as bfb]))
 
-(def facebook-provider (fbprov/facebook))
+(def ^:dynamic *facebook* (fbprov/facebook))
 
-(def github-provider (fbprov/github))
+(def ^:dynamic *github-provider* (fbprov/github))
 
-(def google-provider (fbprov/google))
+(def ^:dynamic *google-provider* (fbprov/google))
 
-(def twitter-provider (fbprov/twitter))
+(def ^:dynamic *twitter-provider* (fbprov/twitter))
 
-(fbprov/scope-email google-provider :google)
-(fbprov/scope-email github-provider :github)
-(fbprov/scope-email facebook-provider :facebook)
+(fbprov/scope-email *google-provider* :google)
+(fbprov/scope-email *github-provider* :github)
+(fbprov/scope-email *facebook-provider* :facebook)
 
-(fbprov/scope-profile google-provider :google)
-(fbprov/scope-profile github-provider :github)
-(fbprov/scope-profile facebook-provider :facebook)
+(fbprov/scope-profile *google-provider* :google)
+(fbprov/scope-profile *github-provider* :github)
+(fbprov/scope-profile *facebook-provider* :facebook)
 
-(defc pending-link nil)
+(def ^:dynamic *pending-link* (cell nil))
 
-(defn handle-link
+(defn- handle-link
   [err]
   (let [cred (aget err "credential")
         email (aget err "email")
         pending {:cred cred :email email}]
     (.then
       (fbauth/providers-by-email bfb/*auth* email)
-      #(reset! pending-link
+      #(reset! *pending-link*
         (assoc pending
           :providers (set %)
           :msg (fbautherr/message err))))))
