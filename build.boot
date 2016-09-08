@@ -68,6 +68,7 @@
   "Build project for development."
   []
   (comp
+    (bower :install {"font-awesome" "4.6.3"})
     (watch)
     (version :no-update true
              :minor 'inc
