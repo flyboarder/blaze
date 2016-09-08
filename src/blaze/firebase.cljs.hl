@@ -113,14 +113,20 @@
   [& [db]]
   (hfb/fb-cell (users db)))
 
-(defn user=
-  [uid & [db]]
-  (hfb/fb-cell (fb-ref (users db) [(keyword uid)])))
+(defn auth-data! [user]
+  (reset! user-auth user))
+  
+(defn persist-user [uid]
+  (fbdb/listen-promise
+    (fb/users uid)
+    "value"
+    #(when-not (fbsnap/exists %)
+      (fbdb/reset! (fb/users uid) {:enabled true}))))
 
 (defn login
-  [auth & [db user]]
-  (dosync
-    (reset! (or user blz/*user*) (hfb/fbonce-cell (fb-ref (or db *db*) )))))
+  [auth]
+  (auth-data! user)
+  (persist-user (fbuser/uid auth)))
 
 (defn logout
   []
