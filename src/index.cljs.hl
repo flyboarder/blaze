@@ -219,4 +219,6 @@
 
 ;; Firebase Auth
 (with-auth!
-  fb/login)
+  fb/*auth*
+  fb/login
+  fb/logout)
