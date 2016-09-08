@@ -165,7 +165,7 @@
                 (config []
                   (grid/grid :class [:demo-blog__posts]
                     (layout/layout-spacer)
-                    (grid/cell-card :cols 4
+                    (grid/cell-card :cols 6
                       (card/card-media)
                       (card/card-supporting-text)
                       (card/card-actions))
