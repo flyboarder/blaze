@@ -49,4 +49,4 @@
 
 (defmethod hoplon.core/do! :login
   [elem _ v]
-  (hoplon.core/do! elem :click #(let [] (prn "click") (login! v))))
+  (.addEventListener elem "click" #(login! v)))
