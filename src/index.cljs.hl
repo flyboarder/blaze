@@ -171,9 +171,7 @@
                       (card/card-supporting-text :css {:margin "16px"}
                         (layout/layout-spacer)
                         (btn/button :fab true)
-                        (layout/layout-spacer)
                         (btn/button :fab true)
-                        (layout/layout-spacer)
                         (btn/button :fab true)
                         (layout/layout-spacer))
                       (card/card-actions))
