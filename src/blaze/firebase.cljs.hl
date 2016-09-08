@@ -106,7 +106,7 @@
 
 (defn login
   [auth & [router]]
-  ('(or router blz/*router*) :index))
+  (blz/*router* :index))
 
 (defn logout
   [& [router]]
