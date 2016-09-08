@@ -106,7 +106,7 @@
 
 (defn login
   [auth]
-  )
+  (prn "Login!"))
 
 (defn logout
   []
