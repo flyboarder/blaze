@@ -50,6 +50,9 @@
     ;; MDL Colors
     (mdl/include-colors :grey :orange)
 
+    ;; Font-Awesome CSS
+    (link :rel "stylesheet" :href "boweer_components/font-awesome/css/font-awesome.min.css")
+
     ;; SimpleMDE CSS
     (link :rel "stylesheet" :href "cljsjs/simplemde/production/simplemde.min.css")
 
