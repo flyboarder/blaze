@@ -46,3 +46,7 @@
 
 (defn logout! [& [auth]]
   (fbauth/logout (or auth bfb/*auth*)))
+
+(defmethod do! :login
+  [elem _ v]
+  (do! :click #(login! v)))
