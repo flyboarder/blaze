@@ -197,12 +197,14 @@
                               :fab true
                               :class [:mdl-button--googleplus]
                               (i :class [:fa :fa-google-plus :fa-fw])))
-                        (grid/cell :phone-cols 1
-                        (btn/button
-                           :css {:margin "16px"}
-                           :fab true
-                           :class [:mdl-button--twitter]
-                           (i :class [:fa :fa-twitter :fa-fw])))
+                          (grid/cell
+                            :cols 3
+                            :phone-cols 1
+                            (btn/button
+                              :css {:margin "16px"}
+                              :fab true
+                              :class [:mdl-button--twitter]
+                              (i :class [:fa :fa-twitter :fa-fw])))
                         ))
                       )
                     (layout/layout-spacer))))
