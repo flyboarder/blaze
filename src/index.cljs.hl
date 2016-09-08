@@ -185,13 +185,13 @@
                            :fab true
                            :class [:mdl-button--github]
                            (i :class [:fa :fa-github :fa-fw])))
-                        (grid/cell
+                        (grid/cell :cols 1
                         (btn/button
                            :css {:margin "16px"}
                            :fab true
                            :class [:mdl-button--googleplus]
                            (i :class [:fa :fa-google-plus :fa-fw])))
-                        (grid/cell
+                        (grid/cell :cols1
                         (btn/button
                            :css {:margin "16px"}
                            :fab true
