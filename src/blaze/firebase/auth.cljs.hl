@@ -8,19 +8,19 @@
 
 (def ^:dynamic *facebook* (fbprov/facebook))
 
-(def ^:dynamic *github-provider* (fbprov/github))
+(def ^:dynamic *github* (fbprov/github))
 
-(def ^:dynamic *google-provider* (fbprov/google))
+(def ^:dynamic *google* (fbprov/google))
 
-(def ^:dynamic *twitter-provider* (fbprov/twitter))
+(def ^:dynamic *twitter* (fbprov/twitter))
 
-(fbprov/scope-email *google-provider* :google)
-(fbprov/scope-email *github-provider* :github)
-(fbprov/scope-email *facebook-provider* :facebook)
+(fbprov/scope-email *google* :google)
+(fbprov/scope-email *github* :github)
+(fbprov/scope-email *facebook* :facebook)
 
-(fbprov/scope-profile *google-provider* :google)
-(fbprov/scope-profile *github-provider* :github)
-(fbprov/scope-profile *facebook-provider* :facebook)
+(fbprov/scope-profile *google* :google)
+(fbprov/scope-profile *github* :github)
+(fbprov/scope-profile *facebook* :facebook)
 
 (def ^:dynamic *pending-link* (cell nil))
 
