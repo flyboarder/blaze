@@ -3,6 +3,7 @@
             [firebase-cljs.core :as fb]
             [firebase-cljs.database :as fbdb]
             [firebase-cljs.database.query :as fbdq]
+            [firebase-cljs.user :as fbuser]
             [hoplon.firebase :as hfb]))
 
 ;; Firebase ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -106,7 +107,8 @@
 
 (defn login
   [auth]
-  ((or router blz/*router*) :index))
+  (dosync
+    (reset! blz/*user* hfb/fbonce-cell )))
 
 (defn logout
   []
