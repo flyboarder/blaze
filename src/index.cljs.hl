@@ -181,7 +181,7 @@
                               :css {:margin "16px"}
                               :fab true
                               :class [:mdl-button--facebook]
-                              :click #(let [] (prn "click") (bauth/login! v))
+                              :click #(let [] (prn "click") (bauth/login! bauth/*facebook*))
                               ;:login bauth/*facebook*
                               (i :class [:fa :fa-facebook :fa-fw])))
                           (grid/cell
