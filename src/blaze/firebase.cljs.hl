@@ -105,10 +105,18 @@
   [& [db]]
   (hfb/fb-cell (navigation db)))
 
+(defn users
+  [& [db]]
+  (fb-ref (or db *db*) [:navigation]))
+
+(defn users=
+  [& [db]]
+  (hfb/fb-cell (navigation db)))
+
 (defn login
-  [auth]
+  [auth & [db user]]
   (dosync
-    (reset! blz/*user* hfb/fbonce-cell )))
+    (reset! (or user blz/*user*) (hfb/fbonce-cell (fb-ref (or db *db*) )))))
 
 (defn logout
   []
