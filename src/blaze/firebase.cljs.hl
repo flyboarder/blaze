@@ -105,8 +105,8 @@
   (hfb/fb-cell (navigation db)))
 
 (defn login
-  []
-  )
+  [auth]
+  (prn auth))
 
 (defn logout
   [err]
