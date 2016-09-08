@@ -176,7 +176,6 @@
                         (layout/layout-spacer)
                         (btn/button
                            :css {:margin "16px"}
-                           :fab true
                            :class [:mdl-button--twitter])
                         (btn/button
                            :css {:margin "16px"}
