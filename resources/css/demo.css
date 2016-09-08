@@ -602,67 +602,257 @@ body .demo-blog {
   box-sizing: border-box;
 }
 
-/* MDL Twitter Button */
-.mdl-button.mdl-button--twitter {
-    color: rgb(63, 81, 181)
-}
-.mdl-button.mdl-button--twitter:focus:not(:active) {
-    background-color: #00acee;
-}
-
 /*
-$twitter: #00acee;
-$facebook: #3b5998;
-$googleplus: #e93f2e;
-$stumbleupon: #f74425;
-$linkedin: #0e76a8;
-
-$md-colour-list: (
-twitter $twitter,
-facebook $facebook,
-googleplus $googleplus,
-stumbleupon $stumbleupon,
-linkedin $linkedin
-);
-
-@each $colour-name, $md-colour in $md-colour-list {
-  .mdl-button.mdl-button--#{$colour-name} {
-      color: rgb(63, 81, 181)
-  }
-  .mdl-button.mdl-button--#{$colour-name}:focus:not(:active) {
-      background-color: $md-colour
-  }
-  .mdl-button--raised.mdl-button--#{$colour-name} {
-      background: $md-colour;
-      color: rgb(255, 255, 255)
-  }
-  .mdl-button--raised.mdl-button--#{$colour-name}:hover {
-      background-color: $md-colour
-  }
-  .mdl-button--raised.mdl-button--#{$colour-name}:active {
-      background-color: $md-colour
-  }
-  .mdl-button--raised.mdl-button--#{$colour-name}:focus:not(:active) {
-      background-color: $md-colour
-  }
-  .mdl-button--raised.mdl-button--#{$colour-name} .mdl-ripple {
-      background: rgb(255, 255, 255)
-  }
-  .mdl-button--fab.mdl-button--#{$colour-name} {
-      background: $md-colour;
-      color: rgb(255, 255, 255)
-  }
-  .mdl-button--fab.mdl-button--#{$colour-name}:hover {
-      background-color: $md-colour
-  }
-  .mdl-button--fab.mdl-button--#{$colour-name}:focus:not(:active) {
-      background-color: $md-colour
-  }
-  .mdl-button--fab.mdl-button--#{$colour-name}:active {
-      background-color: $md-colour
-  }
-  .mdl-button--fab.mdl-button--#{$colour-name} .mdl-ripple {
-      background: rgb(255, 255, 255)
-  }
-}
+// Social Sharing Buttons for Material Design Lite
+// by Brandon Himpfen http://www.himpfen.com/
+// --------------------------------------------------
 */
+.mdl-button.mdl-button--twitter {
+  color: #3f51b5;
+}
+
+.mdl-button.mdl-button--twitter:focus:not(:active) {
+  background-color: #00acee;
+}
+
+.mdl-button--raised.mdl-button--twitter {
+  background: #00acee;
+  color: white;
+}
+
+.mdl-button--raised.mdl-button--twitter:hover {
+  background-color: #00acee;
+}
+
+.mdl-button--raised.mdl-button--twitter:active {
+  background-color: #00acee;
+}
+
+.mdl-button--raised.mdl-button--twitter:focus:not(:active) {
+  background-color: #00acee;
+}
+
+.mdl-button--raised.mdl-button--twitter .mdl-ripple {
+  background: white;
+}
+
+.mdl-button--fab.mdl-button--twitter {
+  background: #00acee;
+  color: white;
+}
+
+.mdl-button--fab.mdl-button--twitter:hover {
+  background-color: #00acee;
+}
+
+.mdl-button--fab.mdl-button--twitter:focus:not(:active) {
+  background-color: #00acee;
+}
+
+.mdl-button--fab.mdl-button--twitter:active {
+  background-color: #00acee;
+}
+
+.mdl-button--fab.mdl-button--twitter .mdl-ripple {
+  background: white;
+}
+
+.mdl-button.mdl-button--facebook {
+  color: #3f51b5;
+}
+
+.mdl-button.mdl-button--facebook:focus:not(:active) {
+  background-color: #3b5998;
+}
+
+.mdl-button--raised.mdl-button--facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.mdl-button--raised.mdl-button--facebook:hover {
+  background-color: #3b5998;
+}
+
+.mdl-button--raised.mdl-button--facebook:active {
+  background-color: #3b5998;
+}
+
+.mdl-button--raised.mdl-button--facebook:focus:not(:active) {
+  background-color: #3b5998;
+}
+
+.mdl-button--raised.mdl-button--facebook .mdl-ripple {
+  background: white;
+}
+
+.mdl-button--fab.mdl-button--facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.mdl-button--fab.mdl-button--facebook:hover {
+  background-color: #3b5998;
+}
+
+.mdl-button--fab.mdl-button--facebook:focus:not(:active) {
+  background-color: #3b5998;
+}
+
+.mdl-button--fab.mdl-button--facebook:active {
+  background-color: #3b5998;
+}
+
+.mdl-button--fab.mdl-button--facebook .mdl-ripple {
+  background: white;
+}
+
+.mdl-button.mdl-button--googleplus {
+  color: #3f51b5;
+}
+
+.mdl-button.mdl-button--googleplus:focus:not(:active) {
+  background-color: #e93f2e;
+}
+
+.mdl-button--raised.mdl-button--googleplus {
+  background: #e93f2e;
+  color: white;
+}
+
+.mdl-button--raised.mdl-button--googleplus:hover {
+  background-color: #e93f2e;
+}
+
+.mdl-button--raised.mdl-button--googleplus:active {
+  background-color: #e93f2e;
+}
+
+.mdl-button--raised.mdl-button--googleplus:focus:not(:active) {
+  background-color: #e93f2e;
+}
+
+.mdl-button--raised.mdl-button--googleplus .mdl-ripple {
+  background: white;
+}
+
+.mdl-button--fab.mdl-button--googleplus {
+  background: #e93f2e;
+  color: white;
+}
+
+.mdl-button--fab.mdl-button--googleplus:hover {
+  background-color: #e93f2e;
+}
+
+.mdl-button--fab.mdl-button--googleplus:focus:not(:active) {
+  background-color: #e93f2e;
+}
+
+.mdl-button--fab.mdl-button--googleplus:active {
+  background-color: #e93f2e;
+}
+
+.mdl-button--fab.mdl-button--googleplus .mdl-ripple {
+  background: white;
+}
+
+.mdl-button.mdl-button--stumbleupon {
+  color: #3f51b5;
+}
+
+.mdl-button.mdl-button--stumbleupon:focus:not(:active) {
+  background-color: #f74425;
+}
+
+.mdl-button--raised.mdl-button--stumbleupon {
+  background: #f74425;
+  color: white;
+}
+
+.mdl-button--raised.mdl-button--stumbleupon:hover {
+  background-color: #f74425;
+}
+
+.mdl-button--raised.mdl-button--stumbleupon:active {
+  background-color: #f74425;
+}
+
+.mdl-button--raised.mdl-button--stumbleupon:focus:not(:active) {
+  background-color: #f74425;
+}
+
+.mdl-button--raised.mdl-button--stumbleupon .mdl-ripple {
+  background: white;
+}
+
+.mdl-button--fab.mdl-button--stumbleupon {
+  background: #f74425;
+  color: white;
+}
+
+.mdl-button--fab.mdl-button--stumbleupon:hover {
+  background-color: #f74425;
+}
+
+.mdl-button--fab.mdl-button--stumbleupon:focus:not(:active) {
+  background-color: #f74425;
+}
+
+.mdl-button--fab.mdl-button--stumbleupon:active {
+  background-color: #f74425;
+}
+
+.mdl-button--fab.mdl-button--stumbleupon .mdl-ripple {
+  background: white;
+}
+
+.mdl-button.mdl-button--linkedin {
+  color: #3f51b5;
+}
+
+.mdl-button.mdl-button--linkedin:focus:not(:active) {
+  background-color: #0e76a8;
+}
+
+.mdl-button--raised.mdl-button--linkedin {
+  background: #0e76a8;
+  color: white;
+}
+
+.mdl-button--raised.mdl-button--linkedin:hover {
+  background-color: #0e76a8;
+}
+
+.mdl-button--raised.mdl-button--linkedin:active {
+  background-color: #0e76a8;
+}
+
+.mdl-button--raised.mdl-button--linkedin:focus:not(:active) {
+  background-color: #0e76a8;
+}
+
+.mdl-button--raised.mdl-button--linkedin .mdl-ripple {
+  background: white;
+}
+
+.mdl-button--fab.mdl-button--linkedin {
+  background: #0e76a8;
+  color: white;
+}
+
+.mdl-button--fab.mdl-button--linkedin:hover {
+  background-color: #0e76a8;
+}
+
+.mdl-button--fab.mdl-button--linkedin:focus:not(:active) {
+  background-color: #0e76a8;
+}
+
+.mdl-button--fab.mdl-button--linkedin:active {
+  background-color: #0e76a8;
+}
+
+.mdl-button--fab.mdl-button--linkedin .mdl-ripple {
+  background: white;
+}

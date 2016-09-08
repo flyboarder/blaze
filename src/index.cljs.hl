@@ -176,7 +176,7 @@
                         (layout/layout-spacer)
                         (btn/button
                            :css {:margin "16px"}
-                           ;:fab true
+                           :fab true
                            :class [:mdl-button--twitter] "Twitter")
                         (btn/button
                            :css {:margin "16px"}
