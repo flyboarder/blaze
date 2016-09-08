@@ -173,28 +173,31 @@
                         (h3 "Login"))
                       (card/card-actions
                         (grid/grid
-                        (layout/layout-spacer)
-                        (btn/button
+                        (grid/cell
+                          (btn/button
                            :css {:margin "16px"}
                            :fab true
                            :class [:mdl-button--facebook]
-                           (i :class [:fa :fa-facebook :fa-fw]))
+                           (i :class [:fa :fa-facebook :fa-fw])))
+                        (grid/cell
                         (btn/button
                            :css {:margin "16px"}
                            :fab true
                            :class [:mdl-button--github]
-                           (i :class [:fa :fa-github :fa-fw]))
+                           (i :class [:fa :fa-github :fa-fw])))
+                        (grid/cell
                         (btn/button
                            :css {:margin "16px"}
                            :fab true
                            :class [:mdl-button--googleplus]
-                           (i :class [:fa :fa-google-plus :fa-fw]))
+                           (i :class [:fa :fa-google-plus :fa-fw])))
+                        (grid/cell
                         (btn/button
                            :css {:margin "16px"}
                            :fab true
                            :class [:mdl-button--twitter]
-                           (i :class [:fa :fa-twitter :fa-fw]))
-                        (layout/layout-spacer)))
+                           (i :class [:fa :fa-twitter :fa-fw])))
+                        ))
                       )
                     (layout/layout-spacer))))
           ;; MDL Footer
