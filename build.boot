@@ -17,7 +17,8 @@
  '[funcool.boot-codeina :refer :all]
  '[adzerk.boot-cljs :refer :all]
  '[pandeiro.boot-http :refer :all]
- '[adzerk.boot-reload :refer [reload]])
+ '[adzerk.boot-reload :refer [reload]]
+ '[degree9.boot-bower :refer :all])
 
 ;; Boot Task Options ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (task-options!
