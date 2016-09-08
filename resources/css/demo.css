@@ -3,10 +3,6 @@
   https://github.com/jchatkinson/demoMDL/
  **/
 
-/*.CodeMirror {
-    width: 100%;
-}*/
-
 body::before {
     background-size: cover;
     background-attachment: fixed;
