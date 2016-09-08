@@ -181,7 +181,9 @@
                            (i :class [:fa :fa-twitter :fa-fw]))
                         (btn/button
                            :css {:margin "16px"}
-                           :fab true)
+                           :fab true
+                           :class [:mdl-button--facebook]
+                           (i :class [:fa :fa-facebook :fa-fw]))
                         (btn/button
                            :css {:margin "16px"}
                            :fab true)
