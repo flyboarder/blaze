@@ -165,9 +165,9 @@
                 (config []
                   (grid/grid :class [:demo-blog__posts]
                     (grid/cell-card :cols 4
-                      (card/media)
-                      (card/supporting-text)
-                      (card/actions)))))
+                      (card/card-media)
+                      (card/card-supporting-text)
+                      (card/card-actions)))))
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
