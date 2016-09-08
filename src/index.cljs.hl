@@ -228,5 +228,5 @@
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
 (bmdl/auto-upgrade!)
 
-;; Firebase Auth
+;; Firebase Authentication
 (with-auth! fb/*auth* fb/login fb/logout)
