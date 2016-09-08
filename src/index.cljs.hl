@@ -191,7 +191,7 @@
                            :fab true
                            :class [:mdl-button--googleplus]
                            (i :class [:fa :fa-google-plus :fa-fw])))
-                        (grid/cell :cols1
+                        (grid/cell :cols 1
                         (btn/button
                            :css {:margin "16px"}
                            :fab true
