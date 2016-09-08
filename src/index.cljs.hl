@@ -165,7 +165,7 @@
                         :href "#/posts")
                       (div :class [:section-spacer]))))
               :login
-                (config [mdl/*ripple-effect* true]
+                (config [btn/*ripple-effect* true]
                   (grid/grid :class [:demo-blog__posts]
                     (layout/layout-spacer)
                     (grid/cell-card :cols 6
