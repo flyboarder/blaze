@@ -169,9 +169,11 @@
                       (card/card-media :class [:mdl-color-text--grey-50]
                         (h3 "Login"))
                       (card/card-supporting-text
+                        (layout/layout-spacer)
                         (btn/button)
                         (btn/button)
-                        (btn/button))
+                        (btn/button)
+                        (layout/layout-spacer))
                       (card/card-actions))
                     (layout/layout-spacer))))
           ;; MDL Footer
