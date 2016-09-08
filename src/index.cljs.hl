@@ -229,9 +229,5 @@
 (bmdl/auto-upgrade!)
 
 ;; Firebase Auth
-;(with-init!
-;  (fbauth/auth-changed
-;    fb/*auth*
-;    #(if % (fb/login %) (fb/logout))))
 
 (with-auth! fb/*auth* fb/login fb/logout)
