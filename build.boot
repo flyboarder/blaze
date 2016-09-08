@@ -12,7 +12,7 @@
 (require
  '[adzerk.bootlaces :refer :all]
  '[hoplon.boot-hoplon :refer :all]
- '[boot-semver.core :refer :all]
+ '[degree9.boot-semver :refer :all]
  '[tolitius.boot-check :as check]
  '[funcool.boot-codeina :refer :all]
  '[adzerk.boot-cljs :refer :all]
