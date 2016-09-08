@@ -113,6 +113,10 @@
   [& [db]]
   (hfb/fb-cell (users db)))
 
+(defn user=
+  [uid & [db]]
+  (hfb/fb-cell (fb-ref (users db) [(keyword uid)])))
+
 (defn login
   [auth & [db user]]
   (dosync
