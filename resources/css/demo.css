@@ -602,11 +602,15 @@ body .demo-blog {
   box-sizing: border-box;
 }
 
-//
-// Social Sharing Buttons for Material Design Lite
-// by Brandon Himpfen http://www.himpfen.com/
-// --------------------------------------------------
+/* MDL Twitter Button */
+.mdl-button.mdl-button--twitter {
+    color: rgb(63, 81, 181)
+}
+.mdl-button.mdl-button--twitter:focus:not(:active) {
+    background-color: #00acee;
+}
 
+/*
 $twitter: #00acee;
 $facebook: #3b5998;
 $googleplus: #e93f2e;
@@ -661,3 +665,4 @@ linkedin $linkedin
       background: rgb(255, 255, 255)
   }
 }
+*/
