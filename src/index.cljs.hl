@@ -7,9 +7,9 @@
             [blaze.bidi :as bidi]
             [blaze.mdl :as bmdl][blaze.core :as blz]
             [blaze.firebase :as fb]
+            [blaze.firebase.auth :as bauth]
             [hoplon.firebase :as hfb]
             [firebase-cljs.database :as fbdb]
-            [firebase-cljs.auth :as fbauth]
             [blaze.markdown-it]
             [blaze.simplemde :as smde])
   (:require-macros [hoplon.firebase :refer [with-auth!]]
