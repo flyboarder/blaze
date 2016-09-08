@@ -171,7 +171,9 @@
                       (card/card-supporting-text
                         (layout/layout-spacer)
                         (btn/button :fab true)
+                        (layout/layout-spacer)
                         (btn/button :fab true)
+                        (layout/layout-spacer)
                         (btn/button :fab true)
                         (layout/layout-spacer))
                       (card/card-actions))
