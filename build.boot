@@ -38,7 +38,7 @@
          :title "Blaze"
          :sources #{"target"}
          :description "A (No Backend) Blog"}
- ;bower  {:install {:font-awesome "4.6.3"}}
+ bower  {:install {:font-awesome "4.6.3"}}
  )
 
 ;; Boot Tasks ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -71,7 +71,7 @@
   "Build project for development."
   []
   (comp
-    ;(bower)
+    (bower)
     (watch)
     (version :no-update true
              :minor 'inc
@@ -84,10 +84,8 @@
   "Run a demo of the project."
   []
   (comp
-    ;(bower)
+    (bower)
     (watch)
-    (sift :add-jar {'cljsjs/simplemde #"cljsjs/simplemde/production/simplemde.min.css"})
-    (sift :add-jar {'cljsjs/codemirror #"cljsjs/codemirror/development/codemirror.css"})
     (hoplon)
     (reload)
     (cljs :optimizations :none)
