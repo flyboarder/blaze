@@ -173,12 +173,14 @@
                         (h3 "Login"))
                       (card/card-actions
                         (grid/grid
-                        (grid/cell :phone-cols 1
-                          (btn/button
-                           :css {:margin "16px"}
-                           :fab true
-                           :class [:mdl-button--facebook]
-                           (i :class [:fa :fa-facebook :fa-fw])))
+                          (grid/cell
+                            :cols 3
+                            :phone-cols 1
+                            (btn/button
+                              :css {:margin "16px"}
+                              :fab true
+                              :class [:mdl-button--facebook]
+                              (i :class [:fa :fa-facebook :fa-fw])))
                         (grid/cell :phone-cols 1
                         (btn/button
                            :css {:margin "16px"}
