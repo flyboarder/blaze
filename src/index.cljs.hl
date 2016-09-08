@@ -179,7 +179,7 @@
                            :fab true
                            :class [:mdl-button--facebook]
                            (i :class [:fa :fa-facebook :fa-fw])))
-                        (grid/cell
+                        (grid/cell :cols 3
                         (btn/button
                            :css {:margin "16px"}
                            :fab true
