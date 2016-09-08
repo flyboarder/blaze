@@ -230,8 +230,8 @@
 
 ;; Firebase Auth
 (with-init!
-  (fauth/auth-changed
-    fb/auth
-    #(if % (handle-login %) (handle-logout))))
+  (fbauth/auth-changed
+    fb/*auth*
+    #(if % (bauth/login %) (bauth/logout))))
 
-(with-auth! fb/*auth* fb/login fb/logout)
+;(with-auth! fb/*auth* fb/login fb/logout)
