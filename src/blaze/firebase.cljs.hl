@@ -106,7 +106,7 @@
 
 (defn login
   [auth]
-  (prn "Login!"))
+  (blz/*router* :index))
 
 (defn logout
   []
