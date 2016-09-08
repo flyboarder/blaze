@@ -229,5 +229,4 @@
 (bmdl/auto-upgrade!)
 
 ;; Firebase Auth
-
 (with-auth! fb/*auth* fb/login fb/logout)
