@@ -71,7 +71,7 @@
   "Build project for development."
   []
   (comp
-    (bower)
+    ;(bower)
     (watch)
     (version :no-update true
              :minor 'inc
