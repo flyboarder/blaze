@@ -225,11 +225,10 @@
                    nil bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer)))))
             )
-
-;; Firebase Authentication
-(with-auth! fb/*auth* fb/login fb/logout)
-
 );; end config
 
 ;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
 (bmdl/auto-upgrade!)
+
+;; Firebase Authentication
+(with-auth! fb/*auth* fb/login fb/logout)
