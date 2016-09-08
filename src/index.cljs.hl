@@ -177,7 +177,8 @@
                         (btn/button
                            :css {:margin "16px"}
                            :fab true
-                           :class [:mdl-button--twitter] "Twitter")
+                           :class [:mdl-button--twitter]
+                           (i :class [:fa :fa-twitter :fa-fw]))
                         (btn/button
                            :css {:margin "16px"}
                            :fab true)
