@@ -82,7 +82,7 @@
   "Run a demo of the project."
   []
   (comp
-    (bower)
+    ;(bower)
     (watch)
     (sift :add-jar {'cljsjs/simplemde #"cljsjs/simplemde/production/simplemde.min.css"})
     (sift :add-jar {'cljsjs/codemirror #"cljsjs/codemirror/development/codemirror.css"})
