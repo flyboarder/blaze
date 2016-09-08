@@ -24,7 +24,6 @@
 
 (defc pending-link nil)
 
-;(defn link-accounts! )
 (defn handle-link
   [err]
   (let [cred (aget err "credential")
@@ -38,13 +37,12 @@
           :msg (fbautherr/message err))))))
 
 (defn login!
-  [provider]
+  [provider & [auth]]
   (.catch
-    (fbauth/login-popup bfb/*auth* provider)
-    (fn [err]
-      (case (keyword (fbautherr/code err))
-        :auth/account-exists-with-different-credential (handle-link err)
-        :auth/internal-error (throw (fbautherr/message err))))))
+    (fbauth/login-popup (or auth bfb/*auth*) provider)
+    #(case (keyword (fbautherr/code %))
+      :auth/account-exists-with-different-credential (handle-link %)
+      (throw (fbautherr/message %)))))
 
-(defn logout! []
-  (fbauth/logout bfb/*auth*))
+(defn logout! [& [auth]]
+  (fbauth/logout (or auth bfb/*auth*)))
