@@ -160,7 +160,14 @@
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
-                      (div :class [:section-spacer])))))
+                      (div :class [:section-spacer]))))
+              :login
+                (config []
+                  (grid/grid :class [:demo-blog__posts]
+                    (grid/cell-card :cols 4
+                      (card/media)
+                      (card/supporting-text)
+                      (card/actions)))))
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
                    nil bmdl/*social-links* (cell= social-settings)]
