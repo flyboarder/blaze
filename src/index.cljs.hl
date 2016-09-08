@@ -189,6 +189,7 @@
                               :css {:margin "16px"}
                               :fab true
                               :class [:mdl-button--github]
+                              :click #(bauth/login! bauth/github-provider)
                               (i :class [:fa :fa-github :fa-fw])))
                           (grid/cell
                             :cols 3
