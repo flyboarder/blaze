@@ -167,7 +167,10 @@
                     (layout/layout-spacer)
                     (grid/cell-card :cols 6
                       (card/card-media)
-                      (card/card-supporting-text)
+                      (card/card-supporting-text
+                        (btn/button)
+                        (btn/button)
+                        (btn/button))
                       (card/card-actions))
                     (layout/layout-spacer))))
           ;; MDL Footer
