@@ -228,4 +228,4 @@
 (bmdl/auto-upgrade!)
 
 ;; Firebase Auth
-(prn (macroexpand-1 '(with-auth! fb/*auth* fb/login fb/logout)))
+(with-auth! fb/*auth* fb/login fb/logout)
