@@ -9,6 +9,7 @@
             [blaze.firebase :as fb]
             [hoplon.firebase :as hfb]
             [firebase-cljs.database :as fbdb]
+            [firebase-cljs.auth :as fbauth]
             [blaze.markdown-it]
             [blaze.simplemde :as smde])
   (:require-macros [hoplon.firebase :refer [with-auth!]]
