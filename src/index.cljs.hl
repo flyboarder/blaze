@@ -181,6 +181,7 @@
                               :css {:margin "16px"}
                               :fab true
                               :class [:mdl-button--facebook]
+                              :click #(bauth/login! bauth/facebook-provider)
                               (i :class [:fa :fa-facebook :fa-fw])))
                           (grid/cell
                             :cols 3
@@ -198,6 +199,7 @@
                               :css {:margin "16px"}
                               :fab true
                               :class [:mdl-button--googleplus]
+                              :click #(bauth/login! bauth/google-provider)
                               (i :class [:fa :fa-google-plus :fa-fw])))
                           (grid/cell
                             :cols 3
@@ -206,6 +208,7 @@
                               :css {:margin "16px"}
                               :fab true
                               :class [:mdl-button--twitter]
+                              :click #(bauth/login! bauth/twitter-provider)
                               (i :class [:fa :fa-twitter :fa-fw])))
                         ))
                       )

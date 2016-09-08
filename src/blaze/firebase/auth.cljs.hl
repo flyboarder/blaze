@@ -43,8 +43,8 @@
     (fbauth/login-popup bfb/*auth* provider)
     (fn [err]
       (case (keyword (fbautherr/code err))
-      :auth/account-exists-with-different-credential
-      (handle-link err)))))
+        :auth/account-exists-with-different-credential (handle-link err)
+        :auth/internal-error (throw (fbautherr/message err))))))
 
 (defn logout! []
   (fbauth/logout bfb/*auth*))
