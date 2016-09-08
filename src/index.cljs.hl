@@ -168,11 +168,17 @@
                     (grid/cell-card :cols 6
                       (card/card-media :class [:mdl-color-text--grey-50]
                         (h3 "Login"))
-                      (card/card-actions ; :css {:margin "16px"}
+                      (card/card-actions :css {:margin "16px"}
                         (layout/layout-spacer)
-                        (btn/button :fab true)
-                        (btn/button :fab true)
-                        (btn/button :fab true)
+                        (btn/button
+                           :css {:margin "16px"}
+                           :fab true)
+                        (btn/button
+                           :css {:margin "16px"}
+                           :fab true)
+                        (btn/button
+                           :css {:margin "16px"}
+                           :fab true)
                         (layout/layout-spacer))
                       )
                     (layout/layout-spacer))))
