@@ -110,4 +110,4 @@
 
 (defn logout
   []
-  (prn err))
+  (prn "Logout!"))
