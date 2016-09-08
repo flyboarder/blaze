@@ -37,7 +37,7 @@
          :title "Blaze"
          :sources #{"target"}
          :description "A (No Backend) Blog"}
- bower  {:install {"font-awesome" "4.6.3"}})
+ bower  {:install {:font-awesome "4.6.3"}})
 
 ;; Boot Tasks ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (deftask tests
