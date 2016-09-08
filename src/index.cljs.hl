@@ -232,6 +232,6 @@
 (with-init!
   (fbauth/auth-changed
     fb/*auth*
-    #(if % (bauth/login! %) (bauth/logout!))))
+    #(if % (fb/login %) (fb/logout))))
 
 ;(with-auth! fb/*auth* fb/login fb/logout)
