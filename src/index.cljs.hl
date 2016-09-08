@@ -188,7 +188,7 @@
                            :css {:margin "16px"}
                            :fab true
                            :class [:mdl-button--googleplus]
-                           (i :class [:fa :fa-googleplus :fa-fw]))
+                           (i :class [:fa :fa-gplus :fa-fw]))
                         (layout/layout-spacer)))
                       )
                     (layout/layout-spacer))))
