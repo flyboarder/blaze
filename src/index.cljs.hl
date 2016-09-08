@@ -168,13 +168,13 @@
                     (grid/cell-card :cols 6
                       (card/card-media :class [:mdl-color-text--grey-50]
                         (h3 "Login"))
-                      (card/card-supporting-text :css {:margin "16px"}
+                      (card/card-actions ; :css {:margin "16px"}
                         (layout/layout-spacer)
                         (btn/button :fab true)
                         (btn/button :fab true)
                         (btn/button :fab true)
                         (layout/layout-spacer))
-                      (card/card-actions))
+                      )
                     (layout/layout-spacer))))
           ;; MDL Footer
           (config [nil bmdl/*copyright*    (cell= (:copyright general-settings))
