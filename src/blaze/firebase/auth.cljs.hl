@@ -50,3 +50,7 @@
 (defmethod hoplon.core/do! :login
   [elem _ v]
   (.addEventListener elem "click" #(login! v)))
+
+(defmethod hoplon.core/do! :logout
+  [elem _ v]
+  (.addEventListener elem "click" #(logout!)))
