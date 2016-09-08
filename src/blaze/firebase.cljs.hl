@@ -109,5 +109,5 @@
   )
 
 (defn logout
-  []
-  )
+  [err]
+  (prn err))
