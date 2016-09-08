@@ -184,11 +184,11 @@
                           (grid/cell
                             :cols 3
                             :phone-cols 1
-                        (btn/button
-                           :css {:margin "16px"}
-                           :fab true
-                           :class [:mdl-button--github]
-                           (i :class [:fa :fa-github :fa-fw])))
+                            (btn/button
+                              :css {:margin "16px"}
+                              :fab true
+                              :class [:mdl-button--github]
+                              (i :class [:fa :fa-github :fa-fw])))
                         (grid/cell :phone-cols 1
                         (btn/button
                            :css {:margin "16px"}
