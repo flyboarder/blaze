@@ -105,8 +105,8 @@
   (hfb/fb-cell (navigation db)))
 
 (defn login
-  [auth]
-  (blz/*router* :index))
+  [auth & [router]]
+  ((or router blz/*router*) :index))
 
 (defn logout
   []
