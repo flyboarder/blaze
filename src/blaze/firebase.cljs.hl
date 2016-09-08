@@ -104,10 +104,15 @@
   [& [db]]
   (hfb/fb-cell (navigation db)))
 
-(defn login
-  [auth]
-  (prn auth))
+(defn login!
+  [provider]
+  (.catch
+    (fbauth/login-popup lfb/auth provider)
+    (fn [err]
+      (case (keyword (fbautherr/code err))
+      :auth/account-exists-with-different-credential
+      (handle-link err)))))
 
-(defn logout
+(defn logout!
   []
   (prn "Logout!"))
