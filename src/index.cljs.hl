@@ -169,6 +169,7 @@
                       (card/card-media :class [:mdl-color-text--grey-50]
                         (h3 "Login"))
                       (card/card-actions
+                        (grid/grid
                         (layout/layout-spacer)
                         (btn/button
                            :css {:margin "16px"}
@@ -179,7 +180,7 @@
                         (btn/button
                            :css {:margin "16px"}
                            :fab true)
-                        (layout/layout-spacer))
+                        (layout/layout-spacer)))
                       )
                     (layout/layout-spacer))))
           ;; MDL Footer
