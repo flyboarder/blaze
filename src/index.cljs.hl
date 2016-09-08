@@ -229,4 +229,5 @@
 (bmdl/auto-upgrade!)
 
 ;; Firebase Authentication
-(with-auth! fb/*auth* fb/login fb/logout)
+(config [nil blz/*router* bidi/route!]
+  (with-auth! fb/*auth* fb/login fb/logout))
