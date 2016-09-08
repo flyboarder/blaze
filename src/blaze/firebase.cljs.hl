@@ -107,11 +107,11 @@
 
 (defn users
   [& [db]]
-  (fb-ref (or db *db*) [:navigation]))
+  (fb-ref (or db *db*) [:users]))
 
 (defn users=
   [& [db]]
-  (hfb/fb-cell (navigation db)))
+  (hfb/fb-cell (users db)))
 
 (defn login
   [auth & [db user]]
