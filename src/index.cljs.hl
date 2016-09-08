@@ -83,7 +83,12 @@
                 (bmdl/nav-backward :class [:demo-back]
                   :href "#"))
               (layout/layout-spacer)
-              (bmdl/navigation :router nav-router)))
+              (bmdl/navigation
+                :router nav-router
+                (btn/button
+                  :icon true
+                  :logout true
+                  (i :class [:material-icons] "lock")))))
           ;; MDL Drawer
           (layout/layout-drawer
             (bmdl/navigation :router nav-router))
