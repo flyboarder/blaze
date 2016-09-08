@@ -103,3 +103,11 @@
 (defn navigation=
   [& [db]]
   (hfb/fb-cell (navigation db)))
+
+(defn login
+  []
+  )
+
+(defn logout
+  []
+  )
