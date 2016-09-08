@@ -208,7 +208,7 @@
                               :css {:margin "16px"}
                               :fab true
                               :class [:mdl-button--twitter]
-                              :click #(bauth/login! bauth/twitter-provider)
+                              :click #(bauth/login! bauth/*twitter*)
                               (i :class [:fa :fa-twitter :fa-fw])))
                         ))
                       )
