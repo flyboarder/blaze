@@ -10,6 +10,7 @@
             [blaze.firebase.auth :as bauth]
             [hoplon.firebase :as hfb]
             [firebase-cljs.database :as fbdb]
+            [firebase-cljs.auth :as fbauth]
             [blaze.markdown-it]
             [blaze.simplemde :as smde])
   (:require-macros [hoplon.firebase :refer [with-auth!]]
@@ -228,4 +229,9 @@
 (bmdl/auto-upgrade!)
 
 ;; Firebase Auth
+(with-init!
+  (fauth/auth-changed
+    fb/auth
+    #(if % (handle-login %) (handle-logout))))
+
 (with-auth! fb/*auth* fb/login fb/logout)
