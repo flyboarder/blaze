@@ -173,7 +173,7 @@
                         (h3 "Login"))
                       (card/card-actions
                         (grid/grid
-                        (grid/cell
+                        (grid/cell :cols 3
                           (btn/button
                            :css {:margin "16px"}
                            :fab true
