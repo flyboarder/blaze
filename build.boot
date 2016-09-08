@@ -18,7 +18,8 @@
  '[adzerk.boot-cljs :refer :all]
  '[pandeiro.boot-http :refer :all]
  '[adzerk.boot-reload :refer [reload]]
- '[degree9.boot-bower :refer :all])
+ ;'[degree9.boot-bower :refer :all]
+ )
 
 ;; Boot Task Options ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (task-options!
@@ -37,7 +38,8 @@
          :title "Blaze"
          :sources #{"target"}
          :description "A (No Backend) Blog"}
- bower  {:install {:font-awesome "4.6.3"}})
+ ;bower  {:install {:font-awesome "4.6.3"}}
+ )
 
 ;; Boot Tasks ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (deftask tests
