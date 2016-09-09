@@ -174,7 +174,7 @@
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
                       (div :class [:section-spacer]))))
-              :fb-login
+              :login
                 (config [nil btn/*ripple-effect* true]
                   (grid/grid :class [:demo-blog__posts]
                     (layout/layout-spacer)
