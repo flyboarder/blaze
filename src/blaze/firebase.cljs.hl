@@ -117,6 +117,7 @@
   [auth]
   ;; Store auth data in cell
   (auth-data! auth)
+  ;; Persist auth data to db
   )
 
 (defn- handle-logout
