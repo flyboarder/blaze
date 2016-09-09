@@ -8,12 +8,7 @@
             [hoplon.firebase :as hfb]))
 
 ;; Firebase Root ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(def ^:dynamic *blaze*   (fbdb/get-in hfb/*db* [:_blaze]))
-
-;; Helper Fn's ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defn fb-ref
-  ([ref] (fb-ref hfb/*db* ref))
-  ([db ref] (fbdb/get-in db ref)))
+(def ^:dynamic *blaze*   (hfb/fb-ref [:_blaze]))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn post
