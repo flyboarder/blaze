@@ -4,7 +4,7 @@
             [firebase-cljs.auth :as fbauth]
             [firebase-cljs.auth.error :as fbautherr]
             [firebase-cljs.auth.provider :as fbprov]
-            [blaze.firebase :as bfb]))
+            [hoplon.firebase :as hfb]))
 
 (def ^:dynamic *facebook* (fbprov/facebook))
 
@@ -30,7 +30,7 @@
         email (aget err "email")
         pending {:cred cred :email email}]
     (.then
-      (fbauth/providers-by-email bfb/*auth* email)
+      (fbauth/providers-by-email hfb/*auth* email)
       #(reset! *pending-link*
         (assoc pending
           :providers (set %)
@@ -39,13 +39,13 @@
 (defn login!
   [provider & [auth]]
   (.catch
-    (fbauth/login-popup (or auth bfb/*auth*) provider)
+    (fbauth/login-popup (or auth hfb/*auth*) provider)
     #(case (keyword (fbautherr/code %))
       :auth/account-exists-with-different-credential (handle-link %)
       (throw (fbautherr/message %)))))
 
 (defn logout! [& [auth]]
-  (fbauth/logout (or auth bfb/*auth*)))
+  (fbauth/logout (or auth hfb/*auth*)))
 
 (defmethod hoplon.core/do! :login
   [elem _ v]
