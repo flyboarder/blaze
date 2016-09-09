@@ -116,7 +116,7 @@
 
 (defn persist-user [uid]
   (fbdb/listen-promise
-    (fb/users uid)
+    (fb-ref (users) [(keyword uid)])
     "value"
     #(when-not (fbsnap/exists %)
       (fbdb/reset! (fb/users uid) {:enabled true}))))
