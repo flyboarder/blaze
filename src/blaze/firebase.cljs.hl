@@ -114,7 +114,7 @@
   (hfb/fb-cell (users db)))
 
 (defn auth-data! [user]
-  (reset! user-auth user))
+  (reset! blz/*user* user))
 
 (defn persist-user [uid]
   (fbdb/listen-promise
