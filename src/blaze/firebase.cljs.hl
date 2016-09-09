@@ -7,12 +7,8 @@
             [firebase-cljs.user :as fbuser]
             [hoplon.firebase :as hfb]))
 
-;; Firebase ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(def ^:dynamic *auth* (fb/get-auth))
-
-(def ^:dynamic *app*  (fb/get-app))
-
-(def ^:dynamic *db*   (fbdb/get-in (fb/get-db) [:_blaze]))
+;; Firebase Root ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(def ^:dynamic *blaze*   (fbdb/get-in (fb/get-db) [:_blaze]))
 
 ;; Helper Fn's ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn fb-ref
