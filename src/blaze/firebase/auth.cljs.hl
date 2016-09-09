@@ -47,10 +47,10 @@
 (defn logout! [& [auth]]
   (fbauth/logout (or auth hfb/*auth*)))
 
-(defmethod hoplon.core/do! :login
+(defmethod hoplon.core/do! :fb-login
   [elem _ v]
   (.addEventListener elem "click" #(login! v)))
 
-(defmethod hoplon.core/do! :logout
+(defmethod hoplon.core/do! :fb-logout
   [elem _ v]
   (.addEventListener elem "click" #(logout!)))
