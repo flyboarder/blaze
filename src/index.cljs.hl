@@ -233,4 +233,4 @@
 (bmdl/auto-upgrade!)
 
 ;; Firebase Authentication
-(with-auth! fb/*auth* fb/login fb/logout)
+(with-auth! fb/*auth* #(fb/login % user) fb/logout)
