@@ -121,8 +121,8 @@
       (fbdb/reset! (fb/users uid) {:enabled true}))))
 
 (defn login
-  [auth]
-  (reset! blz/*user* auth)
+  [auth ucell]
+  (reset! ucell auth)
   (persist-user (fbuser/uid auth)))
 
 (defn logout
