@@ -234,3 +234,5 @@
 
 ;; Firebase Authentication
 (with-auth! fb/*auth* #(fb/login % user) #(fb/logout))
+
+(cell= (prn user))
