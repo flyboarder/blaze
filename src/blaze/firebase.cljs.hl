@@ -109,13 +109,6 @@
 (def ^:dynamic *user-auth* (cell nil))
 ;;
 
-(defn fb-default [ref default]
-  (fbdb/listen-promise
-    ref
-    "value"
-    #(when-not (fbsnap/exists %)
-      (fbdb/reset! ref default))))
-
 (defn- handle-login
   [auth]
   ;; Store auth data in cell
