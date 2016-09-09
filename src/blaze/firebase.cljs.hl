@@ -21,10 +21,8 @@
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn post
-  ([]
-   (fb-ref [:post :content]))
-  ([db]
-  (fb-ref db [:posts :content])))
+  ([] (fb-ref [:post :content]))
+  ([db] (fb-ref db [:posts :content])))
 
 (defn current-content=
   [& [route-params db]]
