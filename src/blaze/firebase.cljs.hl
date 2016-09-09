@@ -107,7 +107,6 @@
 
 ;; Firebase Cells ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (def ^:dynamic *user-auth* (cell nil))
-;;
 
 (defn- handle-login
   [auth]
