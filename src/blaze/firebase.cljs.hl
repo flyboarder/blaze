@@ -11,8 +11,9 @@
 (def ^:dynamic *blaze*   (hfb/fb-ref [:_blaze]))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defn post []
-  (fb-ref [:post :content]))
+(defn post
+  ([] (fb-ref [:post :content]))
+  ([db] (fb-ref db [:posts :content])))
 
 (defn current-content=
   [& [route-params db]]
