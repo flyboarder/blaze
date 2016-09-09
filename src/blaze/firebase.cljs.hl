@@ -114,8 +114,10 @@
   [& [db]]
   (hfb/fb-cell (users db)))
 
+
 (defn login
-  [auth ])
+  [auth]
+  nil)
 
 (defn logout
   [ucell]
