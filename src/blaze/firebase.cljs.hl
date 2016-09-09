@@ -12,8 +12,8 @@
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn post
-  ([] (fb-ref [:post :content]))
-  ([db] (fb-ref db [:posts :content])))
+  ([] (hfb/fb-ref [:post :content]))
+  ([db] (hfb/fb-ref db [:posts :content])))
 
 (defn current-content=
   [& [route-params db]]
@@ -29,7 +29,7 @@
 
 (defn posts
   [& [db]]
-  (fb-ref (or db hfb/*db*) [:posts :meta]))
+  (hfb/fb-ref (or db hfb/*db*) [:posts :meta]))
 
 (defn posts=
   [& [db]]
@@ -59,7 +59,7 @@
 
 (defn settings
   [& [db]]
-  (fb-ref (or db hfb/*db*) [:settings]))
+  (hfb/fb-ref (or db hfb/*db*) [:settings]))
 
 (defn settings=
   [& [db]]
@@ -67,7 +67,7 @@
 
 (defn categories
   [& [db]]
-  (fb-ref (or db hfb/*db*) [:categories]))
+  (hfb/fb-ref (or db hfb/*db*) [:categories]))
 
 (defn categories=
   [& [db]]
@@ -75,7 +75,7 @@
 
 (defn tags
   [& [db]]
-  (fb-ref (or db hfb/*db*) [:tags]))
+  (hfb/fb-ref (or db hfb/*db*) [:tags]))
 
 (defn tags=
   [& [db]]
@@ -83,7 +83,7 @@
 
 (defn pages
   [& [db]]
-  (fb-ref (or db hfb/*db*) [:pages]))
+  (hfb/fb-ref (or db hfb/*db*) [:pages]))
 
 (defn pages=
   [& [db]]
@@ -91,7 +91,7 @@
 
 (defn navigation
   [& [db]]
-  (fb-ref (or db hfb/*db*) [:navigation]))
+  (hfb/fb-ref (or db hfb/*db*) [:navigation]))
 
 (defn navigation=
   [& [db]]
@@ -99,7 +99,7 @@
 
 (defn users
   [& [db]]
-  (fb-ref (or db hfb/*db*) [:users]))
+  (hfb/fb-ref (or db hfb/*db*) [:users]))
 
 (defn users=
   [& [db]]
