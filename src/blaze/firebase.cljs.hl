@@ -109,7 +109,7 @@
 (def ^:dynamic *user-auth* (cell nil))
 ;;
 
-(defn listen-default [ref default]
+(defn persist-default [ref default]
   (fbdb/listen-promise
     ref
     "value"
