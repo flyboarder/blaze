@@ -109,12 +109,12 @@
 (def ^:dynamic *user-auth* (cell nil))
 ;;
 
-(defn persist-user! [ref uid]
+(defn persist-user! [ref udat]
   (fbdb/listen-promise
     ref
     "value"
     #(when-not (fbsnap/exists %)
-      (fbdb/reset! (fb/users uid) {:enabled true}))))
+      (fbdb/reset! ref udat))))
 
 (defn- handle-login
   [auth]
