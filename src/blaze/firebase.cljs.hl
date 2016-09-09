@@ -109,20 +109,16 @@
 (def ^:dynamic *user-auth* (cell nil))
 ;;
 
-(defn- auth-data!
-  [user]
-  (reset! *user-auth* user))
-
 (defn- handle-login
   [auth]
   ;; Store auth data in cell
-  (auth-data! auth)
+  (reset! *user-auth* user)
   ;; Persist auth data to db
   ;(persist-user )
   )
 (cell=
   (fbdb/listen-promise
-    (fb/users uid)
+    (fb/users (fbuser/uid user-auth))
     "value"
     #(when-not (fbsnap/exists %)
       (fbdb/reset! (fb/users uid) {:enabled true}))))
