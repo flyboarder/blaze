@@ -115,7 +115,9 @@
 
 (defn- handle-login
   [auth]
-  (auth-data! auth))
+  ;; Store auth data in cell
+  (auth-data! auth)
+  )
 
 (defn- handle-logout
   []
