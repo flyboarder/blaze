@@ -110,7 +110,7 @@
 ;;
 
 (defn- auth-data! [user]
-  (reset! user-auth user`))
+  (reset! user-auth user))
 
 (defn handle-login
   [auth]
