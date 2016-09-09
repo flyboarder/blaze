@@ -21,8 +21,10 @@
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn post
-  [& [db]]
-  (fb-ref (or db *db*) [:posts :content]))
+  ([]
+   (fb-ref [:post :content]))
+  ([db]
+  (fb-ref db [:posts :content])))
 
 (defn current-content=
   [& [route-params db]]
@@ -114,7 +116,9 @@
   [& [db]]
   (hfb/fb-cell (users db)))
 
+;; Firebase Cells ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;
 (defn login
   [auth & [ucell ]]
   (reset! (or ucell blz/*user*) auth))
