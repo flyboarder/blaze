@@ -113,9 +113,6 @@
   [& [db]]
   (hfb/fb-cell (users db)))
 
-(defn auth-data! [user]
-  (reset! blz/*user* user))
-
 (defn persist-user [uid]
   (fbdb/listen-promise
     (fb/users uid)
@@ -125,7 +122,7 @@
 
 (defn login
   [auth]
-  (auth-data! auth)
+  (reset! blz/*user* auth)
   (persist-user (fbuser/uid auth)))
 
 (defn logout
