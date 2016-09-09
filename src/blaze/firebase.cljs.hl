@@ -115,7 +115,7 @@
 
 (defn auth-data! [user]
   (reset! user-auth user))
-  
+
 (defn persist-user [uid]
   (fbdb/listen-promise
     (fb/users uid)
@@ -125,7 +125,7 @@
 
 (defn login
   [auth]
-  (auth-data! user)
+  (auth-data! auth)
   (persist-user (fbuser/uid auth)))
 
 (defn logout
