@@ -126,5 +126,5 @@
   (persist-user (fbuser/uid auth)))
 
 (defn logout
-  []
+  [ucell]
   (prn "Logout!"))
