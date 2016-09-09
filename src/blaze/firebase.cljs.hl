@@ -3,6 +3,7 @@
             [firebase-cljs.core :as fb]
             [firebase-cljs.database :as fbdb]
             [firebase-cljs.database.query :as fbdq]
+            [firebase-cljs.database.snapshot :as fbsnap]
             [firebase-cljs.user :as fbuser]
             [hoplon.firebase :as hfb]))
 
