@@ -17,6 +17,8 @@
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
 
+(defc user nil)
+
 ;; App Settings // Sugar for binding & let
 (config [prefix           bidi/*prefix*       ""
          router           blz/*router*        bidi/route!
@@ -71,7 +73,7 @@
     (html-meta :name "viewport" :content "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"))
 
   (body
-    
+
         ;; MDL Layout
         (layout/layout
           :class [:demo-blog :demo-blog--blogpost]
