@@ -110,14 +110,13 @@
 ;;
 
 (defn- auth-data!
-  "Stores the auth data in `*user-auth*`."
   [user]
   (reset! *user-auth* user))
 
-(defn handle-login
+(defn- handle-login
   [auth]
   (auth-data! auth))
 
-(defn handle-logout
+(defn- handle-logout
   []
   (prn "Logout!"))
