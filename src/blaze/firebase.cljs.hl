@@ -106,10 +106,12 @@
   (hfb/fb-cell (users db)))
 
 ;; Firebase Cells ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(def ^:dynamic user-auth (cell nil))
+(def ^:dynamic *user-auth* (cell nil))
 ;;
 
-(defn- auth-data! [user]
+(defn- auth-data!
+  "Stores the auth data in `*user-auth*`."
+  [user]
   (reset! user-auth user))
 
 (defn handle-login
