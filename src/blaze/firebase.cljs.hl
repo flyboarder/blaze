@@ -121,7 +121,7 @@
   ;; Store auth data in cell
   (reset! *user-auth* user)
   ;; Persist auth data to db
-  ;(persist-user )
+  ;(persist-user (users (fbuser/uid auth)) {:enabled true})
   )
 (cell=
   (fbdb/listen-promise
