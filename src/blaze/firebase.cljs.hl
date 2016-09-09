@@ -118,8 +118,14 @@
   ;; Store auth data in cell
   (auth-data! auth)
   ;; Persist auth data to db
+  ;(persist-user )
   )
-
+(cell=
+  (fbdb/listen-promise
+    (fb/users uid)
+    "value"
+    #(when-not (fbsnap/exists %)
+      (fbdb/reset! (fb/users uid) {:enabled true}))))
 (defn- handle-logout
   []
   (prn "Logout!"))
