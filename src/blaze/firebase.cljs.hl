@@ -29,7 +29,7 @@
 
 (defn posts
   [& [db]]
-  (hfb/fb-ref (or db hfb/*db*) [:posts :meta]))
+  (hfb/fb-ref (or db *blaze*) [:posts :meta]))
 
 (defn posts=
   [& [db]]
@@ -59,7 +59,7 @@
 
 (defn settings
   [& [db]]
-  (hfb/fb-ref (or db hfb/*db*) [:settings]))
+  (hfb/fb-ref (or db *blaze*) [:settings]))
 
 (defn settings=
   [& [db]]
@@ -67,7 +67,7 @@
 
 (defn categories
   [& [db]]
-  (hfb/fb-ref (or db hfb/*db*) [:categories]))
+  (hfb/fb-ref (or db *blaze*) [:categories]))
 
 (defn categories=
   [& [db]]
@@ -75,7 +75,7 @@
 
 (defn tags
   [& [db]]
-  (hfb/fb-ref (or db hfb/*db*) [:tags]))
+  (hfb/fb-ref (or db *blaze*) [:tags]))
 
 (defn tags=
   [& [db]]
@@ -83,7 +83,7 @@
 
 (defn pages
   [& [db]]
-  (hfb/fb-ref (or db hfb/*db*) [:pages]))
+  (hfb/fb-ref (or db *blaze*) [:pages]))
 
 (defn pages=
   [& [db]]
@@ -91,7 +91,7 @@
 
 (defn navigation
   [& [db]]
-  (hfb/fb-ref (or db hfb/*db*) [:navigation]))
+  (hfb/fb-ref (or db *blaze*) [:navigation]))
 
 (defn navigation=
   [& [db]]
@@ -99,7 +99,7 @@
 
 (defn users
   [& [db]]
-  (hfb/fb-ref (or db hfb/*db*) [:users]))
+  (hfb/fb-ref (or db *blaze*) [:users]))
 
 (defn users=
   [& [db]]
