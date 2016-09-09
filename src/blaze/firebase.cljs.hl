@@ -113,7 +113,7 @@
   ;; Store auth data in cell
   (reset! *user-auth* user)
   ;; Persist auth data to db
-  ;(persist-user! (users (fbuser/uid auth)) {:enabled true})
+  (hfb/fb-default (users (fbuser/uid auth)) {:enabled true})
   )
 
 (defn- handle-logout
