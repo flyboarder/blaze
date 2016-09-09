@@ -229,7 +229,7 @@
             )
 );; end config
 
-;; MDL Upgrade (Upgrades Elements on window 'hashchange' event)
+;; MDL Upgrade
 (bmdl/auto-upgrade!)
 
 ;; Firebase Authentication
