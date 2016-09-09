@@ -106,7 +106,7 @@
   (hfb/fb-cell (users db)))
 
 ;; Firebase Cells ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+(def ^:dynamic user-dat (cell nil))
 ;;
 (defn login
   [auth & [ucell ]]
