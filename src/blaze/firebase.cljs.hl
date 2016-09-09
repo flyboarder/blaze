@@ -110,11 +110,11 @@
 ;;
 
 (defn- auth-data! [user]
-  (reset! user-auth user))
+  (reset! user-auth user`))
 
 (defn login
-  [auth & [ucell ]]
-  (reset! (or ucell blz/*user*) auth))
+  [auth]
+  (auth-data! auth))
 
 (defn logout
   []
