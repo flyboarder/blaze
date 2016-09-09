@@ -12,7 +12,7 @@
 
 ;; Helper Fn's ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn fb-ref
-  ([ref] (fb-ref *db* ref))
+  ([ref] (fb-ref hfb/*db* ref))
   ([db ref] (fbdb/get-in db ref)))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -34,7 +34,7 @@
 
 (defn posts
   [& [db]]
-  (fb-ref (or db *db*) [:posts :meta]))
+  (fb-ref (or db hfb/*db*) [:posts :meta]))
 
 (defn posts=
   [& [db]]
@@ -64,7 +64,7 @@
 
 (defn settings
   [& [db]]
-  (fb-ref (or db *db*) [:settings]))
+  (fb-ref (or db hfb/*db*) [:settings]))
 
 (defn settings=
   [& [db]]
@@ -72,7 +72,7 @@
 
 (defn categories
   [& [db]]
-  (fb-ref (or db *db*) [:categories]))
+  (fb-ref (or db hfb/*db*) [:categories]))
 
 (defn categories=
   [& [db]]
@@ -80,7 +80,7 @@
 
 (defn tags
   [& [db]]
-  (fb-ref (or db *db*) [:tags]))
+  (fb-ref (or db hfb/*db*) [:tags]))
 
 (defn tags=
   [& [db]]
@@ -88,7 +88,7 @@
 
 (defn pages
   [& [db]]
-  (fb-ref (or db *db*) [:pages]))
+  (fb-ref (or db hfb/*db*) [:pages]))
 
 (defn pages=
   [& [db]]
@@ -96,7 +96,7 @@
 
 (defn navigation
   [& [db]]
-  (fb-ref (or db *db*) [:navigation]))
+  (fb-ref (or db hfb/*db*) [:navigation]))
 
 (defn navigation=
   [& [db]]
@@ -104,7 +104,7 @@
 
 (defn users
   [& [db]]
-  (fb-ref (or db *db*) [:users]))
+  (fb-ref (or db hfb/*db*) [:users]))
 
 (defn users=
   [& [db]]
