@@ -116,9 +116,9 @@
 
 
 (defn login
-  [auth [ucell ]]
-  (reset! ucell ))
+  [auth & [ucell ]]
+  (reset! (or ucell blz/*user*) auth))
 
 (defn logout
-  [ucell]
+  []
   (prn "Logout!"))
