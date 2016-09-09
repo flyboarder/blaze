@@ -227,7 +227,7 @@
                    nil bmdl/*social-links* (cell= social-settings)]
             (bmdl/footer)))))
             )
-);; end config
+)
 
 ;; MDL Upgrade
 (bmdl/auto-upgrade!)
