@@ -116,8 +116,8 @@
 
 
 (defn login
-  [auth]
-  nil)
+  [auth [ucell ]]
+  (reset! ucell ))
 
 (defn logout
   [ucell]
