@@ -112,10 +112,10 @@
 (defn- auth-data! [user]
   (reset! user-auth user`))
 
-(defn login
+(defn handle-login
   [auth]
   (auth-data! auth))
 
-(defn logout
+(defn handle-logout
   []
   (prn "Logout!"))
