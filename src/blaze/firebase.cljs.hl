@@ -12,7 +12,7 @@
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn post []
-  (hfb/fb-ref *blaze* [:post :content]))
+  (hfb/fb-ref *blaze* [:posts :content]))
 
 (defn current-content=
   [& [route-params]]
