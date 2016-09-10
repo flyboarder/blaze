@@ -20,7 +20,7 @@
         fbc (cell nil)]
     (cell=
       (when (:id route-params)
-        (hfb/fbmulti-cell (fbdb/get-in (post) (:id route-params)))
+        (hfb/fb-reset! (fbdb/get-in (post) (:id route-params)) fbc)
         ;(fbdb/listen-once
         ;  (fbdb/get-in (post) (:id route-params))
         ;  "value"
