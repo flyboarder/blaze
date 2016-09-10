@@ -45,10 +45,10 @@
     (cell=
       (when (:id route-params)
         (fbdb/listen-once
-          (posts (:id route-params))
+          (posts [:meta (:id route-params)])
           "value"
           ~#(reset! fbc (hfb/fb->clj %)))))
-    (cell= fbc)))
+    (cell= fbc #(fbdb/reset! (post [:meta (:id @route-params)]) %))))
 
 (defn post=
   [& [route-params]]
