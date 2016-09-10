@@ -34,8 +34,8 @@
   (hfb/fb-cell (-> (posts) (fbdq/take 25))))
 
 (defn posts-featured=
-  [& [db]]
-  (hfb/fb-cell (-> (posts db) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
+  []
+  (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
 (defn current-meta=
   [& [route-params db]]
