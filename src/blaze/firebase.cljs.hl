@@ -23,8 +23,7 @@
         (fbdb/listen-once
           (fbdb/get-in (post) (:id route-params))
           "value"
-          ~#(reset! fbc (hfb/fb->clj %))
-          )))
+          ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc #(fbdb/reset! (fbdb/get-in (post) (:id @route-params)) %))))
 
 (defn posts
