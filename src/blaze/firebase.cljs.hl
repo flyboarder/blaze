@@ -39,10 +39,10 @@
         fbc          (hfb/fbwhen-cell postid (cell= (posts postid)))]
     (cell= fbc #(fbdb/reset! (posts @postid) %))))
 
-(defn post= []
+(defn post= [& [route-params]]
   (cell=
-    (assoc ~(post-meta=)
-      :content ~(post-content=))))
+    (assoc ~(post-meta= (or route-params blz/*route-params*))
+      :content ~(post-content= (or route-params blz/*route-params*)))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
