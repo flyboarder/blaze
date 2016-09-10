@@ -42,11 +42,10 @@
           ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc)))
 
-(defn post=
-  [& [route-params db]]
+(defn post= []
   (cell=
-    (assoc ~(current-meta= route-params db)
-      :content ~(current-content= route-params db))))
+    (assoc ~(current-meta=)
+      :content ~(current-content=))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
