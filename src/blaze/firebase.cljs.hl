@@ -54,12 +54,10 @@
       :content ~(current-content= route-params db))))
 
 (defn settings
-  [& [db]]
-  (hfb/fb-ref (or db *blaze*) [:settings]))
+  [] (hfb/fb-ref *blaze* [:settings]))
 
 (defn settings=
-  [& [db]]
-  (hfb/fb-cell (settings db)))
+  [] (hfb/fb-cell (settings)))
 
 (defn categories
   [& [db]]
