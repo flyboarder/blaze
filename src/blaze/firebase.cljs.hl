@@ -21,8 +21,9 @@
 
 (defn post-content= []
   (let [route-params blz/*route-params*
-        postid (cell= (:id route-params))
-        fbc (hfb/fbwhen-cell postid (cell= (post postid)))]
+        postid       (cell= (:id route-params))
+        fbc          (hfb/fbwhen-cell postid
+                       (cell= (post postid)))]
     (cell= fbc #(fbdb/reset! (post @postid) %))))
 
 (defn posts=
