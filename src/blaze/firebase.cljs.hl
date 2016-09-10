@@ -21,6 +21,7 @@
         fbc (cell nil)]
     (cell=
       (when (:id route-params)
+        (prn (:id route-params))
         (fbdb/listen-once
           (fbdb/get-in (post) (:id route-params))
           "value"
