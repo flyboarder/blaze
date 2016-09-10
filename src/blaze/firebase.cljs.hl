@@ -39,7 +39,7 @@
   [] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
 (defn post-meta=
-  [& [route-params db]]
+  [& [route-params]]
   (let [route-params (or route-params blz/*route-params*)
         fbc (cell nil)]
     (cell=
