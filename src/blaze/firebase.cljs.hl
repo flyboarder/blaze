@@ -30,7 +30,8 @@
   ([korks] (hfb/fb-cell (-> korks (posts) (fbdq/take 25)))))
 
 (defn posts-featured=
-  [] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
+  ([] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
+  ([korks] (hfb/fb-cell (-> korks (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1)))))
 
 (defn post-meta=
   [& [route-params db]]
