@@ -13,7 +13,7 @@
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn post
   ([] (hfb/fb-ref *blaze* [:posts :content]))
-  ([id] (fbdb/get-in (post) [id])))
+  ([id] (fbdb/get-in (post) id)))
 
 (defn post-content=
   [& [route-params]]
@@ -51,10 +51,10 @@
     (cell= fbc)))
 
 (defn post=
-  [& [route-params db]]
+  [& [route-params]]
   (cell=
-    (assoc ~(post-meta= route-params db)
-      :content ~(post-content= route-params db))))
+    (assoc ~(post-meta= route-params)
+      :content ~(post-content= route-params))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
