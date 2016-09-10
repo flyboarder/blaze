@@ -113,7 +113,7 @@
 (defn- handle-login
   [auth]
   ;; Store auth data in cell
-  (reset! *user-auth* user)
+  (reset! *user-auth* auth)
   ;; Persist auth data to db
   ;(hfb/fb-default (users (fbuser/uid auth)) {:enabled true})
   ;; Listen to user ref
