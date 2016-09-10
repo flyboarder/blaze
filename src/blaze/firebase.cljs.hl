@@ -30,8 +30,8 @@
   [] (hfb/fb-ref *blaze* [:posts :meta]))
 
 (defn posts=
-  [& [db]]
-  (hfb/fb-cell (-> (posts db) (fbdq/take 25))))
+  []
+  (hfb/fb-cell (-> (posts) (fbdq/take 25))))
 
 (defn posts-featured=
   [& [db]]
