@@ -45,8 +45,7 @@
       :content ~(post-content=))))
 
 (defn settings
-  ([] (hfb/fb-ref *blaze* [:settings]))
-  ([korks] (fbdb/get-in (settings) korks)))
+  [] (hfb/fb-ref *blaze* [:settings]))
 
 (defn settings=
   [] (hfb/fb-cell (settings)))
