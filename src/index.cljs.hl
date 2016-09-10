@@ -162,6 +162,7 @@
                          nil     grid/*shadow*         shadow
                          post    blz/*current-post*    (fb/post= route-params)
                          content blz/*current-content* (fb/current-content= route-params)]
+                         (cell= (prn content))
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       (smde/editor :placeholder "Post Content..."
