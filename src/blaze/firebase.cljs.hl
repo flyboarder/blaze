@@ -26,7 +26,8 @@
     (cell= fbc #(fbdb/reset! (post @postid) %))))
 
 (defn posts=
-  [] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
+  ([] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
+  ([korks] (hfb/fb-cell (-> korks (posts) (fbdq/take 25)))))
 
 (defn posts-featured=
   [] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
