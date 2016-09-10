@@ -14,15 +14,15 @@
 (defn post []
   (hfb/fb-ref *blaze* [:posts :content]))
 
+(defn posts
+  [] (hfb/fb-ref *blaze* [:posts :meta]))
+
 (defn post-content= []
   (let [route-params blz/*route-params*
         postid (cell= (:id route-params))
         fbc (hfb/fbwhen-cell postid
               (cell= (fbdb/get-in (post) postid)))]
     (cell= fbc #(fbdb/reset! (fbdb/get-in (post) @postid) %))))
-
-(defn posts
-  [] (hfb/fb-ref *blaze* [:posts :meta]))
 
 (defn posts=
   [] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
