@@ -63,40 +63,32 @@
   [] (hfb/fb-ref *blaze* [:categories]))
 
 (defn categories=
-  []
-  (hfb/fb-cell (categories)))
+  [] (hfb/fb-cell (categories)))
 
 (defn tags
-  []
-  (hfb/fb-ref (or db *blaze*) [:tags]))
+  [] (hfb/fb-ref *blaze* [:tags]))
 
 (defn tags=
   []
   (hfb/fb-cell (tags)))
 
 (defn pages
-  []
-  (hfb/fb-ref (or db *blaze*) [:pages]))
+  [] (hfb/fb-ref *blaze* [:pages]))
 
 (defn pages=
-  []
-  (hfb/fb-cell (pages)))
+  [] (hfb/fb-cell (pages)))
 
 (defn navigation
-  []
-  (hfb/fb-ref (or db *blaze*) [:navigation]))
+  [] (hfb/fb-ref *blaze* [:navigation]))
 
 (defn navigation=
-  []
-  (hfb/fb-cell (navigation)))
+  [] (hfb/fb-cell (navigation)))
 
 (defn users
-  []
-  (hfb/fb-ref (or db *blaze*) [:users]))
+  [] (hfb/fb-ref *blaze* [:users]))
 
 (defn users=
-  []
-  (hfb/fb-cell (users)))
+  [] (hfb/fb-cell (users)))
 
 ;; Firebase Cells ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (def ^:dynamic *user-auth* (cell nil))
