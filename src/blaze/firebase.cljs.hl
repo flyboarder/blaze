@@ -13,10 +13,11 @@
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn post
   ([] (hfb/fb-ref *blaze* [:posts :content]))
-  ([korks] (fb/get-in (post) korks)))
+  ([korks] (fbdb/get-in (post) korks)))
 
 (defn posts
-  [] (hfb/fb-ref *blaze* [:posts :meta]))
+  ([] (hfb/fb-ref *blaze* [:posts :meta]))
+  ([korks] (fbdb/get-in (posts) korks)))
 
 (defn post-content= []
   (let [route-params blz/*route-params*
