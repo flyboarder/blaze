@@ -29,7 +29,7 @@
 
 (defn posts
   ([] (hfb/fb-ref *blaze* [:posts :meta]))
-  ([korks] (fbdb/get-in (posts) korks)))
+  ([id] (fbdb/get-in (posts) [id])))
 
 (defn posts=
   ([] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
