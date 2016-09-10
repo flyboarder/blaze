@@ -14,7 +14,7 @@
 (defn post []
   (hfb/fb-ref *blaze* [:posts :content]))
 
-(defn current-content=
+(defn post-content=
   [& [route-params]]
   (let [route-params (or route-params blz/*route-params*)
         fbc (cell nil)]
@@ -35,7 +35,7 @@
 (defn posts-featured=
   [] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
-(defn current-meta=
+(defn post-meta=
   [& [route-params db]]
   (let [route-params (or route-params blz/*route-params*)
         fbc (cell nil)]
@@ -50,8 +50,8 @@
 (defn post=
   [& [route-params db]]
   (cell=
-    (assoc ~(current-meta= route-params db)
-      :content ~(current-content= route-params db))))
+    (assoc ~(post-meta= route-params db)
+      :content ~(post-content= route-params db))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
