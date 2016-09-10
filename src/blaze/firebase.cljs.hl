@@ -27,10 +27,6 @@
           ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc #(fbdb/reset! (posts [:content (:id @route-params)]) %))))
 
-;(defn posts
-;  ([] (hfb/fb-ref *blaze* [:posts :meta]))
-;  ([id] (fbdb/get-in (posts) [id])))
-
 (defn posts=
   ([] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
   ([korks] (hfb/fb-cell (-> korks (posts) (fbdq/take 25)))))
