@@ -160,8 +160,8 @@
               :post
                 (config [nil     grid/*cols*           width-cols
                          nil     grid/*shadow*         shadow
-                         post    blz/*current-post*    (fb/post=)
-                         content blz/*current-content* (fb/post-content=)]
+                         post    blz/*post*            (fb/post=)
+                         content nil                   (fb/post-content=)]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       (smde/editor :placeholder "Post Content..."
