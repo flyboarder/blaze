@@ -232,6 +232,6 @@
 (bmdl/auto-upgrade!)
 
 ;; Firebase Authentication
-(with-auth! #(fb/login % user) #(fb/logout))
+(with-auth! #(fb/handle-login % user) #(fb/handle-logout))
 
 (cell= (prn user))
