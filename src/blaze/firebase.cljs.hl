@@ -44,7 +44,6 @@
         fbc (cell nil)]
     (cell=
       (when (:id route-params)
-        (prn (:id route-params))
         (fbdb/listen-once
           (posts (:id route-params))
           "value"
