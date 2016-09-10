@@ -34,9 +34,10 @@
   ([korks] (hfb/fb-cell (-> korks (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1)))))
 
 (defn post-meta= [& [route-params]]
-  (let [route-params (or route-params blz/*route-params*)
+  (let [route-params blz/*route-params*
         postid       (cell= (:id route-params))
         fbc          (hfb/fbwhen-cell postid (cell= (posts postid)))]
+
     (cell= fbc #(fbdb/reset! (posts @postid) %))))
 
 (defn post= [& [route-params]]
