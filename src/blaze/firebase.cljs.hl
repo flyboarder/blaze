@@ -11,8 +11,9 @@
 (def ^:dynamic *blaze*   (hfb/fb-ref [:_blaze]))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defn post []
-  (hfb/fb-ref *blaze* [:posts :content]))
+(defn post
+  ([] (hfb/fb-ref *blaze* [:posts :content]))
+  ([korks] (fb/get-in (post) korks)))
 
 (defn posts
   [] (hfb/fb-ref *blaze* [:posts :meta]))
