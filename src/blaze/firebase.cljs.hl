@@ -102,7 +102,7 @@
   ;; Persist auth data to db
   ;(hfb/fb-default (users (fbuser/uid auth)) {:enabled true})
   ;; Listen to user ref
-  ;(hfb/fb-update (users (fbuser/uid auth)) *user-fb*)
+  ;(hfb/fb-reset! (users (fbuser/uid auth)) *user-fb*)
   )
 
 (defn- handle-logout
