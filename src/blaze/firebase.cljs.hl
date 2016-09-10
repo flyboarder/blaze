@@ -60,8 +60,7 @@
   [] (hfb/fb-cell (settings)))
 
 (defn categories
-  [& [db]]
-  (hfb/fb-ref (or db *blaze*) [:categories]))
+  [] (hfb/fb-ref *blaze* [:categories]))
 
 (defn categories=
   [& [db]]
