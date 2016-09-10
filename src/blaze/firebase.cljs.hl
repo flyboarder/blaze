@@ -28,8 +28,8 @@
     (cell= fbc #(fbdb/reset! (fbdb/get-in (post db) (:id @route-params)) %))))
 
 (defn posts
-  [& [db]]
-  (hfb/fb-ref (or db *blaze*) [:posts :meta]))
+  ([] (hfb/fb-ref (or db *blaze*) [:posts :meta]))
+  ([db] (hfb/fb-ref (or db *blaze*) [:posts :meta])))
 
 (defn posts=
   [& [db]]
