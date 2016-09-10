@@ -45,7 +45,7 @@
     (cell=
       (when (:id route-params)
         (fbdb/listen-once
-          (fbdb/get-in (posts) (:id route-params))
+          (posts (:id route-params))
           "value"
           ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc)))
