@@ -20,12 +20,10 @@
         fbc (cell nil)]
     (cell=
       (when (:id route-params)
-        (hfb/fb-reset! (fbdb/get-in (post) (:id route-params)) fbc)
-        ;(fbdb/listen-once
-        ;  (fbdb/get-in (post) (:id route-params))
-        ;  "value"
-        ;  ~#(reset! fbc (hfb/fb->clj %)))
-          ))
+        (fbdb/listen-once
+          (fbdb/get-in (post) (:id route-params))
+          "value"
+          ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc #(fbdb/reset! (fbdb/get-in (post) (:id @route-params)) %))))
 
 (defn posts
