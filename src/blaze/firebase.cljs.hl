@@ -18,6 +18,7 @@
   [& [route-params]]
   (let [route-params (or route-params blz/*route-params*)
         fbc (cell nil)]
+        (prn "content")
     (cell=
       (when (:id route-params)
         (fbdb/listen-once
