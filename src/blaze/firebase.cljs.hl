@@ -11,29 +11,31 @@
 (def ^:dynamic *blaze*   (hfb/fb-ref [:_blaze]))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defn post
-  ([] (hfb/fb-ref *blaze* [:posts :content]))
-  ([korks] (fbdb/get-in (post) korks)))
+(defn post []
+  (hfb/fb-ref *blaze* [:posts :content]))
+
+(defn current-content=
+  [& [route-params]]
+  (let [route-params (or route-params blz/*route-params*)
+        fbc (cell nil)]
+    (cell=
+      (when (:id route-params)
+        (fbdb/listen-once
+          (fbdb/get-in (post) (:id route-params))
+          "value"
+          ~#(reset! fbc (hfb/fb->clj %)))))
+    (cell= fbc #(fbdb/reset! (fbdb/get-in (post) (:id @route-params)) %))))
 
 (defn posts
-  ([] (hfb/fb-ref *blaze* [:posts :meta]))
-  ([korks] (fbdb/get-in (posts) korks)))
-
-(defn post-content= [& [route-params]]
-  (let [route-params blz/*route-params*
-        postid       (cell= (:id route-params))
-        fbc          (hfb/fbwhen-cell postid (cell= (post postid)))]
-    (cell= fbc #(fbdb/reset! (post @postid) %))))
+  [] (hfb/fb-ref *blaze* [:posts :meta]))
 
 (defn posts=
-  ([] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
-  ([korks] (hfb/fb-cell (-> korks (posts) (fbdq/take 25)))))
+  [] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
 
 (defn posts-featured=
-  ([] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
-  ([korks] (hfb/fb-cell (-> korks (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1)))))
+  [] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
 
-(defn post-meta=
+(defn current-meta=
   [& [route-params db]]
   (let [route-params (or route-params blz/*route-params*)
         fbc (cell nil)]
@@ -45,10 +47,11 @@
           ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc)))
 
-(defn post= []
+(defn post=
+  [& [route-params db]]
   (cell=
-    (assoc ~(post-meta=)
-      :content ~(post-content=))))
+    (assoc ~(current-meta= route-params db)
+      :content ~(current-content= route-params db))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
@@ -99,7 +102,7 @@
   ;; Persist auth data to db
   ;(hfb/fb-default (users (fbuser/uid auth)) {:enabled true})
   ;; Listen to user ref
-  ;(hfb/fb-reset! (users (fbuser/uid auth)) *user-fb*)
+  ;(hfb/fb-update (users (fbuser/uid auth)) *user-fb*)
   )
 
 (defn- handle-logout
