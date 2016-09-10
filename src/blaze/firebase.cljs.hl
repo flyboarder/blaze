@@ -40,9 +40,11 @@
     (cell= fbc #(fbdb/reset! (posts @postid) %))))
 
 (defn post= [& [route-params]]
-  (cell=
-    (assoc ~(post-meta= (or route-params blz/*route-params*))
-      :content ~(post-content= (or route-params blz/*route-params*)))))
+  (let [pm (post-meta=)
+        pc (post-content=)]
+    (cell=
+      (assoc pm
+        :content pc))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
