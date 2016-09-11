@@ -83,7 +83,8 @@
   (hfb/fb-cell (tags)))
 
 (defn pages
-  [] (hfb/fb-ref *blaze* [:pages]))
+  ([] (hfb/fb-ref *blaze* [:pages]))
+  ([korks] (fbdb/get-in (pages) korks)))
 
 (defn pages=
   [] (hfb/fb-cell (pages)))
