@@ -102,22 +102,3 @@
 
 (defn users=
   [] (hfb/fb-cell (users)))
-
-;; Firebase Cells ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(def ^:dynamic *user-auth* (cell nil))
-
-(def ^:dynamic *user-fb* (cell nil))
-
-(defn- handle-login
-  [auth & [ref default]]
-  (let [ref (when ref (fbdb/get-in ref (fbuser/uid auth)))]
-    (reset! *user-auth* auth)
-    (when (and ref default)
-      (hfb/fb-default ref default))
-    (when ref
-      (fbdb/listen-promise ref #(reset! *user-fb* (hfb/fb->clj %))))))
-
-(defn- handle-logout
-  [& [ref]]
-  (reset! *user-auth* nil)
-  (when ref (reset! *user-fb* nil)))
