@@ -64,7 +64,6 @@
                                 postref
                                 "value"
                                 ~#(reset! fbc (hfb/fb->clj %)))))]
-
     (cell= (assoc metac :content contentc))))
 
 (defn settings
