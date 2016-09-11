@@ -57,11 +57,13 @@
                                 "value"
                                 ~#(reset! fbc (hfb/fb->clj %)))))
              contentc     (cell=
-                            (when (:id route-params)
+                            (when-let [postid (:id route-params)
+                                       postref (posts [:content (keyword postid)])
+                                       fbc (cell nil)]
                               (fbdb/listen-once
-                                (posts [:content (keyword (:id route-params))])
+                                postref
                                 "value"
-                                ~#(reset! contentc (hfb/fb->clj %)))))]
+                                ~#(reset! fbc (hfb/fb->clj %)))))]
 
     (cell= (assoc metac :content contentc))))
 
