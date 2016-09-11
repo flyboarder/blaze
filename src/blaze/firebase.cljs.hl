@@ -68,7 +68,8 @@
   [] (hfb/fb-cell (settings)))
 
 (defn categories
-  [] (hfb/fb-ref *blaze* [:categories]))
+  ([] (hfb/fb-ref *blaze* [:categories]))
+  ([korks] (fbdb/get-in (categories) korks)))
 
 (defn categories=
   [] (hfb/fb-cell (categories)))
