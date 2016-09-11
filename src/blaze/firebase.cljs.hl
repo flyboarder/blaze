@@ -75,7 +75,8 @@
   [] (hfb/fb-cell (categories)))
 
 (defn tags
-  [] (hfb/fb-ref *blaze* [:tags]))
+  ([] (hfb/fb-ref *blaze* [:tags]))
+  ([korks] (fbdb/get-in (tags) korks)))
 
 (defn tags=
   []
