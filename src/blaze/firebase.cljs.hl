@@ -49,10 +49,12 @@
     (cell= fbc)))
 
 (defn post=
-  [& [route-params db]]
-  (cell=
-    (assoc ~(post-meta= route-params db)
-      :content ~(post-content= route-params db))))
+  [& [route-params]]
+  (let [post-meta    (post-meta= route-params)
+        post-content (post-content= route-params)]
+    (cell=
+      (assoc post-meta
+        :content post-content))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
