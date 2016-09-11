@@ -61,7 +61,8 @@
         (reset! post-content (:content %))))))
 
 (defn settings
-  [] (hfb/fb-ref *blaze* [:settings]))
+  ([] (hfb/fb-ref *blaze* [:settings]))
+  ([korks] (fbdb/get-in (settings) korks)))
 
 (defn settings=
   [] (hfb/fb-cell (settings)))
