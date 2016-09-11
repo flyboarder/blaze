@@ -54,9 +54,11 @@
         post-content (post-content= route-params)]
     (cell=
       (assoc post-meta :content post-content)
-      #(dosync
-        (reset! post-meta (dissoc % :content))
-        (reset! post-content (:content %))))))
+      #(prn %)
+      ;#(dosync
+      ;  (reset! post-meta (dissoc % :content))
+      ;  (reset! post-content (:content %)))
+      )))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
