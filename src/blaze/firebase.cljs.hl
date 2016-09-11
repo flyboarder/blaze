@@ -110,15 +110,12 @@
 
 (defn- handle-login
   [auth & [ref default]]
-  ;; Store auth data in cell
-  (reset! *user-auth* auth)
-  (when (and ref default)
-    (hfb/fb-default (fbdb/get-in ref (fbuser/uid auth)) default))
-  ;; Persist auth data to db
-  ;(hfb/fb-default (users (fbuser/uid auth)) {:enabled true})
-  ;; Listen to user ref
-  ;(hfb/fb-reset! (users (fbuser/uid auth)) *user-fb*)
-  )
+  (let [ref (when ref (fbdb/get-in ref (fbuser/uid auth)))]
+    (reset! *user-auth* auth)
+    (when (and ref default)
+      (hfb/fb-default ref default))
+    (when ref
+      (fbdb/listen-promise ref #(reset! *user-fb* (hfb/fb->clj %))))))
 
 (defn- handle-logout
   []
