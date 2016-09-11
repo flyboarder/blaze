@@ -46,15 +46,17 @@
           (fbdb/get-in (posts) (:id route-params))
           "value"
           ~#(reset! fbc (hfb/fb->clj %)))))
-    (cell= fbc)))
+    (cell= fbc #(fbdb/reset! (fbdb/get-in (posts) (:id @route-params)) %))))
 
 (defn post=
   [& [route-params]]
   (let [post-meta    (post-meta= route-params)
         post-content (post-content= route-params)]
     (cell=
-      (assoc post-meta
-        :content post-content))))
+      (assoc post-meta :content post-content)
+      #(dosync
+        (reset! )
+        ()))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
