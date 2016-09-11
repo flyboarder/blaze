@@ -17,8 +17,6 @@
                    [hoplon.bidi :refer [route-tpl]]
                    [blaze.core :refer [config]]))
 
-(defc user nil)
-
 ;; App Settings // Sugar for binding & let
 (config [prefix           bidi/*prefix*       ""
          router           blz/*router*        bidi/route!
