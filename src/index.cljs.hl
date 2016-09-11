@@ -170,7 +170,7 @@
                                    :hideIcons ["side-by-side" "fullscreen"]
                                    :status ["lines" "words"]
                                    :content (cell= (:content post))
-                                   :change #(reset! post (assoc {} :content %))))
+                                   :change #(reset! post {:content %})))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
                         :href "#/posts")
