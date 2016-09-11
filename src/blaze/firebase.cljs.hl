@@ -55,8 +55,8 @@
     (cell=
       (assoc post-meta :content post-content)
       #(dosync
-        (reset! )
-        ()))))
+        (reset! post-meta (dissoc % :content))
+        (reset! post-content (:content %))))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
