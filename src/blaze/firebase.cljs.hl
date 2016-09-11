@@ -67,7 +67,7 @@
                                     ~#(reset! fbc (hfb/fb->clj %)))
                                   fbc))))]
     (cell= (assoc metac :content contentc)
-      #(dosync
+      #(do
         (fbdb/reset! (posts [:meta (keyword (:id @route-params))]) (dissoc % :content))
         (fbdb/reset! (posts [:content (keyword (:id @route-params))]) (:content %))))))
 
