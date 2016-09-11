@@ -51,6 +51,7 @@
   (cell-let [route-params (or route-params blz/*route-params*)
              metac        (cell nil)
              contentc     (cell nil)]
+    (prn "test!")
     (cell= (assoc metac :content contentc))))
 
 (defn settings
