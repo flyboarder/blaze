@@ -5,7 +5,8 @@
             [firebase-cljs.database.query :as fbdq]
             [firebase-cljs.database.datasnapshot :as fbsnap]
             [firebase-cljs.user :as fbuser]
-            [hoplon.firebase :as hfb]))
+            [hoplon.firebase :as hfb]
+            [hoplon.firebase.auth :as hfba]))
 
 ;; Firebase Root ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (def ^:dynamic *blaze* (hfb/fb-ref [:_blaze]))
