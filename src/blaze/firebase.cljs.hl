@@ -26,8 +26,10 @@
     (cell= fbc #(fbdb/reset! (fbdb/get-in post (:id @route-params)) %))))
 
 (def posts (hfb/fb-ref *blaze* [:posts :meta]))
-(prn posts)
+
 (def posts= (hfb/fb-cell (-> posts (fbdq/take 25))))
+
+(cell= (prn posts=))
 
 (defn posts-featured=
   [] (hfb/fb-cell (-> posts (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
