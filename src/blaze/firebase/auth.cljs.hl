@@ -4,7 +4,8 @@
             [firebase-cljs.auth :as fbauth]
             [firebase-cljs.auth.error :as fbautherr]
             [firebase-cljs.auth.provider :as fbprov]
-            [hoplon.firebase :as hfb]))
+            [hoplon.firebase :as hfb])
+  (:require-macros [hoplon.firebase :refer [with-auth!]]))
 
 (def ^:dynamic *facebook* (fbprov/facebook))
 
@@ -54,3 +55,24 @@
 (defmethod hoplon.core/do! :fb-logout
   [elem _ v]
   (.addEventListener elem "click" #(logout!)))
+
+(def ^:dynamic *user-auth* (cell nil))
+
+(def ^:dynamic *user-fb* (cell nil))
+
+(defn- handle-login
+  [auth & [ref default]]
+  (let [ref (when ref (fbdb/get-in ref (fbuser/uid auth)))]
+    (reset! *user-auth* auth)
+    (when (and ref default)
+      (hfb/fb-default ref default))
+    (when ref
+      (fbdb/listen-promise ref #(reset! *user-fb* (hfb/fb->clj %))))))
+
+(defn- handle-logout
+  [& [ref]]
+  (reset! *user-auth* nil)
+  (when ref (reset! *user-fb* nil)))
+
+(defn fb-auth! [& [ref default]]
+  (with-auth! #(handle-login % ref default) #(handle-logout ref)))
