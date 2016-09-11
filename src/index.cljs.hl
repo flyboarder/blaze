@@ -228,8 +228,4 @@
 ;; MDL Upgrade
 (bmdl/auto-upgrade!)
 
-;; Firebase Authentication
-;(with-auth! #(fb/handle-login %) #(fb/handle-logout))
-(hfba/fb-auth! (fb/users) {:enabled true})
-
 (cell= (prn hfba/*user-fb*))
