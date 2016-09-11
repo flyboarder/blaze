@@ -8,7 +8,7 @@
             [hoplon.firebase :as hfb]))
 
 ;; Firebase Root ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(def ^:dynamic *blaze*   (hfb/fb-ref [:_blaze]))
+(def ^:dynamic *blaze* (hfb/fb-ref [:_blaze]))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn post
