@@ -25,7 +25,7 @@
           (posts [:content (keyword (:id @route-params))])
           "value"
           ~#(reset! fbc (hfb/fb->clj %)))))
-    (cell= fbc #(fbdb/reset! (posts [(keyword (:id @route-params))]) %))))
+    (cell= fbc)))
 
 (defn posts=
   ([] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
