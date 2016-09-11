@@ -97,7 +97,8 @@
   [] (hfb/fb-cell (navigation)))
 
 (defn users
-  [] (hfb/fb-ref *blaze* [:users]))
+  ([] (hfb/fb-ref *blaze* [:users]))
+  ([korks] (fbdb/get-in (users) korks)))
 
 (defn users=
   [] (hfb/fb-cell (users)))
