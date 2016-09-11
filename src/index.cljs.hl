@@ -232,4 +232,4 @@
 ;(with-auth! #(fb/handle-login %) #(fb/handle-logout))
 (bauth/fb-auth! (fb/users) {:enabled true})
 
-(cell= (prn user))
+(cell= (prn bauth/*user-auth*))
