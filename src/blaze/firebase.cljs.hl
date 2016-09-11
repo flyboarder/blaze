@@ -56,7 +56,7 @@
       (assoc post-meta :content post-content)
       ;#(prn %)
       #(dosync
-      ;  (reset! post-meta (dissoc % :content))
+        (reset! post-meta (dissoc % :content))
         (reset! post-content (:content %)))
       )))
 
