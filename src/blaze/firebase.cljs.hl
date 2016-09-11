@@ -109,9 +109,11 @@
 (def ^:dynamic *user-fb* (cell nil))
 
 (defn- handle-login
-  [auth]
+  [auth & [ref default]]
   ;; Store auth data in cell
   (reset! *user-auth* auth)
+  (when (and ref default)
+    (hfb/fb-default (fbdb/get-in ref (fbuser/uid auth)) default))
   ;; Persist auth data to db
   ;(hfb/fb-default (users (fbuser/uid auth)) {:enabled true})
   ;; Listen to user ref
