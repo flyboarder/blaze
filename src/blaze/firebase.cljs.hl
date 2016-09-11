@@ -52,9 +52,9 @@
         contentc     (cell nil)]
         (cell= (prn metac contentc))
     (cell= (when (:id route-params)
-      (fbdb/listen-promise (posts [:meta (keyword (:id route-params))]) "value"
+      (fbdb/listen-once (posts [:meta (keyword (:id route-params))]) "value"
         ~#(reset! metac (hfb/fb->clj %)))
-      (fbdb/listen-promise (posts [:content (keyword (:id route-params))]) "value"
+      (fbdb/listen-once (posts [:content (keyword (:id route-params))]) "value"
         ~#(reset! contentc (hfb/fb->clj %)))))
     (cell= (assoc metac :content contentc))))
 
