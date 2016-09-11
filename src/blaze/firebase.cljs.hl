@@ -12,7 +12,7 @@
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn posts
-  ([] (hfb/fb-ref *blaze* [:posts :meta]))
+  ([] (hfb/fb-ref *blaze* [:posts]))
   ([korks] (fbdb/get-in (posts) korks)))
 
 (defn post-content=
@@ -28,8 +28,8 @@
     (cell= fbc)))
 
 (defn posts=
-  ([] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
-  ([korks] (hfb/fb-cell (-> (posts korks) (fbdq/take 25)))))
+  ([] (hfb/fb-cell (-> (posts [:meta]) (fbdq/take 25))))
+  ([korks] (hfb/fb-cell (-> (posts (into [:meta] korks)) (fbdq/take 25)))))
 
 (defn posts-featured=
   [] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
@@ -49,9 +49,9 @@
 (defn post=
   [& [route-params]]
   (cell-let [route-params (or route-params blz/*route-params*)
-             metac        (cell nil)
+             metac        (hfb/fbonce-cell ())
              contentc     (cell nil)]
-    (cell= (prn route-params))
+    (cell= )
     (cell= (assoc metac :content contentc))))
 
 (defn settings
