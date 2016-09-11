@@ -49,21 +49,21 @@
   [& [route-params]]
   (cell-let [route-params (or route-params blz/*route-params*)
              metac        (cell=
-                            (when-let [postid (:id route-params)
-                                       postref (posts [:meta (keyword postid)])
-                                       fbc (cell nil)]
-                              (fbdb/listen-once
-                                postref
-                                "value"
-                                ~#(reset! fbc (hfb/fb->clj %)))))
+                            (when-let [postid (:id route-params)]
+                              (let [postref (posts [:meta (keyword postid)])
+                                    fbc (cell nil)]
+                                (fbdb/listen-once
+                                  postref
+                                  "value"
+                                  ~#(reset! fbc (hfb/fb->clj %))))))
              contentc     (cell=
-                            (when-let [postid (:id route-params)
-                                       postref (posts [:content (keyword postid)])
-                                       fbc (cell nil)]
-                              (fbdb/listen-once
-                                postref
-                                "value"
-                                ~#(reset! fbc (hfb/fb->clj %)))))]
+                            (when-let [postid (:id route-params)]
+                              (let [postref (posts [:content (keyword postid)])
+                                    fbc (cell nil)]
+                                (fbdb/listen-once
+                                  postref
+                                  "value"
+                                  ~#(reset! fbc (hfb/fb->clj %))))))]
     (cell= (assoc metac :content contentc))))
 
 (defn settings
