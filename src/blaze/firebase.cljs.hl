@@ -47,29 +47,9 @@
 
 (defn post=
   [& [route-params]]
-  (cell-let [route-params (or route-params blz/*route-params*)
-             metac        (let [fbc (cell nil)]
-                            (cell=
-                              (when-let [postid (:id route-params)]
-                                (let [postref (posts [:meta (keyword postid)])]
-                                  (fbdb/listen-once
-                                    postref
-                                    "value"
-                                    ~#(reset! fbc (hfb/fb->clj %)))
-                                  fbc))))
-             contentc     (let [fbc (cell nil)]
-                            (cell=
-                              (when-let [postid (:id route-params)]
-                                (let [postref (posts [:content (keyword postid)])]
-                                  (fbdb/listen-once
-                                    postref
-                                    "value"
-                                    ~#(reset! fbc (hfb/fb->clj %)))
-                                  fbc))))]
-    (cell= (assoc metac :content contentc)
-      #(do
-        (fbdb/reset! (posts [:meta (keyword (:id @route-params))]) (dissoc % :content))
-        (fbdb/reset! (posts [:content (keyword (:id @route-params))]) (:content %))))))
+  (let [route-params (or route-params blz/*route-params*)]
+    (fbdb/listen-once ref event #(reset! fbc (fb->clj %)))
+    ))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
