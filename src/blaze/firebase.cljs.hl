@@ -28,8 +28,8 @@
     (cell= fbc #(fbdb/reset! (posts [:content (keyword (:id @route-params))]) %))))
 
 (defn posts=
-  ([] (hfb/fb-cell (-> (posts [:meta]) (fbdq/take 25))))
-  ([korks] (hfb/fb-cell (-> (fbdb/get-in (posts [:meta]) korks) (fbdq/take 25)))))
+  ([] (hfb/fb-cell (-> (posts) (fbdq/take 25))))
+  ([korks] (hfb/fb-cell (-> (posts korks) (fbdq/take 25)))))
 
 (defn posts-featured=
   [] (hfb/fb-cell (-> (posts) (fbdq/sort-by :child "featured") (fbdq/take-last 1))))
@@ -46,11 +46,10 @@
           ~#(reset! fbc (hfb/fb->clj %)))))
     (cell= fbc #(fbdb/reset! (posts [:meta (keyword (:id @route-params))]) %))))
 
-;(defn post=
-;  [& [route-params]]
-;  (cell=
-;    (assoc ~(post-meta= route-params)
-;      :content ~(post-content= route-params))))
+(defn post=
+  [& [route-params]]
+  (let []
+    (cell= (assoc )))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
