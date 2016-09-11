@@ -55,7 +55,8 @@
                                   (fbdb/listen-once
                                     postref
                                     "value"
-                                    ~#(reset! fbc (hfb/fb->clj %)))))))
+                                    ~#(reset! fbc (hfb/fb->clj %)))
+                                  fbc))))
              contentc     (let [fbc (cell nil)]
                             (cell=
                               (when-let [postid (:id route-params)]
@@ -64,7 +65,8 @@
                                   (fbdb/listen-once
                                     postref
                                     "value"
-                                    ~#(reset! fbc (hfb/fb->clj %)))))))]
+                                    ~#(reset! fbc (hfb/fb->clj %)))
+                                  fbc))))]
     (cell= (assoc metac :content contentc))))
 
 (defn settings
