@@ -118,5 +118,6 @@
       (fbdb/listen-promise ref #(reset! *user-fb* (hfb/fb->clj %))))))
 
 (defn- handle-logout
-  []
-  (reset! *user-auth* nil))
+  [& [ref]]
+  (reset! *user-auth* nil)
+  (when ref (reset! *user-fb* nil)))
