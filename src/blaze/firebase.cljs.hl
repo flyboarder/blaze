@@ -60,8 +60,7 @@
              contentc     (let [fbc (cell nil)]
                             (cell=
                               (when-let [postid (:id route-params)]
-                                (let [postref (posts [:content (keyword postid)])
-                                      fbc (cell nil)]
+                                (let [postref (posts [:content (keyword postid)])]
                                   (fbdb/listen-once
                                     postref
                                     "value"
