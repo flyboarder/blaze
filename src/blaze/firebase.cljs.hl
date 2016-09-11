@@ -26,7 +26,8 @@
 ;          "value"
 ;          ~#(reset! fbc (hfb/fb->clj %)))))
 ;    (cell= fbc #(dosync (fbdb/reset! )))))
-
+(prn (posts)
+     (posts [:meta]))
 (defn posts=
   ([] (hfb/fb-cell (-> (posts [:meta]) (fbdq/take 25)))))
 
