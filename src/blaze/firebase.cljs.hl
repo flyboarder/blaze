@@ -11,8 +11,7 @@
 (def ^:dynamic *blaze*   (hfb/fb-ref [:_blaze]))
 
 ;; Firebase Public References ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defn post
-  ([] (hfb/fb-ref *blaze* [:posts :content])))
+(defn post (hfb/fb-ref *blaze* [:posts :content]))
 
 (defn post-content=
   [& [route-params]]
@@ -21,10 +20,10 @@
     (cell=
       (when (:id route-params)
         (fbdb/listen-once
-          (fbdb/get-in (post) (:id route-params))
+          (fbdb/get-in post (:id route-params))
           "value"
           ~#(reset! fbc (hfb/fb->clj %)))))
-    (cell= fbc #(fbdb/reset! (fbdb/get-in (post) (:id @route-params)) %))))
+    (cell= fbc #(fbdb/reset! (fbdb/get-in post (:id @route-params)) %))))
 
 (defn posts
   ([] (hfb/fb-ref *blaze* [:posts :meta]))
