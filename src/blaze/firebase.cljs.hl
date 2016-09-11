@@ -51,7 +51,7 @@
         metac        (cell nil)
         contentc     (cell nil)]
         (cell= (prn metac contentc))
-    (cell= (when (fbdb/listen-promise (posts [:meta (keyword (:id route-params))]) "value" ~#(reset! metac (hfb/fb->clj %)))))
+    (cell= (when (:id route-params) (fbdb/listen-promise (posts [:meta (keyword (:id route-params))]) "value" ~#(reset! metac (hfb/fb->clj %)))))
     ))
 
 (defn settings
