@@ -55,9 +55,9 @@
     (cell=
       (assoc post-meta :content post-content)
       #(prn %)
-      ;#(dosync
+      #(dosync
       ;  (reset! post-meta (dissoc % :content))
-      ;  (reset! post-content (:content %)))
+        (reset! post-content (:content %)))
       )))
 
 (defn settings
