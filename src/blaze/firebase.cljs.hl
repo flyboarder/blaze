@@ -90,7 +90,8 @@
   [] (hfb/fb-cell (pages)))
 
 (defn navigation
-  [] (hfb/fb-ref *blaze* [:navigation]))
+  ([] (hfb/fb-ref *blaze* [:navigation]))
+  ([korks] (fbdb/get-in (navigation) korks)))
 
 (defn navigation=
   [] (hfb/fb-cell (navigation)))
