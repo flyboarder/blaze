@@ -47,8 +47,10 @@
 
 (defn post=
   [& [route-params]]
-  (let [route-params (or route-params blz/*route-params*)]
-    (fbdb/listen-once ref event #(reset! fbc (fb->clj %)))
+  (let [route-params (or route-params blz/*route-params*)
+        metac        (cell nil)
+        contentc     (cell nil)]
+    (fbdb/listen-once ref "value" #(reset! metac (fb->clj %)))
     ))
 
 (defn settings
