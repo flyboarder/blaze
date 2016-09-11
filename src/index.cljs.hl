@@ -161,14 +161,15 @@
                 (config [nil     grid/*cols*           width-cols
                          nil     grid/*shadow*         shadow
                          post    blz/*post*            (fb/post= route-params)
-                         content nil                   (fb/post-content= route-params)]
+                         ;content nil                   (fb/post-content= route-params)
+                         ]
                   (grid/grid :class [:demo-blog__posts]
                     (bmdl/post-card
                       (smde/editor :placeholder "Post Content..."
                                    :autosave false
                                    :hideIcons ["side-by-side" "fullscreen"]
                                    :status ["lines" "words"]
-                                   :content content
+                                   :content (cell= (:content post))
                                    :change #(reset! post (assoc {} :content %))))
                     (bmdl/bottom-nav :class [:demo-nav]
                       (bmdl/nav-backward :class [:demo-nav__button]
