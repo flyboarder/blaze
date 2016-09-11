@@ -25,7 +25,7 @@
          route            blz/*route*         (bidi/route)
          route-params     blz/*route-params*  (bidi/route-params)
          categories       blz/*categories*    (fb/categories=)
-         posts            blz/*posts*         (fb/posts=)
+         posts            blz/*posts*         fb/posts=
          nil              blz/*navigation*    (fb/navigation=)
          nil              blz/*settings*      (fb/settings=)
          nil              blz/*featured-post* (fb/posts-featured=)
