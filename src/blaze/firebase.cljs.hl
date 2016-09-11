@@ -50,7 +50,7 @@
   (let [route-params (or route-params blz/*route-params*)
         metac        (cell nil)
         contentc     (cell nil)]
-    (fbdb/listen-once ref "value" #(reset! metac (fb->clj %)))
+    (cell= (when (fbdb/listen-promise (posts [:meta (keyword (:id route-params))]) "value" #(reset! metac (fb->clj %)))))
     ))
 
 (defn settings
