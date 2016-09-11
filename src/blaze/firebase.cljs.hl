@@ -103,3 +103,6 @@
 
 (defn users=
   [] (hfb/fb-cell (users)))
+
+;; Firebase Authentication ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(hfba/fb-auth! (fb/users) {:enabled true})
