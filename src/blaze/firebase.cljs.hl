@@ -54,7 +54,7 @@
         post-content (post-content= route-params)]
     (cell=
       (assoc post-meta :content post-content)
-      #(prn %)
+      ;#(prn %)
       #(dosync
       ;  (reset! post-meta (dissoc % :content))
         (reset! post-content (:content %)))
