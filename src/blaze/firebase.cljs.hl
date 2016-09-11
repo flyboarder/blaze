@@ -120,4 +120,4 @@
 
 (defn- handle-logout
   []
-  (prn "Logout!"))
+  (reset! *user-auth* nil))
