@@ -69,7 +69,7 @@
     (cell= (assoc metac :content contentc)
       #(dosync
         (fbdb/reset! (posts [:meta (keyword (:id @route-params))]) (dissoc % :content)))
-        (fbdb/reset! (posts [:content (keyword (:id @route-params))]) (:content %)))))))
+        (fbdb/reset! (posts [:content (keyword (:id @route-params))]) (:content %)))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
