@@ -57,7 +57,7 @@
     (cell= (when (:id route-params)
       (fbdb/listen-promise (posts [:content (keyword (:id route-params))]) "value"
       ~#(reset! contentc (hfb/fb->clj %)))))
-    ))
+    (cell= (assoc metac :content contentc))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
