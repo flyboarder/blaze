@@ -25,7 +25,7 @@
           (posts [:content (keyword (:id route-params))])
           "value"
           ~#(reset! fbc (hfb/fb->clj %)))))
-    (cell= fbc)))
+    (cell= fbc #(dosync (fbdb/reset! )))))
 
 (defn posts=
   ([] (hfb/fb-cell (-> (posts [:meta]) (fbdq/take 25)))))
@@ -67,7 +67,10 @@
                                     "value"
                                     ~#(reset! fbc (hfb/fb->clj %)))
                                   fbc))))]
-    (cell= (assoc metac :content contentc))))
+    (cell= (assoc metac :content contentc)
+      #(dosync
+        (fbdb/reset! (posts [:meta (keyword (:id @route-params)]) (dissoc % :content)))
+        (fbdb/reset! (posts [:content (keyword (:id @route-params)]) (:content %)))))))
 
 (defn settings
   [] (hfb/fb-ref *blaze* [:settings]))
